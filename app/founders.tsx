@@ -35,7 +35,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
 }) => {
   return (
     <motion.div
-      className="flex flex-col h-full bg-[#327293] rounded-lg shadow-lg overflow-hidden group border border-[#1A362D]"
+      className="flex flex-col h-full bg-opacity-95 rounded-lg shadow-xl overflow-hidden group border border-gray-400"
       whileHover={{ y: -5 }}
       transition={{ duration: 0.3 }}
     >
@@ -48,24 +48,24 @@ const TeamMember: React.FC<TeamMemberProps> = ({
           className="object-cover h-full w-full transition-transform duration-500 group-hover:scale-105"
         />
       </div>
-      <div className="p-6 space-y-3 flex-1 flex flex-col justify-between text-white">
+      <div className="p-6 space-y-3 flex-1 flex flex-col justify-between text-black">
         <div>
           <h3 className="font-semibold text-2xl">{name}</h3>
-          <p className="font-medium text-lg mt-1 text-gray-300">{role}</p>
+          <p className="font-medium text-lg mt-1 text-slate-800">{role}</p>
           {description && (
-            <p className="text-gray-400 text-sm leading-relaxed mt-3">
+            <p className="text-slate-800 text-sm leading-relaxed mt-3">
               {description}
             </p>
           )}
         </div>
-        <div className="mt-auto pt-4 border-t border-gray-700 flex items-center justify-between">
+        <div className="mt-auto pt-4 border-t border-slate-900 flex items-center justify-between">
           <Link
             href={courseLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-white hover:text-white transition-colors duration-300 transform hover:translate-x-1"
+            className="flex items-center gap-2 text-red-600 hover:text-red-400 transition-colors duration-300 transform hover:translate-x-1"
           >
-            <div className="bg-[#006394]  p-2 rounded-full flex items-center justify-center">
+            <div className="bg-red-600  p-2 rounded-full flex items-center justify-center">
               {courseIcon}
             </div>
             <span className="font-medium text-sm">{course}</span>
@@ -132,7 +132,7 @@ const teamMembers: TeamMemberProps[] = [
 
 const Founders = () => {
   return (
-    <div className="py-20 bg-[#E1F5FE]">
+    <div className="py-20 bg-[#FAFAFA]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -143,7 +143,7 @@ const Founders = () => {
           <p className="text-sm uppercase tracking-widest text-gray-500 mb-3">
             NUESTROS EXPERTOS
           </p>
-          <h2 className="text-4xl font-extrabold text-[#006394] sm:text-5xl lg:text-6xl">
+          <h2 className="text-4xl font-extrabold text-red-500 sm:text-5xl lg:text-6xl">
             Nuestros profesores son expertos de la industria
           </h2>
         </motion.div>

@@ -32,50 +32,69 @@ interface TestimonialItem {
 const testimonials: TestimonialItem[] = [
   {
     id: 1,
-    name: "Jesus Espinoza",
+    name: "Luis Quispe",
     role: "🇵🇪",
-    avatar: "/avatar1.jpg",
+    avatar: "/coment1.webp",
     comment:
-      "Simplemente FELICITACIONES y así mismo con Mayúscula! Durante años he participado en curso de fundamentos de programación y ninguno se compara con la calidad, el contenido, la pedagogía y la metodología que ustedes tienen.",
+      "Gracias al curso de ingeniería de sistemas, logré obtener mi primer empleo como soporte técnico en una empresa de tecnología. La formación fue muy completa y práctica.",
     rating: 5,
   },
   {
     id: 2,
-    name: "Catalina Navarrete",
-    role: "🇲🇽",
+    name: "Fiorella Huamán",
+    role: "🇵🇪",
     avatar: "/avatar2.jpg",
     comment:
-      "Voy a la mitad de la carrera de 'Ingeniería en Informática' en México. En todos esos años jamás aprendí todo lo que se aprendió en este curso. Si fue muy teórico o no, realmente es algo que se necesita saber, es la base para cualquier programador.",
-    rating: 4,
-  },
-  {
-    id: 3,
-    name: "Juan Montiel",
-    role: "🇦🇷",
-    avatar: "/avatar3.jpg",
-    comment:
-      "El curso me sirvió para poder dar el primer paso en mi aprendizaje sobre Python. Agradezco sinceramente este curso que parte desde la base y no da nada por sentado.",
+      "Estudié ingeniería civil y el curso de estructuras me ayudó bastante. Gracias a esto ahora trabajo en una consultora que diseña obras públicas en Cusco.",
     rating: 5,
   },
   {
-    id: 4,
-    name: "Maria Rodriguez",
-    role: "🇨🇴",
-    avatar: "/avatar4.jpg",
+    id: 3,
+    name: "Renzo Paredes",
+    role: "🇵🇪",
+    avatar: "/avatar3.jpg",
     comment:
-      "Excelente contenido y muy bien explicado. Me ayudó a solidificar mis conocimientos y a sentirme más segura en mi camino como desarrolladora. ¡Altamente recomendado!",
+      "El curso de hidráulica aplicada fue excelente. Aprendí a usar herramientas que ahora aplico en mi trabajo como ingeniero agrícola en Cajamarca.",
+    rating: 4,
+  },
+  {
+    id: 4,
+    name: "Camila Vargas",
+    role: "🇵🇪",
+    avatar: "/coment2.jpg",
+    comment:
+      "El programa de hidrología fue clave para mi puesto actual en una ONG ambiental. Muy bien estructurado y con casos reales del Perú.",
     rating: 5,
   },
   {
     id: 5,
-    name: "Carlos Sanchez",
-    role: "🇪🇸",
+    name: "Jorge Alvarado",
+    role: "🇵🇪",
+    avatar: "/coment3.jpg",
+    comment:
+      "Me capacité en ingeniería geológica y minera. Actualmente trabajo en una empresa de exploración en Apurímac gracias al respaldo del curso y la certificación.",
+    rating: 5,
+  },
+  {
+    id: 6,
+    name: "Natalie Yupanqui",
+    role: "🇵🇪",
+    avatar: "/avatar4.jpg",
+    comment:
+      "Tomé el curso de ingeniería eléctrica y fue muy completo. Me ayudó a validar conocimientos que ahora aplico en proyectos de electrificación rural.",
+    rating: 5,
+  },
+  {
+    id: 7,
+    name: "Carlos Mejía",
+    role: "🇵🇪",
     avatar: "/avatar5.jpg",
     comment:
-      "Los instructores son muy profesionales y el material didáctico es de primera. Lo que más valoro es la atención personalizada que brindan, resolviendo todas mis dudas.",
-    rating: 4,
+      "Gracias al curso en gestión ambiental para ingenieros, hoy trabajo en una minera donde aplico directamente lo aprendido. ¡Recomendado!",
+    rating: 5,
   },
 ];
+
 
 // Animation variants for section header elements
 const sectionHeaderVariants = {
@@ -128,25 +147,25 @@ export default function SuccessStoriesCarousel() {
   }, [isMobile, isTablet]);
 
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-8 py-16 md:py-24 bg-[#26374c] text-gray-50 overflow-hidden relative">
+    <section className="w-full px-4 sm:px-6 lg:px-8 py-16 md:py-24 bg-[#FAFAFA] text-gray-50 overflow-hidden relative">
       {/* Background radial gradient for visual flair */}
       <div className="absolute inset-0 z-0 radial-gradient-custom opacity-30"></div>
 
       <div className="text-center mb-12 md:mb-16 lg:mb-20 relative z-10">
         <motion.h2
-          className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 sm:mb-5 text-gray-100 leading-tight"
+          className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 sm:mb-5 text-red-600 leading-tight"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
           variants={sectionHeaderVariants}
         >
           Tú puedes ser la próxima{" "}
-          <span className="inline-block text-[#327293] font-extrabold drop-shadow-md">
+          <span className="inline-block text-red-600 font-extrabold drop-shadow-md">
             historia de éxito
           </span>
         </motion.h2>
         <motion.p
-          className="text-white text-base sm:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed"
+          className="text-slate-800 text-base sm:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -186,7 +205,7 @@ export default function SuccessStoriesCarousel() {
                 >
                   <Card
                     // Responsive padding: smaller on mobile (p-4) larger on sm/lg (sm:p-6 lg:p-8)
-                    className="p-4 sm:p-6 lg:p-8 bg-[#1f232b] text-gray-200 border border-[#373e4a] rounded-xl h-full flex flex-col justify-between shadow-lg hover:shadow-2xl transition-shadow duration-300 relative overflow-hidden"
+                    className="p-4 sm:p-6 lg:p-8 bg-[#FAFAFA] text-gray-200 border border-[#373e4a] rounded-xl h-full flex flex-col justify-between shadow-lg hover:shadow-2xl transition-shadow duration-300 relative overflow-hidden"
                   >
                     {/* Subtle inner glow effect */}
                     <div
@@ -202,7 +221,7 @@ export default function SuccessStoriesCarousel() {
 
                     <CardHeader className="flex flex-row items-start gap-3 p-0 pb-4 sm:gap-4 sm:pb-5">
                       {/* Responsive avatar size: w-12 h-12 on mobile, larger on sm/lg */}
-                      <Avatar className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-2 border-[#00c2a8] flex-shrink-0 shadow-md">
+                      <Avatar className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-2 border-red-600 flex-shrink-0 shadow-md">
                         {" "}
                         {/* Reduced border-width for smaller avatars */}
                         <AvatarImage
@@ -216,7 +235,7 @@ export default function SuccessStoriesCarousel() {
                       </Avatar>
                       <div className="flex-1">
                         {/* Responsive title size: text-lg on mobile, larger on sm/lg */}
-                        <CardTitle className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-100 mb-0 sm:mb-1">
+                        <CardTitle className="text-lg sm:text-xl lg:text-2xl font-bold text-red-600 mb-0 sm:mb-1">
                           {testimonial.name}
                         </CardTitle>{" "}
                         {/* Reduced margin-bottom */}
@@ -245,7 +264,7 @@ export default function SuccessStoriesCarousel() {
                     <CardContent className="p-0 text-sm sm:text-base leading-relaxed flex-grow overflow-hidden pt-3">
                       {" "}
                       {/* Added small padding top to separate from header slightly */}
-                      <blockquote className="italic text-gray-300 pl-3 border-l-3 border-[#00c2a8] text-sm sm:text-base">
+                      <blockquote className="italic text-slate-800 pl-3 border-l-3 border-[#00c2a8] text-sm sm:text-base">
                         {" "}
                         {/* Reduced border-left width and padding-left */}
                         &quot;{testimonial.comment}&quot;

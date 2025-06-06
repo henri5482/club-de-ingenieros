@@ -188,16 +188,16 @@ const Planes = () => {
     switch (type) {
       case 'expert':
       case 'expert-duo':
-        return 'bg-[#26374c]';
+        return 'bg-white';
       case 'basic':
       default:
-        return 'bg-[#26374c]';
+        return 'bg-white';
     }
   };
 
   // Determinar el color del borde si es necesario (el Plan Expert tiene un borde verde)
   const getCardBorderColor = (type: Plan['type']) => {
-    return type === 'expert' || type === 'expert-duo' ? 'border border-[#2d8d85]' : 'border border-gray-700';
+    return type === 'expert' || type === 'expert-duo' ? 'border border-red-600' : 'border border-gray-700';
   };
 
   // Determinar el color del botón
@@ -206,13 +206,13 @@ const Planes = () => {
   };
 
   return (
-    <section className="bg-[#E7F6FE] min-h-screen py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="bg-white min-h-screen py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto text-center">
         <motion.h2
           variants={headingVariants}
           initial="hidden"
           animate="visible"
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#006394] mb-12 md:mb-16 drop-shadow-lg leading-tight"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-red-600 mb-12 md:mb-16 drop-shadow-lg leading-tight"
         >
           Elige el plan ideal para ti
         </motion.h2>
@@ -222,7 +222,7 @@ const Planes = () => {
           variants={audienceSelectorVariants}
           initial="hidden"
           animate="visible"
-          className="inline-flex rounded-full bg-[#26374c] p-1 mb-10 md:mb-12 shadow-lg flex-wrap justify-center" // Added flex-wrap and justify-center for small screens
+          className="inline-flex rounded-full bg-[#e1e2e3] p-1 mb-10 md:mb-12 shadow-lg flex-wrap justify-center" // Added flex-wrap and justify-center for small screens
           role="tablist"
         >
           <button
@@ -236,7 +236,7 @@ const Planes = () => {
             {currentAudience === 'personas' && (
               <motion.span
                 layoutId="audience-pill"
-                className="absolute inset-0 bg-[#4f5869] rounded-full -z-10"
+                className="absolute inset-0 bg-red-400 rounded-full -z-10"
                 transition={{ type: "spring", stiffness: 700, damping: 40 }}
               />
             )}
@@ -252,7 +252,7 @@ const Planes = () => {
             {currentAudience === 'empresas' && (
               <motion.span
                 layoutId="audience-pill"
-                className="absolute inset-0 bg-[#4f5869] rounded-full -z-10"
+                className="absolute inset-0 bg-red-500 rounded-full -z-10"
                 transition={{ type: "spring", stiffness: 700, damping: 40 }}
               />
             )}
@@ -330,12 +330,12 @@ const Planes = () => {
                   )}
 
                   {/* Encabezado del plan */}
-                  <div className="text-left mb-4 sm:mb-6">
-                    <h3 className="text-2xl sm:text-3xl font-bold text-white mb-1">{currentPlan.name}</h3>
-                    <span className="text-gray-400 text-sm">{currentPlan.billingCycle === 'mensual' ? 'Mensual' : 'Anual'}</span>
+                  <div className="text-left mb-4 sm:mb-6 shax">
+                    <h3 className="text-2xl sm:text-3xl font-bold text-red-600 mb-1">{currentPlan.name}</h3>
+                    <span className="text-slate-900text-sm">{currentPlan.billingCycle === 'mensual' ? 'Mensual' : 'Anual'}</span>
                     {currentPlan.type === 'expert-duo' && currentAudience === 'personas' && (
                       <div className="flex flex-wrap items-center space-x-3 sm:space-x-4 mt-3"> {/* Adjusted spacing */}
-                        <label className="flex items-center text-gray-300 text-sm cursor-pointer mb-1 sm:mb-0"> {/* Adjusted margin-bottom */}
+                        <label className="flex items-center text-slate-900 text-sm cursor-pointer mb-1 sm:mb-0"> {/* Adjusted margin-bottom */}
                           <input
                             type="radio"
                             name={`students-${currentPlan.id}`}
@@ -345,7 +345,7 @@ const Planes = () => {
                           />
                           2 estudiantes
                         </label>
-                        <label className="flex items-center text-gray-300 text-sm cursor-pointer mb-1 sm:mb-0"> {/* Adjusted margin-bottom */}
+                        <label className="flex items-center text-slate-900 text-sm cursor-pointer mb-1 sm:mb-0"> {/* Adjusted margin-bottom */}
                           <input
                             type="radio"
                             name={`students-${currentPlan.id}`}
@@ -361,24 +361,24 @@ const Planes = () => {
 
                   {/* Precio */}
                   <div className="mb-4 sm:mb-6 flex items-baseline justify-start">
-                    <span className="text-4xl sm:text-5xl font-extrabold text-white">
+                    <span className="text-4xl sm:text-5xl font-extrabold text-slate-900">
                       {currentPlan.currency}
                       {currentPlan.price.toLocaleString('es-PE', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
                     </span>
-                    <span className="text-gray-400 text-lg sm:text-xl ml-2">/{currentPlan.billingCycle === 'mensual' ? 'mes' : 'año'}</span>
+                    <span className="text-slate-900 text-lg sm:text-xl ml-2">/{currentPlan.billingCycle === 'mensual' ? 'mes' : 'año'}</span>
                     {currentPlan.oldPrice && (
-                      <span className="text-gray-600 line-through text-base sm:text-lg ml-2 sm:ml-3">
+                      <span className="text-slate-700 line-through text-base sm:text-lg ml-2 sm:ml-3">
                         {currentPlan.currency}
                         {currentPlan.oldPrice.toLocaleString('es-PE', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
                       </span>
                     )}
                   </div>
-                  <p className="text-gray-400 text-xs sm:text-sm mb-4 sm:mb-6">{currentPlan.billingCycle === 'mensual' ? 'Cobro mensual recurrente' : ''}</p>
+                  <p className="text-slate-900 text-xs sm:text-sm mb-4 sm:mb-6">{currentPlan.billingCycle === 'mensual' ? 'Cobro mensual recurrente' : ''}</p>
 
                   {/* Lista de características (ahora usa displayFeatures) */}
                   <ul className="text-left space-y-3 sm:space-y-4 flex-grow mb-6 sm:mb-8">
                     {displayFeatures.map((feature, index) => (
-                      <li key={index} className={`flex items-start ${feature.included ? 'text-gray-300' : 'text-gray-500 line-through'}`}> {/* Changed items-center to items-start for better multi-line text alignment */}
+                      <li key={index} className={`flex items-start ${feature.included ? 'text-slate-900' : 'text-gray-500 line-through'}`}> {/* Changed items-center to items-start for better multi-line text alignment */}
                         {feature.included ? (
                           <FaCheckCircle className="text-green-400 mr-3 text-base sm:text-lg flex-shrink-0 mt-1" /> 
                         ) : (

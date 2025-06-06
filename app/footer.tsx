@@ -16,11 +16,10 @@ const Footer = () => {
   // Data for "Acerca de" section links
   const aboutLinks = [
     { name: "¿Sobre Nosotros?", href: "/about" },
-    { name: "El equipo", href: "#" },
-    { name: "Los profesores", href: "/about/profesores" },
-    { name: "Enunciado de misión", href: "/about/mision" },
-    { name: "Marca y logotipo", href: "/about/marca" },
-    { name: "Cultura", href: "/about/cultura" },
+    { name: "El equipo", href: "/profesor" },
+    { name: "Los profesores", href: "/profesor" },
+    { name: "Enunciado de misión", href: "/about" },
+    { name: "Marca y logotipo", href: "/about" },
   ];
 
   // Data for "Conecta con EDteam" sections
@@ -71,7 +70,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#E1F5FE] border-t border-gray-200 text-gray-800">
+    <footer className="bg-[#FAFAFA] border-t border-gray-200 text-gray-800">
       <div className="container mx-auto px-4 py-8 sm:px-6 md:px-8 lg:px-12 xl:px-16 md:py-12 lg:py-16">
         {/* Top section: Logo and back to top */}
         <div className="hidden md:flex justify-between items-center">
@@ -86,7 +85,7 @@ const Footer = () => {
               transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
             >
               <Image
-                src="/logo02.webp"
+                src="/logoing.webp"
                 alt="Logo Asociación de Enfermeros"
                 fill
                 sizes="(max-width: 768px) 192px, (max-width: 1200px) 256px, 384px"
@@ -97,7 +96,7 @@ const Footer = () => {
           </Link>
           <button
             onClick={scrollToTop}
-            className="flex items-center text-sm font-medium text-[#0d70af] hover:text-[#0a5c8a] transition-colors group"
+            className="flex items-center text-sm font-medium text-red-600 hover:text-red-950 transition-colors group"
             aria-label="Volver arriba"
           >
             Volver arriba
@@ -135,7 +134,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-y-10 lg:gap-x-12 mb-8 sm:mb-12">
           {/* Section: JEDteam (About) */}
           <div className="py-2">
-            <h2 className="text-lg font-bold mb-4 text-[#0d70af]">
+            <h2 className="text-lg font-bold mb-4 text-red-600">
               Asociacion de Enfermeros
             </h2>
             <nav>
@@ -144,9 +143,9 @@ const Footer = () => {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-gray-700 hover:text-[#0a5c8a] hover:underline transition-colors flex items-center text-sm group"
+                      className="text-gray-700 hover:text-red-600 hover:underline transition-colors flex items-center text-sm group"
                     >
-                      <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#0d70af] mr-2 flex-shrink-0 group-hover:bg-[#0a5c8a] transition-colors"></span>
+                      <span className="inline-block w-1.5 h-1.5 rounded-full bg-red-600 mr-2 flex-shrink-0 group-hover:bg-red-600 transition-colors"></span>
                       {link.name}
                     </Link>
                   </li>
@@ -157,7 +156,7 @@ const Footer = () => {
 
           {/* Section: Conecta con EDteam */}
           <div className="py-2">
-            <h2 className="text-lg font-bold mb-4 text-[#0d70af]">
+            <h2 className="text-lg font-bold mb-4 text-red-600">
               Conecta con Nosotros
             </h2>
             <nav className="space-y-4 sm:space-y-6">
@@ -171,9 +170,9 @@ const Footer = () => {
                       <li key={link.name}>
                         <Link
                           href={link.href}
-                          className="text-gray-700 hover:text-[#0a5c8a] hover:underline transition-colors flex items-center text-sm group"
+                          className="text-gray-700 hover:text-red-600 hover:underline transition-colors flex items-center text-sm group"
                         >
-                          <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#0d70af] mr-2 flex-shrink-0 group-hover:bg-[#0a5c8a] transition-colors"></span>
+                          <span className="inline-block w-1.5 h-1.5 rounded-full bg-red-600 mr-2 flex-shrink-0 group-hover:bg-red-600 transition-colors"></span>
                           {link.name}
                         </Link>
                       </li>
@@ -186,7 +185,7 @@ const Footer = () => {
 
           {/* Section: Nuestros productos */}
           <div className="py-2">
-            <h2 className="text-lg font-bold mb-4 text-[#0d70af]">
+            <h2 className="text-lg font-bold mb-4 text-red-600">
               Nuestros productos
             </h2>
             <nav>
@@ -195,9 +194,9 @@ const Footer = () => {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-gray-700 hover:text-[#0a5c8a] hover:underline transition-colors flex items-center text-sm group"
+                      className="text-gray-700 hover:text-red-600 hover:underline transition-colors flex items-center text-sm group"
                     >
-                      <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#0d70af] mr-2 flex-shrink-0 group-hover:bg-[#0a5c8a] transition-colors"></span>
+                      <span className="inline-block w-1.5 h-1.5 rounded-full bg-red-600 mr-2 flex-shrink-0 group-hover:bg-red-500 transition-colors"></span>
                       {link.name}
                     </Link>
                   </li>
@@ -210,14 +209,14 @@ const Footer = () => {
           <div className="hidden md:flex flex-col items-start py-2">
             <p className="text-gray-700 mb-4 sm:mb-6 text-sm leading-relaxed">
               Comprometidos con la excelencia en la formación y el desarrollo
-              profesional de enfermeros.
+              profesional de Ingenieros en el peru.
             </p>
             <div className="flex gap-3 mt-auto">
               {socialLinks.map((social) => (
                 <Link
                   key={social.name}
                   href={social.href}
-                  className="text-gray-600 hover:text-[#0d70af] transition-colors p-2 rounded-full hover:scale-110 transform transition-transform"
+                  className="text-red-600 hover:text-[#0d70af] transition-colors p-2 rounded-full hover:scale-110 transform transition-transform"
                   aria-label={social.name}
                 >
                   <social.icon size={22} />
@@ -246,7 +245,7 @@ const Footer = () => {
         {/* Copyright and Legal Links */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-2 sm:pt-4">
           <div className="text-gray-600 text-xs sm:text-sm mb-3 md:mb-0 text-center md:text-left leading-relaxed">
-            © {new Date().getFullYear()} Asociacion de enfermeros del peru.
+            © {new Date().getFullYear()} Club de Ingenieros.
             Todos los derechos reservados.
           </div>
           <nav className="flex flex-wrap justify-center gap-x-3 sm:gap-x-4 gap-y-1 sm:gap-y-2 items-center">
