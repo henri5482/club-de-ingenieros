@@ -7,16 +7,16 @@ import Image from "next/image";
 
 // Definición de las empresas con sus logos
 const companies = [
-  { name: "coca-cola", logo: "/logo-1.svg" },
-  { name: "amazon", logo: "/logo-2.svg" },
-  { name: "forbes", logo: "/logo-3.svg" },
-  { name: "booking", logo: "/logo-4.svg" },
-  { name: "microsoft", logo: "/logo-5.svg" },
-  { name: "paypal", logo: "/logo-6.svg" },
-  { name: "redbull", logo: "/logo-1.svg" },
-  { name: "salesforce", logo: "/logo-2.svg" },
-  { name: "spotify", logo: "/logo-3.svg" },
-  { name: "lift", logo: "/logo-4.svg" },
+  { name: "camara de comercio de lima", logo: "/camaradecomercio.gif" },
+  { name: "club de ingenieros", logo: "/clubdeingenieros.png" },
+  { name: "club de agromos", logo: "/clubdeagronomos.png" },
+  { name: "club de ambientalistas", logo: "/clubdeambientalistas.png" },
+  { name: "club de enfermeros", logo: "/clubdeenfermeros.png" },
+  { name: "ingenieria y capacitacion", logo: "/ingenieriaycapacitacion.png" },
+  { name: "club de quimicos y farmaceuticos", logo: "/clubdequimicosfarmaceuticos.png" },
+  { name: "colegio de abogados", logo: "/colegiodeabogados.png" },
+  { name: "club de abogados", logo: "/clubdeabogados.webp" },
+  { name: "asociacion de enfermeros", logo: "/asociaciondeenfermeros.png" },
 ];
 
 const firstRow = companies.slice(0, Math.ceil(companies.length / 2));
@@ -40,7 +40,7 @@ const CompanyLogo = ({ name, logo }: { name: string; logo: string }) => {
         src={logo}
         alt={`${name} logo`}
         // Aplicamos los efectos de grayscale y opacidad directamente a la imagen
-        className="w-16 h-16 md:w-20 md:h-20 object-contain opacity-60 hover:opacity-100 transition-all duration-300 filter grayscale hover:grayscale-0" // Reducimos los tamaños de las clases w/h
+        className="w-16 h-16 md:w-20 md:h-20 object-contain  transition-all duration-300 " // Reducimos los tamaños de las clases w/h
       />
     </motion.div>
   );
@@ -62,7 +62,7 @@ const Trusted = () => {
     <div
       className={cn(
         "w-full overflow-hidden py-12 md:py-16 relative", // Menos padding vertical
-        "bg-[#E1F5FE] text-[#006394]" // Fondo claro y texto oscuro
+        "bg-white text-[#006394]" // Fondo claro y texto oscuro
       )}
     >
       {/* Elementos de fondo decorativos (ajustados para ser más sutiles en un espacio más pequeño) */}
@@ -89,18 +89,18 @@ const Trusted = () => {
           variants={textVariants}
         >
           <motion.h2
-            className="text-3xl md:text-4xl font-extrabold mb-3 leading-tight tracking-tight" // Título más pequeño
+            className="text-3xl text-red-600 md:text-4xl font-extrabold mb-3 leading-tight tracking-tight" // Título más pequeño
             variants={itemVariants}
           >
             Nuestros{' '}
             <span
-              className="text-[#006394] bg-clip-text bg-gradient-to-r" // Degradado de azules vibrantes
+              className="text-red-600 bg-clip-text bg-gradient-to-r" // Degradado de azules vibrantes
             >
               Socios Estratégicos
             </span>
           </motion.h2>
           <motion.p
-            className="text-base md:text-lg text-[#0f1e26] leading-relaxed max-w-2xl mx-auto" // Párrafo más pequeño
+            className="text-base md:text-lg text-black leading-relaxed max-w-2xl mx-auto" // Párrafo más pequeño
             variants={itemVariants}
           >
             Colaboramos con líderes del sector para ofrecerte la educación más vanguardista y relevante para tu crecimiento profesional.

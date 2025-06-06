@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const links = [
-  { href: "/cursosall", label: "Cursoss" },
+  { href: "/cursosall", label: "Cursos" },
   { href: "/projects", label: "Certificados" },
   { href: "/docentes", label: "Profesores" },
   { href: "/about", label: "Nosotros" },
@@ -118,7 +118,7 @@ const Navbar = () => {
     <AnimatePresence>
       <motion.nav
         key="navbar"
-        className="fixed top-0 left-0 right-0 bg-[#E1F5FE] z-50 shadow-sm"
+        className="fixed top-0 left-0 right-0 bg-white z-50 shadow-sm"
         animate={isVisible ? "visible" : "hidden"}
         variants={navbarVariants}
       >
@@ -133,7 +133,7 @@ const Navbar = () => {
                 transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
               >
                 <Image
-                  src="/logo02.webp"
+                  src="/logoing.webp"
                   alt="Logo Asociación de Enfermeros"
                   fill
                   sizes="(max-width: 768px) 192px, (max-width: 1200px) 256px, 384px"
@@ -154,7 +154,7 @@ const Navbar = () => {
                   >
                     <Link
                       href={link.href}
-                      className={`relative px-4 py-1 font-medium text-[#0d70af] ${
+                      className={`relative px-4 py-1 font-medium text-red-600 ${
                         pathname === link.href ? "font-semibold" : ""
                       } transition-colors duration-200`}
                     >
@@ -162,14 +162,14 @@ const Navbar = () => {
                       {pathname === link.href && (
                         <motion.span
                           layoutId="nav-underline"
-                          className="absolute left-0 bottom-0 w-full h-0.5 bg-[#0d70af]"
+                          className="absolute left-0 bottom-0 w-full h-0.5 bg-red-600"
                           transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                         />
                       )}
                     </Link>
                   </motion.div>
                   {index < links.length - 1 && (
-                    <span className="text-[#0d70af] mx-1 opacity-70">|</span>
+                    <span className="text-red-600 mx-1 opacity-70">|</span>
                   )}
                 </div>
               ))}
@@ -177,15 +177,15 @@ const Navbar = () => {
 
             {/* Botón móvil (Hamburguesa / X) */}
             <motion.button
-              className="md:hidden p-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0d70af] transition-transform duration-200 z-[100]"
+              className="md:hidden p-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-600 transition-transform duration-200 z-[100]"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Menú de navegación"
               whileTap={{ scale: 0.9 }}
             >
               {mobileMenuOpen ? (
-                <X className="w-8 h-8 text-[#0d70af]" />
+                <X className="w-8 h-8 text-red-600" />
               ) : (
-                <Menu className="w-8 h-8 text-[#0d70af]" />
+                <Menu className="w-8 h-8 text-red-600" />
               )}
             </motion.button>
           </div>
@@ -211,17 +211,17 @@ const Navbar = () => {
                 animate="open"
                 exit="closed"
                 variants={mobileMenuContainerVariants}
-                className="fixed top-0 right-0 h-full w-3/4 max-w-xs bg-[#E1F5FE] shadow-xl md:hidden z-50 flex flex-col border-l border-gray-200" // bg-white, sharper shadow, border
+                className="fixed top-0 right-0 h-full w-3/4 max-w-xs bg-white shadow-xl md:hidden z-50 flex flex-col border-l border-gray-200" // bg-white, sharper shadow, border
               >
                 {/* Header del menú con botón de cierre */}
-                <div className="flex justify-end p-4 border-b bg-[#E1F5FE]"> {/* Added border-b for separation */}
+                <div className="flex justify-end p-4 border-b bg-white"> {/* Added border-b for separation */}
                   <motion.button
-                    className="p-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 transition-transform duration-200"
+                    className="p-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-600 transition-transform duration-200"
                     onClick={() => setMobileMenuOpen(false)}
                     aria-label="Cerrar menú"
                     whileTap={{ scale: 0.9 }}
                   >
-                    <X className="w-7 h-7 text-gray-500 hover:text-gray-700" /> {/* Neutral icon color */}
+                    <X className="w-7 h-7 text-gray-500 hover:text-red-500" /> {/* Neutral icon color */}
                   </motion.button>
                 </div>
 
@@ -233,10 +233,10 @@ const Navbar = () => {
                         href={link.href}
                         className={`
                           block w-full text-left py-2 px-3 rounded-md text-base font-medium
-                          text-gray-700 hover:text-gray-900 hover:bg-gray-100
-                          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500
+                          text-gray-700 hover:text-red-400 hover:bg-gray-100
+                          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400
                           transition-all duration-200
-                          ${pathname === link.href ? "bg-blue-50 text-blue-700" : ""}
+                          ${pathname === link.href ? "bg-blue-50 text-red-400" : ""}
                         `}
                       >
                         {link.label}

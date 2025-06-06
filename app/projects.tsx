@@ -66,18 +66,18 @@ export function Projects() {
   }, []);
 
   if (loading)
-    return <div className="text-white text-center py-20">Cargando cursos...</div>;
+    return <div className="text-black text-center py-20">Cargando cursos...</div>; // Changed text to black for better contrast on white bg
   if (error)
     return <div className="text-red-500 text-center py-20">{error}</div>;
   if (courses.length === 0)
     return (
-      <div className="text-gray-400 text-center py-20">
+      <div className="text-gray-600 text-center py-20">
         No hay cursos disponibles.
       </div>
     );
 
   return (
-    <section className="w-full  bg-[#26374c] py-12 md:py-20 px-4 md:px-8 lg:px-16 flex justify-center items-center">
+    <section className="w-full bg-white py-12 md:py-20 px-4 md:px-8 lg:px-16 flex justify-center items-center">
       <Carousel opts={{ align: "start", loop: true }} className="w-full max-w-7xl">
         <CarouselContent>
           {courses.map((course, index) => (
@@ -87,11 +87,11 @@ export function Projects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="flex flex-col md:flex-row items-center gap-6 md:gap-10 bg-[#0f1e26] rounded-2xl p-6 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-300"
+                className="flex flex-col md:flex-row items-center gap-6 md:gap-10 bg-white rounded-2xl p-6 md:p-10 shadow-slate-400 hover:shadow-xl transition-all duration-300 border border-gray-400" // Added shadow-lg and border
               >
                 <Link
                   href={`/cursos/${course.slug}`}
-                  className="w-full md:w-1/2 aspect-video relative rounded-xl overflow-hidden shadow-lg order-1 md:order-2 group"
+                  className="w-full md:w-1/2 aspect-video relative rounded-xl overflow-hidden shadow-md order-1 md:order-2 group" // Adjusted shadow for image
                   aria-label={`Ver detalles de ${course.titulo}`}
                 >
                   <Image
@@ -104,12 +104,12 @@ export function Projects() {
                   />
                 </Link>
 
-                <div className="w-full md:w-1/2 space-y-4 md:space-y-5 text-white order-2 md:order-1">
+                <div className="w-full md:w-1/2 space-y-4 md:space-y-5 text-gray-800 order-2 md:order-1"> {/* Changed text color for better contrast */}
                   <motion.span
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ delay: 0.3 }}
-                    className="bg-yellow-400 text-black px-3 py-1 rounded-md text-sm font-semibold inline-block shadow"
+                    className="bg-red-500 text-white px-3 py-1 rounded-md text-sm font-semibold inline-block shadow-sm" // Adjusted shadow for badge
                   >
                     PRÓXIMO LANZAMIENTO
                   </motion.span>
@@ -118,24 +118,19 @@ export function Projects() {
                     {course.titulo}
                   </h2>
 
-                  <p className="text-gray-300 text-sm">{course.fechatext}</p>
-                  <p className="text-gray-400 leading-relaxed text-sm md:text-base">
+                  <p className="text-red-600 text-sm">{course.fechatext}</p> {/* Adjusted text color */}
+                  <p className="text-gray-700 leading-relaxed text-sm md:text-base"> {/* Adjusted text color */}
                     {course.descripcion}
                   </p>
 
-                  <Link
-                    href={`/cursos/${course.slug}`}
-                    className="text-cyan-300 font-semibold underline hover:text-cyan-200 transition text-sm md:text-base block"
-                  >
-                    Más detalles
-                  </Link>
+              
 
                   <Link href={`/cursos/${course.slug}`} passHref>
                     <Button
-                      className="w-full md:w-auto mt-4 md:mt-6 bg-yellow-400 text-black hover:bg-yellow-300 font-semibold transition hover:scale-105 text-sm md:text-base"
+                      className="w-full md:w-auto mt-4 md:mt-6 bg-red-500 text-white hover:bg-red-400 font-semibold transition hover:scale-105 text-sm md:text-base shadow-md" // Added shadow for button
                       asChild
                     >
-                      <span>🛒 Compra tu entrada ahora</span>
+                      <span>mas informacion</span>
                     </Button>
                   </Link>
                 </div>
