@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const links = [
-  { href: "/cursosall", label: "Cursos" },
+  { href: "/cursosall", label: "Cursoss" },
   { href: "/projects", label: "Certificados" },
   { href: "/docentes", label: "Profesores" },
   { href: "/about", label: "Nosotros" },
