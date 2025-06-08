@@ -118,7 +118,7 @@ const Footer = () => {
                 transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
               >
                 <Image
-                  src="/logo02.webp"
+                  src="/logoing.webp"
                   alt="Logo Asociación de Enfermeros"
                   fill
                   sizes="100vw"
@@ -135,7 +135,7 @@ const Footer = () => {
           {/* Section: JEDteam (About) */}
           <div className="py-2">
             <h2 className="text-lg font-bold mb-4 text-red-600">
-              Asociacion de Enfermeros
+              Club de Ingenieros
             </h2>
             <nav>
               <ul className="space-y-2 sm:space-y-3">
@@ -232,7 +232,7 @@ const Footer = () => {
             <Link
               key={social.name}
               href={social.href}
-              className="text-gray-600 hover:text-[#0d70af] transition-colors p-2 sm:p-3 rounded-full hover:scale-110 transform transition-transform"
+              className="text-red-600 hover:text-[#0d70af] transition-colors p-2 sm:p-3 rounded-full hover:scale-110 transform transition-transform"
               aria-label={social.name}
             >
               <social.icon size={24} className="w-6 h-6" />

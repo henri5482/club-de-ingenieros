@@ -117,9 +117,9 @@ export default async function CourseDetail({
 
   if (!course) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-[#0f1e26] text-white">
+      <div className="min-h-screen flex flex-col items-center justify-center bg-white text-red-600">
         <p className="text-xl mb-4">Curso no encontrado.</p>
-        <Link href="/" className="text-cyan-300 hover:underline">
+        <Link href="/" className="text-red-600 hover:underline">
           Volver al inicio
         </Link>
       </div>
@@ -142,35 +142,37 @@ export default async function CourseDetail({
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-[#0f1e26] text-white py-12 px-4 md:px-8 lg:px-16 pt-40">
-        <div className="max-w-7xl mx-auto bg-[#1a2c3b] rounded-2xl p-6 md:p-10 shadow-2xl">
+      <div className="min-h-screen bg-white text-gray-800 py-12 px-2 md:px-8 pt-40">
+        <div className="max-w-7xl mx-auto bg-white rounded-2xl p-4 md:p-8 shadow-lg">
           {/* Top Section: Title, description, and main content */}
           <div className="flex flex-col md:flex-row gap-8 mb-8">
             {/* Left Column: Textual content */}
             <div className="flex-1">
               <div className="flex flex-wrap gap-2 mb-4">
-                <div className="bg-yellow-400 text-black px-4 py-2 rounded-md font-semibold inline-block">
+                <div className="bg-red-600 text-white px-4 py-2 rounded-md font-semibold inline-block">
                   PRÓXIMO LANZAMIENTO
                 </div>
-                <div className="bg-yellow-400 text-black px-4 py-2 rounded-md font-semibold inline-block">
+                <div className="bg-red-600 text-white px-4 py-2 rounded-md font-semibold inline-block">
                   <span>Las clases empiezan el </span>
                   <span className="font-bold">{startDate}</span>
                 </div>
               </div>
-              <h1 className="text-3xl md:text-4xl font-bold mb-4">
+              <h1 className="text-2xl md:text-4xl font-bold mb-4 text-gray-900">
                 {course.titulo}
               </h1>
-              <p className="text-gray-300 text-lg mb-6">{course.descripcion}</p>
+              <p className="text-gray-700 text-lg mb-6">{course.descripcion}</p>
 
               {/* "¿Qué aprenderás?" Section */}
               {course.learnings && course.learnings.length > 0 && (
                 <div className="mb-8">
-                  <h2 className="text-2xl font-bold mb-4">¿Qué aprenderás?</h2>
+                  <h2 className="text-2xl font-bold mb-4 text-gray-900 border-b-2 border-red-100 pb-2">
+                    ¿Qué aprenderás?
+                  </h2>
                   <ul className="space-y-3">
                     {course.learnings.map((item, index) => (
                       <li key={index} className="flex items-start">
-                        <span className="text-cyan-300 mr-2 mt-1">•</span>
-                        <span className="text-lg text-gray-300">{item}</span>
+                        <span className="text-red-600 mr-2 mt-1">•</span>
+                        <span className="text-lg text-gray-700">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -181,45 +183,48 @@ export default async function CourseDetail({
               <div className="flex flex-col md:flex-row items-center gap-4 mt-8 w-full">
                 {/* Botón "Ver más cursos" */}
                 <Button
-                  className="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-gray-900 font-semibold py-5 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-[1.02] flex items-center gap-3 min-w-[240px] justify-center"
+                  className="w-full bg-amber-500 hover:bg-red-600 text-white font-bold py-5 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-[1.02] flex items-center justify-between group"
                   asChild
                 >
-                  <Link href="/premium-subscription">
+                  <a
+                    href={`https://wa.me/51987654321?text=Hola%2C%20quisiera%20saber%20mas%20sobre%20la%20suscripcion%20premium%20`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="flex items-center gap-4">
+                      <div className="text-left">
+                        <div className="text-base font-semibold">Suscripción Premium</div>
+                      </div>
+                    </div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-6 w-6"
+                      className="h-5 w-5 opacity-80 group-hover:translate-x-1 transition-transform"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
                     >
-                      <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
-                      <path d="M5 3v4" />
-                      <path d="M19 17v4" />
-                      <path d="M3 5h4" />
-                      <path d="M17 19h4" />
+                      <path
+                        fillRule="evenodd"
+                        d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      />
                     </svg>
-                    <span className="text-lg">Explorar cursos</span>
-                  </Link>
+                  </a>
                 </Button>
 
-                {/* Botón "Comprar curso" */}
-                <div className="relative w-full max-w-md">
+                <div className="relative w-full max-w-md mx-auto">
                   <Button
-                    className={`w-full bg-gradient-to-r ${
-                      course.descuento
-                        ? "from-purple-600 to-indigo-600"
-                        : "from-blue-600 to-cyan-600"
-                    } hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-5 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-[1.02] flex items-center justify-between group`}
+                    className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-5 px-2 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-[1.02] flex items-center justify-between group"
                     asChild
                   >
-                    <Link href="/checkout">
-                      <div className="flex items-center gap-4">
-                        <div className="bg-white/20 p-3 rounded-lg group-hover:bg-white/30 transition-all">
+                    <a
+                      href={`https://wa.me/51987654321?text=Hola%2C%20estoy%20interesado%20en%20comprar%20el%20curso%20*${encodeURIComponent(course.titulo)}*%20a%20S/%20${(
+                        (course.precio ?? 0) * (1 - (course.descuento ?? 0))
+                      ).toFixed(2)}.`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <div className="flex items-center gap-0">
+                        <div className="p-3 rounded-lg transition-all">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-6 w-6"
@@ -236,18 +241,17 @@ export default async function CourseDetail({
                           </svg>
                         </div>
                         <div className="text-left">
-                          <div className="text-sm font-medium opacity-90"></div>
+                          <div className="text-sm font-medium opacity-90">
+                            Comprar curso
+                          </div>
                           <div className="text-xl font-bold">
                             {course.descuento && course.precio ? (
                               <>
                                 <span className="text-white mr-2">
                                   S/
-                                  {(
-                                    course.precio *
-                                    (1 - course.descuento)
-                                  ).toFixed(2)}
+                                  {(course.precio * (1 - course.descuento)).toFixed(2)}
                                 </span>
-                                <span className="line-through text-white/70 text-sm ">
+                                <span className="line-through text-white/70 text-sm">
                                   S/{course.precio.toFixed(2)}
                                 </span>
                               </>
@@ -269,7 +273,7 @@ export default async function CourseDetail({
                           clipRule="evenodd"
                         />
                       </svg>
-                    </Link>
+                    </a>
                   </Button>
 
                   {course.descuento && (
@@ -296,9 +300,9 @@ export default async function CourseDetail({
             </div>
 
             {/* Right Column: Image and course details */}
-            <div className="bg-[#1f2937] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col h-full transform hover:-translate-y-2 cursor-pointer group">
+            <div className="bg-white rounded-2xl transition-all duration-300 overflow-hidden flex flex-col h-full transform hover:-translate-y-2 cursor-pointer group">
               {/* Imagen: RESPONSIVA y no cortada */}
-              <div className="relative w-full aspect-video bg-gray-800 overflow-hidden">
+              <div className="relative w-full aspect-video bg-gray-100 overflow-hidden">
                 <Image
                   src={course.src}
                   alt={course.name}
@@ -308,38 +312,38 @@ export default async function CourseDetail({
                   priority
                 />
               </div>
-              <div className="bg-[#223344] rounded-lg p-6">
+              <div className="bg-white rounded-lg p-2 md:p-6">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center md:text-left">
-                    <p className="text-gray-400 text-sm uppercase tracking-wider mb-1">
+                    <p className="text-gray-500 text-sm uppercase tracking-wider mb-1">
                       Fecha
                     </p>
-                    <p className="font-semibold text-lg">
+                    <p className="font-semibold text-sm md:text-lg text-gray-800">
                       {course.details.date}
                     </p>
                   </div>
                   <div className="text-center md:text-left">
-                    <p className="text-gray-400 text-sm uppercase tracking-wider mb-1">
+                    <p className="text-gray-500 text-sm uppercase tracking-wider mb-1">
                       Duración
                     </p>
-                    <p className="font-semibold text-lg">
+                    <p className="font-semibold text-sm md:text-lg text-gray-800">
                       {course.details.duration}
                     </p>
                   </div>
                   <div className="text-center md:text-left">
-                    <p className="text-gray-400 text-sm uppercase tracking-wider mb-1">
+                    <p className="text-gray-500 text-sm uppercase tracking-wider mb-1">
                       Estudiantes
                     </p>
-                    <p className="font-semibold text-lg">
+                    <p className="font-semibold text-sm md:text-lg text-gray-800">
                       {course.remainingSeats}
                     </p>
                   </div>
                   {course.details.offer && (
                     <div className="text-center md:text-left">
-                      <p className="text-gray-400 text-sm uppercase tracking-wider mb-1">
+                      <p className="text-gray-500 text-sm uppercase tracking-wider mb-1">
                         Oferta
                       </p>
-                      <p className="font-semibold text-lg text-cyan-300">
+                      <p className="font-semibold text-sm md:text-lg text-red-600">
                         {course.details.offer}
                       </p>
                     </div>
@@ -353,30 +357,32 @@ export default async function CourseDetail({
           <div className="flex flex-col lg:flex-row gap-8 mb-10">
             {/* Syllabus Column (2/3 width) */}
             <div className="lg:w-2/3">
-              <h2 className="text-2xl font-bold mb-6">Temario del Curso</h2>
+              <h2 className="text-2xl font-bold mb-6 text-red-600 border-b-2 border-red-100 pb-2">Temario del Curso</h2>
+
               {course.temarios && course.temarios.length > 0 ? (
                 <Accordion
                   type="single"
                   collapsible
-                  className="w-full space-y-2"
+                  className="w-full space-y-4 "
                 >
                   {course.temarios.map((temario, index) => (
                     <AccordionItem
                       key={`temario-${index}`}
                       value={`item-${index}`}
-                      className="border border-gray-700 rounded-lg overflow-hidden"
+                      className="border border-red-200 rounded-lg overflow-hidden hover:border-red-300 transition-colors  "
                     >
-                      <AccordionTrigger className="text-lg font-semibold hover:no-underline px-6 py-4 bg-[#223344] hover:bg-[#2a3c4b] transition-colors duration-200">
-                        <span className="text-left">
-                          {index + 1}. {temario.title}
+                      <AccordionTrigger className=" text-base md:text-lg font-semibold hover:no-underline px-6 py-4 bg-white hover:bg-red-50 transition-colors duration-200 text-gray-800">
+                        <span className="text-left flex items-center">
+                      
+                          {temario.title}
                         </span>
                       </AccordionTrigger>
-                      <AccordionContent className="bg-[#1a2c3b] px-6 py-4">
-                        <ul className="list-disc list-inside space-y-2 text-gray-300">
+                      <AccordionContent className="bg-white px-6 py-4">
+                        <ul className="list-disc list-inside space-y-2 text-gray-700">
                           {temario.items.map((item, itemIndex) => (
                             <li
                               key={`temario-item-${index}-${itemIndex}`}
-                              className="text-base"
+                              className="text-sm md:text-base"
                             >
                               {item}
                             </li>
@@ -387,18 +393,18 @@ export default async function CourseDetail({
                   ))}
                 </Accordion>
               ) : (
-                <p className="text-gray-400 text-center py-4">
+                <p className="text-gray-500 text-center py-8 bg-red-50 rounded-lg">
                   No hay temario disponible para este curso.
                 </p>
               )}
 
               {/* "Acerca del curso" Section */}
               {course.about && (
-                <div className="mt-8 bg-[#223344] rounded-lg p-6 border border-[#2a3c4b]">
-                  <h2 className="text-xl font-bold mb-4 flex items-center">
+                <div className="mt-8 bg-red-50 rounded-lg p-6 border border-red-100">
+                  <h2 className="text-xl font-bold mb-4 flex items-center text-red-600">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 mr-2 text-cyan-400"
+                      className="h-6 w-6 mr-2 text-red-600"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -412,19 +418,20 @@ export default async function CourseDetail({
                     </svg>
                     Acerca del curso
                   </h2>
-                  <div className="text-gray-300 space-y-4">
+                  <div className="text-gray-700 space-y-4">
                     {course.about.split("\n").map((paragraph, index) => (
                       <p key={index}>{paragraph}</p>
                     ))}
                   </div>
                 </div>
               )}
+
               {!course.about && (
-                <div className="mt-8 bg-[#223344] rounded-lg p-6 border border-[#2a3c4b]">
-                  <h2 className="text-xl font-bold mb-4 flex items-center">
+                <div className="mt-8 bg-red-50 rounded-lg p-6 border border-red-100">
+                  <h2 className="text-xl font-bold mb-4 flex items-center text-red-600">
                     Acerca del curso
                   </h2>
-                  <p className="text-gray-400">
+                  <p className="text-gray-500">
                     Información detallada no disponible para este curso.
                   </p>
                 </div>
@@ -434,14 +441,15 @@ export default async function CourseDetail({
             {/* Professors Column (1/3 width) */}
             {course.profesores && course.profesores.length > 0 && (
               <div className="lg:w-1/3">
-                <h2 className="text-2xl font-bold mb-6">
+                <h2 className="text-2xl font-bold mb-6 text-red-600 border-b-2 border-red-100 pb-2">
                   Profesores del Curso
                 </h2>
-                <div className="bg-[#223344] rounded-lg p-6 shadow-lg">
+
+                <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
                   <div className="space-y-6">
                     {course.profesores.map((profesor, index) => (
                       <div key={index} className="flex items-start gap-4">
-                        <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0 border-2 border-cyan-400">
+                        <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0 border-2 border-red-500">
                           <Image
                             src={profesor.imagen}
                             alt={profesor.nombre}
@@ -451,14 +459,14 @@ export default async function CourseDetail({
                           />
                         </div>
                         <div>
-                          <h3 className="text-lg font-semibold text-white">
+                          <h3 className="text-lg font-semibold text-gray-800">
                             {profesor.nombre}
                           </h3>
                           {profesor.usuarioSocial && (
                             <div className="mt-1">
                               <Link
                                 href={profesor.enlacePerfil || "#"}
-                                className="text-cyan-400 hover:text-cyan-300 text-sm inline-flex items-center"
+                                className="text-red-600 hover:text-red-500 text-sm inline-flex items-center"
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
@@ -487,12 +495,12 @@ export default async function CourseDetail({
 
                   {/* "Para quien es este curso" Section */}
                   {course.paraQuienEs && course.paraQuienEs.length > 0 && (
-                    <div className="mt-10 border-t-[1px] border-[#566f82] py-4">
-                      <h2 className="text-xl font-bold mb-1">
+                    <div className="mt-8 border-t border-gray-200 pt-6">
+                      <h2 className="text-xl font-bold mb-3 text-red-600">
                         ¿Para quién es este curso?
                       </h2>
-                      <div className="bg-[#223344] rounded-lg shadow-lg">
-                        <ul className="list-disc list-outside p-4 space-y-2 text-gray-300">
+                      <div className="bg-red-50 rounded-lg p-4">
+                        <ul className="list-disc list-inside space-y-2 text-gray-700">
                           {course.paraQuienEs.map((item, index) => (
                             <li key={`para-quien-${index}`} className="text-sm">
                               {item}
@@ -504,26 +512,25 @@ export default async function CourseDetail({
                   )}
 
                   {/* "Conocimientos Previos" Section */}
-                  {course.conocimientosPrevios &&
-                    course.conocimientosPrevios.length > 0 && (
-                      <div className="mt-10 border-t-[1px] border-[#566f82] py-4 ">
-                        <h2 className="text-2xl font-bold mb-1">
-                          Conocimientos Previos
-                        </h2>
-                        <div className="bg-[#223344] rounded-lg shadow-lg">
-                          <ul className="list-disc list-outside p-4 space-y-2 text-gray-300">
-                            {course.conocimientosPrevios.map((item, index) => (
-                              <li
-                                key={`conocimientos-${index}`}
-                                className="text-sm"
-                              >
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
+                  {course.conocimientosPrevios && course.conocimientosPrevios.length > 0 && (
+                    <div className="mt-8 border-t border-gray-200 pt-6">
+                      <h2 className="text-xl font-bold mb-3 text-red-600">
+                        Conocimientos Previos
+                      </h2>
+                      <div className="bg-red-50 rounded-lg p-4">
+                        <ul className="list-disc list-inside space-y-2 text-gray-700">
+                          {course.conocimientosPrevios.map((item, index) => (
+                            <li
+                              key={`conocimientos-${index}`}
+                              className="text-sm"
+                            >
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                    )}
+                    </div>
+                  )}
                 </div>
               </div>
             )}
@@ -532,14 +539,16 @@ export default async function CourseDetail({
           {/* Related Courses Section */}
           {relatedCourses.length > 0 && (
             <div className="mt-12">
-              <h2 className="text-2xl font-bold mb-6">Cursos relacionados</h2>
+              <h2 className="text-2xl font-bold mb-6 text-gray-900 border-b-2 border-red-100 pb-2">
+                Cursos relacionados
+              </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {relatedCourses.map((relatedCourse) => (
                   <Link
                     href={`/cursosall/${relatedCourse.slug}`}
                     key={relatedCourse.id}
                   >
-                    <div className="bg-[#223344] rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] transition-transform duration-300 cursor-pointer">
+                    <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] transition-transform duration-300 cursor-pointer border border-gray-100">
                       <div className="relative h-40">
                         <Image
                           src={relatedCourse.src}
@@ -550,9 +559,12 @@ export default async function CourseDetail({
                         />
                       </div>
                       <div className="p-4">
-                        <h3 className="text-lg font-semibold text-white">
+                        <h3 className=" text-base text-lg font-semibold text-gray-900">
                           {relatedCourse.titulo}
                         </h3>
+                        <p className="text-red-600 font-medium mt-2">
+                          {relatedCourse.details.date}
+                        </p>
                       </div>
                     </div>
                   </Link>

@@ -8,7 +8,7 @@ import Cursos from "./Cursos"; // Importa el componente Cursos
 
 const CursosAllPage = () => {
   return (
-    <div className="md:min-h-screen bg-[#26374c] ">
+    <div className="md:min-h-screen bg-white ">
       <Navbar />
       <div className="py-10">
         <Projects />

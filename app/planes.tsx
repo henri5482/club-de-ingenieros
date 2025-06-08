@@ -16,7 +16,7 @@ interface Plan {
   name: string;
   type: 'basic' | 'expert' | 'expert-duo';
   audience: 'personas' | 'empresas';
-  billingCycle: 'mensual' | 'anual';
+  billingCycle: 'Trimestral' | "Semestral" | 'anual';
   price: number;
   currency: string;
   oldPrice?: number;
@@ -37,63 +37,70 @@ const planesData: Plan[] = [
     name: 'Plan Basic',
     type: 'basic',
     audience: 'personas',
-    billingCycle: 'mensual',
-    price: 149,
+    billingCycle: 'Trimestral',
+    price: 199,
     currency: 'S/',
     features: [
       { text: 'Para 1 estudiante', included: true },
-      { text: 'Contenido profesional y actualizado con certificados digitales', included: true },
-      { text: 'Certificados físicos para las rutas de aprendizaje profesional', included: false },
-      { text: 'Acceso a las escuelas de Startups, Inglés y liderazgo', included: false },
-      { text: 'Eventos exclusivos como Platzi Conf', included: false },
-      { text: 'Descarga contenido en la app móvil', included: false },
+      { text: 'Acceso ilimitado a todos los cursos durante 3 meses', included: true },
+      { text: 'Descarga de contenido', included: true },
+      { text: 'Certificados digitales por cada curso completado', included: true },
+      { text: 'Acceso a eventos exclusivos y comunidad', included: false },
+      { text: 'Soporte prioritario 24/7', included: false },
     ],
     callToAction: 'Suscríbete a Plan Basic',
   },
   {
     id: 'personas-expert',
-    name: 'Plan Expert',
+    name: 'Plan Master',
     type: 'expert',
     audience: 'personas',
-    billingCycle: 'anual',
-    price: 890,
+    billingCycle: 'Semestral',
+    price: 299,
     currency: 'S/',
     discountMonths: 7,
     features: [
       { text: 'Para 1 estudiante', included: true },
-      { text: 'Contenido profesional y actualizado con certificados digitales', included: true },
-      { text: 'Certificados físicos para las rutas de aprendizaje profesional', included: true },
-      { text: 'Acceso a las escuelas de Startups, Inglés y liderazgo', included: true },
-      { text: 'Eventos exclusivos como Platzi Conf', included: true },
-      { text: 'Descarga contenido en la app móvil', included: true },
+      { text: 'Acceso a mas de 10 cursos pasados', included: true },
+      { text: 'Acceso ilimitado a todos los cursos en vivo durante 6 meses', included: true },
+      { text: 'Certificados digitales por cada curso completado', included: true },
+      { text: 'Soporte prioritario 24/7', included: true },
+      { text: 'Descarga de contenido', included: true },
+      { text: 'Proyectos prácticos y mentorías personalizadas', included: false },
+      { text: 'Acceso a eventos exclusivos y comunidad', included: false },
+
     ],
-    callToAction: 'Suscríbete a Plan Expert',
+    callToAction: 'Suscríbete a Plan Master',
     paymentOptions: {
-      installments: 4,
-      amountPerInstallment: 223,
+      installments: 3,
+      amountPerInstallment: 100,
     },
   },
   {
     id: 'personas-expert-duo',
-    name: 'Plan Expert Duo',
+    name: 'Plan Expert ',
     type: 'expert-duo',
     audience: 'personas',
     billingCycle: 'anual',
-    price: 1190, // Precio base para 2 estudiantes
+    price: 499, // Precio base para 2 estudiantes
     currency: 'S/',
     discountMonths: 9,
     features: [
       // La característica de estudiantes se gestionará dinámicamente en el render
-      { text: 'Contenido profesional y actualizado con certificados digitales', included: true },
-      { text: 'Certificados físicos para las rutas de aprendizaje profesional', included: true },
-      { text: 'Acceso a las escuelas de Startups, Inglés y liderazgo', included: true },
-      { text: 'Eventos exclusivos como Platzi Conf', included: true },
-      { text: 'Descarga contenido en la app móvil', included: true },
+      { text: 'Para 1 estudiante', included: true },
+      { text: 'Acceso a mas de 20 cursos pasados', included: true },
+      { text: 'Acceso ilimitado a todos los cursos en vivo', included: true },
+      { text: 'Certificados digitales por cada curso completado', included: true },
+      { text: 'Proyectos prácticos y mentorías personalizadas', included: true },
+      { text: 'Acceso a eventos exclusivos y comunidad', included: true },
+      { text: 'Soporte prioritario 24/7', included: true },
+      { text: 'Descarga de contenido', included: true },
+
     ],
-    callToAction: 'Suscríbete a Plan Expert Duo',
+    callToAction: 'Suscríbete a Plan Expert ',
     paymentOptions: {
-      installments: 4,
-      amountPerInstallment: 298, // Cuota base para 2 estudiantes
+      installments: 3,
+      amountPerInstallment: 166, // Cuota base para 2 estudiantes
     },
   },
 
@@ -135,19 +142,11 @@ const planesData: Plan[] = [
 
 const Planes = () => {
   const [currentAudience, setCurrentAudience] = useState<'personas' | 'empresas'>('personas');
-  const [expertDuoStudents, setExpertDuoStudents] = useState<'2' | '4'>('2'); // Estado para la opción de estudiantes
 
   const filteredPlanes = planesData.filter(plan => plan.audience === currentAudience);
 
-  // Define los valores específicos para el Plan Expert Duo de 4 estudiantes
-  const expertDuo4StudentsConfig = {
-    price: 1590, // Precio para 4 estudiantes
-    oldPrice: 1990, // Opcional: un precio "tachado" si quieres mostrar un descuento para 4 estudiantes
-    paymentOptions: {
-      installments: 4,
-      amountPerInstallment: 398, // Cuota para 4 estudiantes
-    },
-  };
+  // --- NUEVA CONSTANTE PARA EL NÚMERO DE WHATSAPP ---
+  const WHATSAPP_NUMBER = '51936972560';
 
   // Variantes para Framer Motion: Animaciones más rápidas y dinámicas
   const headingVariants = {
@@ -276,43 +275,16 @@ const Planes = () => {
               let displayFeatures = [...plan.features];
 
               // Lógica para Expert Duo: ajustar precio, cuotas y características
-              if (currentPlan.type === 'expert-duo' && currentAudience === 'personas') {
-                let studentFeatureText = '';
 
-                if (expertDuoStudents === '4') {
-                  currentPlan.price = expertDuo4StudentsConfig.price;
-                  currentPlan.oldPrice = expertDuo4StudentsConfig.oldPrice;
-                  currentPlan.paymentOptions = expertDuo4StudentsConfig.paymentOptions;
-                  studentFeatureText = '4 estudiantes';
-                } else {
-                  const originalDuoPlan = planesData.find(p => p.id === 'personas-expert-duo');
-                  if (originalDuoPlan) {
-                    currentPlan.price = originalDuoPlan.price;
-                    currentPlan.oldPrice = originalDuoPlan.oldPrice;
-                    currentPlan.paymentOptions = originalDuoPlan.paymentOptions;
-                  }
-                  studentFeatureText = '2 estudiantes';
-                }
-
-                const existingStudentFeatureIndex = displayFeatures.findIndex(f => f.text.includes('estudiantes'));
-                if (existingStudentFeatureIndex !== -1) {
-                  displayFeatures[existingStudentFeatureIndex] = { text: studentFeatureText, included: true };
-                } else {
-                  displayFeatures.unshift({ text: studentFeatureText, included: true });
-                }
-              }
               // Lógica para Plan Basic: asegurar la característica de 1 estudiante
-              else if (currentPlan.type === 'basic' && currentAudience === 'personas') {
-                const studentFeatureText = 'Para 1 estudiante';
-                const existingStudentFeatureIndex = displayFeatures.findIndex(f => f.text.includes('estudiante'));
-                if (existingStudentFeatureIndex === -1) {
-                  displayFeatures.unshift({ text: studentFeatureText, included: true });
-                }
-              }
+
+              // --- CONSTRUCCIÓN DEL ENLACE DE WHATSAPP ---
+              const whatsappMessage = encodeURIComponent(`¡Hola! Estoy interesado en el plan ${currentPlan.name} de ${currentPlan.audience}.`);
+              const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`;
 
               return (
                 <motion.div
-                  key={currentPlan.id + expertDuoStudents} // Clave única para forzar la reanimación al cambiar estudiantes
+                  key={currentPlan.id} // Clave única para forzar la reanimación al cambiar estudiantes
                   variants={itemVariants}
                   className={`
                     relative flex flex-col rounded-3xl p-6 sm:p-8 shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-2xl
@@ -332,31 +304,14 @@ const Planes = () => {
                   {/* Encabezado del plan */}
                   <div className="text-left mb-4 sm:mb-6 shax">
                     <h3 className="text-2xl sm:text-3xl font-bold text-red-600 mb-1">{currentPlan.name}</h3>
-                    <span className="text-slate-900text-sm">{currentPlan.billingCycle === 'mensual' ? 'Mensual' : 'Anual'}</span>
-                    {currentPlan.type === 'expert-duo' && currentAudience === 'personas' && (
-                      <div className="flex flex-wrap items-center space-x-3 sm:space-x-4 mt-3"> {/* Adjusted spacing */}
-                        <label className="flex items-center text-slate-900 text-sm cursor-pointer mb-1 sm:mb-0"> {/* Adjusted margin-bottom */}
-                          <input
-                            type="radio"
-                            name={`students-${currentPlan.id}`}
-                            className="form-radio text-blue-500 mr-2"
-                            checked={expertDuoStudents === '2'}
-                            onChange={() => setExpertDuoStudents('2')}
-                          />
-                          2 estudiantes
-                        </label>
-                        <label className="flex items-center text-slate-900 text-sm cursor-pointer mb-1 sm:mb-0"> {/* Adjusted margin-bottom */}
-                          <input
-                            type="radio"
-                            name={`students-${currentPlan.id}`}
-                            className="form-radio text-blue-500 mr-2"
-                            checked={expertDuoStudents === '4'}
-                            onChange={() => setExpertDuoStudents('4')}
-                          />
-                          4 estudiantes
-                        </label>
-                      </div>
-                    )}
+                    <span className="text-slate-900 text-sm">
+                      {currentPlan.billingCycle === 'Trimestral'
+                        ? 'Trimestral'
+                        : currentPlan.billingCycle === 'Semestral'
+                          ? 'Semestral'
+                          : 'Anual'}
+                    </span>
+
                   </div>
 
                   {/* Precio */}
@@ -365,7 +320,6 @@ const Planes = () => {
                       {currentPlan.currency}
                       {currentPlan.price.toLocaleString('es-PE', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
                     </span>
-                    <span className="text-slate-900 text-lg sm:text-xl ml-2">/{currentPlan.billingCycle === 'mensual' ? 'mes' : 'año'}</span>
                     {currentPlan.oldPrice && (
                       <span className="text-slate-700 line-through text-base sm:text-lg ml-2 sm:ml-3">
                         {currentPlan.currency}
@@ -373,16 +327,16 @@ const Planes = () => {
                       </span>
                     )}
                   </div>
-                  <p className="text-slate-900 text-xs sm:text-sm mb-4 sm:mb-6">{currentPlan.billingCycle === 'mensual' ? 'Cobro mensual recurrente' : ''}</p>
+                  <p className="text-slate-900 text-xs sm:text-sm mb-4 sm:mb-6">{currentPlan.billingCycle === 'Trimestral' ? 'Cobro mensual recurrente' : ''}</p>
 
                   {/* Lista de características (ahora usa displayFeatures) */}
                   <ul className="text-left space-y-3 sm:space-y-4 flex-grow mb-6 sm:mb-8">
                     {displayFeatures.map((feature, index) => (
                       <li key={index} className={`flex items-start ${feature.included ? 'text-slate-900' : 'text-gray-500 line-through'}`}> {/* Changed items-center to items-start for better multi-line text alignment */}
                         {feature.included ? (
-                          <FaCheckCircle className="text-green-400 mr-3 text-base sm:text-lg flex-shrink-0 mt-1" /> 
+                          <FaCheckCircle className="text-green-400 mr-3 text-base sm:text-lg flex-shrink-0 mt-1" />
                         ) : (
-                          <FaTimesCircle className="text-red-500 mr-3 text-base sm:text-lg flex-shrink-0 mt-1" /> 
+                          <FaTimesCircle className="text-red-500 mr-3 text-base sm:text-lg flex-shrink-0 mt-1" />
                         )}
                         <span className="text-xs sm:text-sm">{feature.text}</span> {/* Adjusted font size */}
                       </li>
@@ -402,12 +356,18 @@ const Planes = () => {
                   )}
 
                   {/* Botón de llamada a la acción */}
-                  <button
-                    className={`w-full py-3 sm:py-4 rounded-xl text-base sm:text-lg font-bold text-white transition-colors duration-300 shadow-lg
+                  {/* --- MODIFICACIÓN DEL BOTÓN A UN ENLACE DE WHATSAPP --- */}
+                  <a
+                    href={whatsappLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-full py-3 sm:py-4 rounded-xl text-base sm:text-lg font-bold text-white transition-colors duration-300 shadow-lg text-center
                       ${getButtonBgColor(currentPlan.type)}`}
                   >
                     {currentPlan.callToAction}
-                  </button>
+                  </a>
+                  {/* --- FIN DE LA MODIFICACIÓN --- */}
+
                 </motion.div>
               );
             })}
