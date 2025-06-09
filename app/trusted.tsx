@@ -12,11 +12,11 @@ const companies = [
   { name: "club de agromos", logo: "/clubdeagronomos.png" },
   { name: "club de ambientalistas", logo: "/clubdeambientalistas.png" },
   { name: "club de enfermeros", logo: "/clubdeenfermeros.png" },
-  { name: "ingenieria y capacitacion", logo: "/ingenieriaycapacitacion.png" },
+  { name: "ingenieria y capacitacion", logo: "/ingenieriaycapacitacion.webp" },
   { name: "club de quimicos y farmaceuticos", logo: "/clubdequimicosfarmaceuticos.png" },
   { name: "colegio de abogados", logo: "/colegiodeabogados.png" },
   { name: "club de abogados", logo: "/clubdeabogados.webp" },
-  { name: "asociacion de enfermeros", logo: "/asociaciondeenfermeros.png" },
+  { name: "asociacion de enfermeros", logo: "/asociaciondeenfermeros.webp" },
 ];
 
 const firstRow = companies.slice(0, Math.ceil(companies.length / 2));

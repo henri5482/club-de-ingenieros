@@ -134,7 +134,7 @@ const Navbar = () => {
               >
                 <Image
                   src="/logoing.webp"
-                  alt="Logo Asociación de Enfermeros"
+                  alt="Club de Ingenieros"
                   fill
                   sizes="(max-width: 768px) 192px, (max-width: 1200px) 256px, 384px"
                   className="object-contain object-left transition-transform group-hover:scale-105"
@@ -247,7 +247,7 @@ const Navbar = () => {
 
                  {/* Optional: Add a footer or branding at the bottom of the mobile menu */}
                  <div className="p-4 border-t border-gray-200 text-sm text-gray-500 text-center">
-                    <p>© 2025 Tu Asociación. Todos los derechos reservados.</p>
+                    <p>© 2025 Club de Ingenieros. Todos los derechos reservados.</p>
                  </div>
               </motion.div>
             </>

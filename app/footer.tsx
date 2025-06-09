@@ -86,7 +86,7 @@ const Footer = () => {
             >
               <Image
                 src="/logoing.webp"
-                alt="Logo Asociación de Enfermeros"
+                alt="Logo Club de Ingenieros"
                 fill
                 sizes="(max-width: 768px) 192px, (max-width: 1200px) 256px, 384px"
                 className="object-contain object-left transition-transform group-hover:scale-105"
@@ -119,7 +119,7 @@ const Footer = () => {
               >
                 <Image
                   src="/logoing.webp"
-                  alt="Logo Asociación de Enfermeros"
+                  alt="Club de Ingenieros"
                   fill
                   sizes="100vw"
                   className="object-contain transition-transform group-hover:scale-105"
