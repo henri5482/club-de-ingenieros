@@ -79,7 +79,7 @@ const testimonials: TestimonialItem[] = [
     id: 6,
     name: "Natalie Yupanqui",
     role: "🇵🇪",
-    avatar: "/avatar4.jpg",
+    avatar: "/",
     comment:
       "Tomé el curso de ingeniería eléctrica y fue muy completo. Me ayudó a validar conocimientos que ahora aplico en proyectos de electrificación rural.",
     rating: 5,
@@ -88,7 +88,7 @@ const testimonials: TestimonialItem[] = [
     id: 7,
     name: "Carlos Mejía",
     role: "🇵🇪",
-    avatar: "/avatar5.jpg",
+    avatar: "/",
     comment:
       "Gracias al curso en gestión ambiental para ingenieros, hoy trabajo en una minera donde aplico directamente lo aprendido. ¡Recomendado!",
     rating: 5,

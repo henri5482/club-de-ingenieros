@@ -3,7 +3,7 @@ const docentesData = [
   {
     id: 'alvaro-felipe',
     name: 'Álvaro Felipe Chávez',
-    image: '/image-2.jpg', // Replace with actual image path
+    image: '/profesorcuencas.webp', // Replace with actual image path
     title: 'Especialista en Cuidados Intensivos',
     profession: 'Enfermero Intensivista',
     bio: 'Álvaro es un referente en el manejo de pacientes críticos. Con más de 15 años de experiencia en unidades de cuidados intensivos pediátricos y adultos, su expertise abarca desde la monitorización avanzada hasta la gestión de equipos de emergencia. Ha capacitado a cientos de profesionales en técnicas de reanimación y soporte vital.',
@@ -24,7 +24,7 @@ const docentesData = [
   {
     id: 'alexys-lozada',
     name: 'Alexys Lozada',
-    image: '/image-2.jpg',
+    image: '/profesorcuencas.webp',
     countryFlag: '/images/flags/peru.png',
     title: 'Experto en Enfermería Geriátrica',
     profession: 'Enfermero Geriatra',
@@ -42,7 +42,7 @@ const docentesData = [
   {
     id: 'alejandro',
     name: 'Alejandro Vargas',
-    image: '/image-2.jpg',
+    image: '/profesorcuencas.webp',
     countryFlag: '/images/flags/chile.png',
     title: 'Especialista en Enfermería Quirúrgica',
     profession: 'Enfermero de Quirófano',
@@ -59,7 +59,7 @@ const docentesData = [
   {
     id: 'manuel-rodriguez',
     name: 'Manuel Rodríguez',
-    image: '/image-2.jpg',
+    image: '/profesorcuencas.webp',
     countryFlag: '/images/flags/colombia.png',
     title: 'Líder en Salud Pública',
     profession: 'Enfermero de Salud Pública',
@@ -76,7 +76,7 @@ const docentesData = [
   {
     id: 'jose-dimas',
     name: 'José Dimas Luján',
-    image: '/image-2.jpg',
+    image: '/profesorcuencas.webp',
     countryFlag: '/images/flags/mexico.png',
     title: 'Experto en Farmacología Clínica',
     profession: 'Farmacólogo Clínico, con enfoque en Enfermería',

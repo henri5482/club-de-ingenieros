@@ -95,7 +95,7 @@ const teamMembers: TeamMemberProps[] = [
   {
     name: "Carli Florida",
     role: "Teacher In-house en Platzi",
-    image: "/image-4.jpg",
+    image: "/profesorcuencas.webp",
     // social: {}, // La propiedad 'social' en los datos puede quedarse, pero la interface y el destructuring se eliminaron
     course: "Curso de Python",
     courseLink: "/docentes",
@@ -104,7 +104,7 @@ const teamMembers: TeamMemberProps[] = [
   {
     name: "Anibal Rojas",
     role: "VP de Ingeniería en Platzi",
-    image: "/image-3.jpg",
+    image: "/profesorcuencas.webp",
     // social: {},
     course: "Curso de ChatGPT para Empresas",
     courseLink: "/docentes",
@@ -113,7 +113,7 @@ const teamMembers: TeamMemberProps[] = [
   {
     name: "Carolina Castañeda",
     role: "Online Tech Teacher en Platzi",
-    image: "/image-2.jpg",
+    image: "/profesorcuencas.webp",
     // social: {},
     course: "Curso de Bases de Datos con SQL",
     courseLink: "/docentes",
@@ -122,7 +122,7 @@ const teamMembers: TeamMemberProps[] = [
   {
     name: "Luis Martinez",
     role: "Platform Engineer en Deel",
-    image: "/image-1.jpg",
+    image: "/profesorcuencas.webp",
     // social: {},
     course: "Curso de Django",
     courseLink: "/docentes",

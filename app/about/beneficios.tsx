@@ -11,19 +11,19 @@ const Beneficios = () => {
   const benefits = [
     {
       id: 1,
-      icon: '/logo-1.svg',
+      icon: '/clubdeingenieros.png',
       title: 'Obtén un gran descuento si eres estudiante',
       description: 'Prepárate un año en EDteam a mitad de precio y consigue tu primer empleo antes de acabar tu carrera.',
     },
     {
       id: 2,
-      icon: '/logo-2.svg',
+      icon: '/clubdeingenieros.png',
       title: 'Trae amigos y estudia gratis',
       description: 'Ayuda a tus contactos a obtener un descuento en EDteam y gana suscripciones premium.',
     },
     {
       id: 3,
-      icon: '/logo-3.svg',
+      icon: '/clubdeingenieros.png',
       title: 'Regala educación a tus seres queridos',
       description: 'Obsequia un curso o una suscripción y ayuda a las personas que más quieres a avanzar en su carrera.',
     },

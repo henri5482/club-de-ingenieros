@@ -16,7 +16,7 @@ const CursosAllPage = () => {
         {/* Hero Section */}
         <section className="container mx-auto px-4 mb-8">
           <h1 className="text-3xl md:text-5xl font-bold text-center text-gray-800 mb-4">
-            Formación de Calidad para Profecionales
+            Formación de Calidad 
           </h1>
           <div className="flex flex-col items-center justify-center mt-8">
             <Image 
@@ -25,7 +25,7 @@ const CursosAllPage = () => {
               width={1500} 
               height={500}
               priority
-              className="w-full  mx-auto rounded-lg shadow-md"
+              className="w-full rounded-lg shadow-md"
             />
           </div>
         </section>

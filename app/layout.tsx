@@ -1,4 +1,4 @@
-import { Analytics } from '@vercel/analytics/react';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import FloatingButtons from './floating-buttons';
@@ -78,7 +78,7 @@ export default function RootLayout({
       <body className={`${font.className} antialiased`}>
         {children}
         <FloatingButtons />
-        <Analytics />
+    <GoogleAnalytics gaId="G-EK501511RW" /> 
       </body>
     </html>
   );
