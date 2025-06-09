@@ -2,13 +2,11 @@
 import { MetadataRoute } from 'next';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://www.asociaciondeenfermerosdelperu.com';
+  const baseUrl = 'https://www.clubdeingeniero.com';
 
 
   const courses = [
-    { slug: 'cuidados-intensivos-pediatricos', lastMod: '2025-05-27T10:00:00Z' },
-    { slug: 'enfermeria-geriatrica', lastMod: '2025-05-20T10:00:00Z' },
-    { slug: 'gestion-servicios-enfermeria', lastMod: '2025-05-15T10:00:00Z' },
+    { slug: 'analisis-cuencas-hidrograficas-qgis', lastMod: '2025-05-27T10:00:00Z' },
 
   ];
 
@@ -29,33 +27,37 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1, // La página de inicio suele tener la prioridad más alta
     },
     {
-      url: `${baseUrl}/nosotros`, // Ejemplo de página "Sobre Nosotros"
+      url: `${baseUrl}/cursosall`, // Ejemplo de página "Sobre Nosotros"
       lastModified: new Date('2025-01-01T00:00:00Z'), // Si es una página que no cambia mucho
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/cursos`, // La página principal que lista todos los cursos
+      url: `${baseUrl}/projects`, // La página principal que lista todos los cursos
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/contacto`, // Página de Contacto
+      url: `${baseUrl}/docentes`, // Página de Contacto
       lastModified: new Date('2025-01-01T00:00:00Z'),
       changeFrequency: 'yearly',
       priority: 0.6,
     },
     // Si tienes un blog
     {
-      url: `${baseUrl}/blog`, // Página del blog
+      url: `${baseUrl}/about`, // Página del blog
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.7,
     },
-    // --- Fin Páginas Estáticas Principales ---
-
-    // Incluye las URLs de los cursos generadas dinámicamente
+      
+    {
+      url: `${baseUrl}/profesor`, // Página del blog
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
     ...courseEntries,
 
     // AÑADE AQUÍ CUALQUIER OTRA PÁGINA ESPECÍFICA QUE QUIERAS INCLUIR EN EL SITEMAP

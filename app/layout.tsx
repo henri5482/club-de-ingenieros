@@ -1,51 +1,70 @@
 import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from 'next/font/google';
-import "./globals.css";
 import FloatingButtons from './floating-buttons';
+import "./globals.css";
 
 const font = Plus_Jakarta_Sans({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-jakarta',
-  weight: ['400', '500', '600', '700'], // Especifica los pesos necesarios
+  weight: ['400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = {
   title: {
-    default: "Asociación de Enfermeros del Perú | Cursos y Diplomados de Enfermería",
-    template: "%s | Asociación de Enfermeros del Perú",
+    default: "Club de Ingenieros | Cursos diplomados y certificaciones",
+    template: "%s | Club de Ingenieros",
   },
-  description: "Potencia tu carrera de enfermería con los mejores cursos, diplomados y especializaciones en Perú. Formación continua, certificaciones y capacitación para enfermeros y estudiantes. ¡Inscríbete hoy!",
-  keywords: "cursos de enfermería, enfermería Perú, capacitación enfermeros, especializaciones enfermería, formación enfermeros, Asociación de Enfermeros del Perú, cursos para enfermeras, cursos para estudiantes de enfermería, diplomados enfermería, certificaciones enfermería, enfermería profesional, actualización enfermería, salud Perú",
+  description: "Cursos especializados con certificado para profesionales y estudiantes. Mejora tus habilidades con formación práctica de alto nivel. Certificaciones reconocidas en el sector.",
+  keywords: [
+    "cursos de ingeniería",
+    "formación para ingenieros",
+    "capacitación ingenieria",
+    "especializaciones en ingeniería",
+    "ingeniería civil",
+    "ingeniería mecánica",
+    "ingeniería eléctrica",
+    "ingeniería industrial",
+    "ingeniería de sistemas",
+    "cursos técnicos para ingenieros",
+    "certificaciones ingeniería",
+    "actualización profesional ingenieros",
+    "maestrías en ingeniería",
+    "diplomados en ingeniería",
+    "Club de Ingenieros"
+  ].join(", "),
   icons: {
-    icon: [{ url: '/favicon.ico', type: 'image/x-icon' }], // Standard type for .ico files
+    icon: [{ url: '/favicon.ico', type: 'image/x-icon' }],
     shortcut: '/favicon.ico',
     apple: '/apple-touch-icon.png',
   },
-  metadataBase: new URL('https://www.asociaciondeenfermerosdelperu.com'), // <--- ¡IMPORTANTE! REEMPLAZA CON TU DOMINIO REAL
+  metadataBase: new URL('https://www.clubdeingeniero.com'), // REEMPLAZA CON TU DOMINIO REAL
   openGraph: {
-    title: 'Asociación de Enfermeros del Perú | Cursos de Enfermería Profesional',
-    description: 'Encuentra los mejores cursos y programas de formación para enfermeros y estudiantes de enfermería en Perú. Impulsa tu carrera con nuestra formación de alta calidad.',
-    url: 'https://www.asociaciondeenfermerosdelperu.com', // <--- ¡IMPORTANTE! REEMPLAZA CON TU DOMINIO REAL
-    siteName: 'Asociación de Enfermeros del Perú',
+    title: 'Club de Ingenieros | Cursos Especializados para Ingenieros',
+    description: 'Formación de alto nivel en todas las ramas de la ingeniería. Cursos prácticos con certificación reconocida para impulsar tu carrera profesional.',
+    url: 'https://www.clubdeingeniero.com/', // REEMPLAZA CON TU DOMINIO REAL
+    siteName: 'Club de Ingenieros',
     images: [
       {
-        url: 'https://www.asociaciondeenfermerosdelperu.com/images/og-image.jpg', // <--- RUTA A TU IMAGEN DE OPEN GRAPH
+        url: 'https://www.clubdeingeniero.com/clubdeingenieros.png', // RUTA A TU IMAGEN DE OPEN GRAPH
         width: 1200,
         height: 630,
-        alt: 'Cursos de Enfermería y Capacitación Profesional en Perú',
+        alt: 'Cursos Especializados en Ingeniería para Profesionales',
       },
     ],
-    locale: 'es_PE', // Specifies Spanish, Peru
+    locale: 'es_ES', // o 'es_PE' si está enfocado en Perú
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Asociación de Enfermeros del Perú | Cursos y Diplomados',
-    description: 'Potencia tu carrera de enfermería con cursos, diplomados y especializaciones de alta calidad en Perú.',
-    creator: '@EnfermerosPeru', // <--- OPCIONAL: REEMPLAZA CON TU USUARIO DE TWITTER
-    images: ['https://www.asociaciondeenfermerosdelperu.com/images/twitter-image.jpg'], // <--- RUTA A TU IMAGEN DE TWITTER
+    title: 'Club de Ingenieros | Formación Especializada',
+    description: 'Cursos y certificaciones en ingeniería civil, mecánica, eléctrica, industrial y más. Actualiza tus conocimientos con expertos.',
+    creator: '@ClubIngenieros', // OPCIONAL: REEMPLAZA CON TU USUARIO DE TWITTER
+    images: ['https://www.clubdeingenieros.com/clubdeingenieros.png'], // RUTA A TU IMAGEN DE TWITTER
+  },
+  alternates: {
+    canonical: 'https://www.clubdeingenieros.com', // IMPORTANTE PARA SEO
   },
 };
 
@@ -58,7 +77,7 @@ export default function RootLayout({
     <html lang="es" suppressHydrationWarning className={font.variable}>
       <body className={`${font.className} antialiased`}>
         {children}
-        <FloatingButtons /> {/* Render the floating buttons here */}
+        <FloatingButtons />
         <Analytics />
       </body>
     </html>

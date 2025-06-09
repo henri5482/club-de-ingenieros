@@ -8,8 +8,11 @@ const docentesData = [
     profession: 'Enfermero Intensivista',
     bio: 'Álvaro es un referente en el manejo de pacientes críticos. Con más de 15 años de experiencia en unidades de cuidados intensivos pediátricos y adultos, su expertise abarca desde la monitorización avanzada hasta la gestión de equipos de emergencia. Ha capacitado a cientos de profesionales en técnicas de reanimación y soporte vital.',
    courses: [
-      { name: 'Diplomado en UCI Pediátrica', url: '/cursos/uci-pediatrica', imageUrl: '/Group65.png' },
-      { name: 'Soporte Vital Avanzado', url: '/cursos/soporte-vital-avanzado', imageUrl: '/Group65.png' },
+      { name: 'Diplomado en UCI Pediátrica', url: '/cursos/programacion-ia', imageUrl: '/Group65.png' },
+      { name: 'Soporte Vital Avanzado', url: '/cursos/programacion-ia', imageUrl: '/Group65.png' },
+            { name: 'Soporte Vital Avanzado', url: '/cursos/programacion-ia', imageUrl: '/Group65.png' },
+ { name: 'Soporte Vital Avanzado', url: '/cursos/programacion-ia', imageUrl: '/Group65.png' },
+
     ],
     social: {
       linkedin: 'https://www.linkedin.com/in/alvaro-felipe',

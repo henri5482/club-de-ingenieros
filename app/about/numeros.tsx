@@ -69,19 +69,19 @@ const Numeros = () => {
   };
 
   return (
-    <section className="bg-[#26374c] py-12 sm:py-16 md:py-20 lg:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Background Gradients: Adjusted colors for cohesive blue theme */}
       <div className="absolute inset-0 z-0" ></div>
 
       <div className="max-w-7xl mx-auto text-center relative z-10" ref={containerRef}>
         {/* Section Title */}
         <motion.h2
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-[#E1F5FE] mb-12 sm:mb-16 md:mb-20 leading-tight"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-red-600 mb-12 sm:mb-16 md:mb-20 leading-tight"
           initial="hidden"
           animate={isInViewContainer ? "visible" : "hidden"}
           variants={sectionHeaderVariants}
         >
-          Nuestro Impacto en <span className="text-[#E1F5FE] drop-shadow-xl">Números</span> {/* Increased drop shadow */}
+          Nuestro Impacto en <span className="text-red-600 drop-shadow-xl">Números</span> {/* Increased drop shadow */}
         </motion.h2>
 
         {/* Statistics Grid */}

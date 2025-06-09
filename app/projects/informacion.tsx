@@ -40,7 +40,7 @@ const Informacion = () => {
   ];
 
   return (
-    <section className='bg-[#E1F5FE] py-24 md:py-36 overflow-hidden'>
+    <section className='bg-white py-24 md:py-36 overflow-hidden'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-start justify-center gap-16 md:gap-24'>
         {/* Left Section: Main Heading */}
         <motion.div
@@ -50,7 +50,7 @@ const Informacion = () => {
           viewport={{ once: true, amount: 0.5 }}
           variants={questionVariants}
         >
-          <h2 className='text-4xl md:text-5xl font-extrabold text-[#26374c] leading-tight drop-shadow-sm'>
+          <h2 className='text-2xl md:text-6xl font-extrabold text-[#26374c] leading-tight drop-shadow-sm'>
             Todo lo que tienes que saber sobre los certificados
           </h2>
         </motion.div>

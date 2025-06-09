@@ -61,7 +61,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
         <div className="mt-auto pt-4 border-t border-slate-900 flex items-center justify-between">
           <Link
             href={courseLink}
-            target="_blank"
+           
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-red-600 hover:text-red-400 transition-colors duration-300 transform hover:translate-x-1"
           >
@@ -98,8 +98,8 @@ const teamMembers: TeamMemberProps[] = [
     image: "/image-4.jpg",
     // social: {}, // La propiedad 'social' en los datos puede quedarse, pero la interface y el destructuring se eliminaron
     course: "Curso de Python",
-    courseLink: "#",
-    courseIcon: <PiCodeSimple size={20} className="text-[#A2E285]" />,
+    courseLink: "/docentes",
+    courseIcon: <PiCodeSimple size={20} className="text-white" />,
   },
   {
     name: "Anibal Rojas",
@@ -107,8 +107,8 @@ const teamMembers: TeamMemberProps[] = [
     image: "/image-3.jpg",
     // social: {},
     course: "Curso de ChatGPT para Empresas",
-    courseLink: "#",
-    courseIcon: <PiBookOpenText size={20} className="text-[#A2E285]" />,
+    courseLink: "/docentes",
+    courseIcon: <PiBookOpenText size={20} className="text-white" />,
   },
   {
     name: "Carolina Castañeda",
@@ -116,8 +116,8 @@ const teamMembers: TeamMemberProps[] = [
     image: "/image-2.jpg",
     // social: {},
     course: "Curso de Bases de Datos con SQL",
-    courseLink: "#",
-    courseIcon: <PiDatabase size={20} className="text-[#A2E285]" />,
+    courseLink: "/docentes",
+    courseIcon: <PiDatabase size={20} className="text-white" />,
   },
   {
     name: "Luis Martinez",
@@ -125,8 +125,8 @@ const teamMembers: TeamMemberProps[] = [
     image: "/image-1.jpg",
     // social: {},
     course: "Curso de Django",
-    courseLink: "#",
-    courseIcon: <PiCodeSimple size={20} className="text-[#A2E285]" />,
+    courseLink: "/docentes",
+    courseIcon: <PiCodeSimple size={20} className="text-white" />,
   },
 ];
 

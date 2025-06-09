@@ -73,18 +73,18 @@ const Beneficios = () => {
   };
 
   return (
-    <section className="bg-[#26374c] py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden" ref={containerRef}>
+    <section className="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden" ref={containerRef}>
       {/* Background element - consider if it's truly needed or adds too much complexity */}
       <div className="absolute inset-0 z-0"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.h2
-          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#E1F5FE] text-center mb-12 md:mb-16 leading-tight"
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-red-600 text-center mb-12 md:mb-16 leading-tight"
           initial="hidden"
           animate={isInViewContainer ? "visible" : "hidden"}
           variants={titleVariants}
         >
-          Aprovecha los beneficios y crece con <span className="text-[#00c2a8]">Nosotros</span> {/* Changed highlight color for consistency */}
+          Aprovecha los beneficios y crece con <span className="text-red-600]">Nosotros</span> {/* Changed highlight color for consistency */}
         </motion.h2>
 
         {/* Grid layout changes from 1 column to 2 columns on large screens */}
@@ -94,7 +94,7 @@ const Beneficios = () => {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.id}
-                className="flex items-start text-left bg-[#1a1f2c] p-6 rounded-lg shadow-xl border border-transparent hover:border-[#00c2a8]/50 transition-all duration-300"
+                className="flex items-start text-left bg-white p-6 rounded-lg shadow-xl border border-transparent hover:border-red-600 transition-all duration-300"
                 custom={index}
                 initial="hidden"
                 animate={isInViewContainer ? "visible" : "hidden"}
@@ -115,10 +115,10 @@ const Beneficios = () => {
                 </div>
                 {/* Text Content for the Benefit */}
                 <div>
-                  <h3 className="text-lg sm:text-xl font-semibold text-gray-100 mb-1">
+                  <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-1">
                     {benefit.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-gray-400">
+                  <p className="text-sm sm:text-base text-slate-700">
                     {benefit.description}
                   </p>
                 </div>
@@ -149,7 +149,7 @@ const Beneficios = () => {
 
             {/* Community Text below the image */}
             <motion.p
-              className="mt-8 text-base sm:text-lg text-gray-300 font-medium text-center max-w-md mx-auto"
+              className="mt-8 text-base sm:text-lg text-slate-700 font-medium text-center max-w-md mx-auto"
               initial="hidden"
               animate={isInViewContainer ? "visible" : "hidden"}
               variants={communityTextVariants}

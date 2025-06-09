@@ -9,7 +9,7 @@ import Sellos from "./sellos";
 
 const Projects = () => {
   return (
-    <div className="bg-[#E1F5FE]">
+    <div className="bg-white">
       <Navbar />
       <Sellos />
       <Certificado />

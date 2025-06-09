@@ -44,7 +44,7 @@ const Certifications = () => {
       id: 3,
       name: "Educare Internacional",
       description: "Capacitación y desarrollo profesional en diversas áreas tecnológicas y técnicas",
-      logo: "/logo-3.svg",
+      logo: "/logoeducare.webp",
       link: "https://educareempresarial.educareinternacional.com",
       color: "purple",
     },

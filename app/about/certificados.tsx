@@ -12,43 +12,40 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-// Importa un ícono de flecha para la mejora visual del botón
-import { LuArrowRight } from "react-icons/lu";
-
-// Define la estructura para cada elemento de certificación para mayor seguridad de tipo
 interface CertificationItem {
   id: number;
   name: string;
   description: string;
   logo: string;
   link: string;
-  color: "blue" | "green" | "purple";
+  color: "blue" | "red" | "purple";
 }
 
 const Certifications = () => {
   const certifications: CertificationItem[] = [
     {
       id: 1,
-      name: "TOEFL",
-      description: "Alianza con ETS para la certificación TOEFL en Inglés",
-      logo: "/logo-1.svg",
-      link: "/cursos/toefl",
+      name: "Camara de Comercio de Lima",
+      description:
+        "Contamos con alianzas estratégicas con la Cámara de Comercio de Lima para ofrecerte capacitación y desarrollo profesional de calidad",
+      logo: "/camaradecomercio.gif",
+      link: "https://www.camaralima.org.pe/",
       color: "blue",
     },
     {
       id: 2,
-      name: "Google",
-      description: "Convenio de certificación en tecnologías cloud",
-      logo: "/logo-5.svg",
-      link: "/cursos/google",
-      color: "green",
+      name: "Club de Ingenieros",
+      description: "Capacitamos a ingenieros para potenciar sus habilidades y desarrollo profesional en diversas áreas tecnológicas y técnicas",
+      logo: "/clubdeingenieros.png",
+      link: "#",
+      color: "red",
     },
     {
       id: 3,
-      name: "SIGUAY",
-      description: "Domina la seguridad digital con CompTIA security+",
-      logo: "/logo-3.svg",
-      link: "/cursos/siguay",
+      name: "Educare Internacional",
+      description: "Capacitación y desarrollo profesional en diversas áreas tecnológicas y técnicas",
+      logo: "/logoeducare.webp",
+      link: "https://educareempresarial.educareinternacional.com",
       color: "purple",
     },
   ];
@@ -58,19 +55,19 @@ const Certifications = () => {
       // Cambio aquí: Fondo sólido para la tarjeta y un hover más distintivo
       bg: "bg-white hover:bg-blue-100", // Fondo blanco, hover con un toque de azul claro
       border: "border-blue-200", // Borde azul claro
-      button: "bg-blue-600 hover:bg-blue-700",
+      button: "bg-[#006AB6] hover:bg-[#006AB6]",
     },
-    green: {
+    red: {
       // Cambio aquí: Fondo sólido para la tarjeta y un hover más distintivo
-      bg: "bg-white hover:bg-green-100", // Fondo blanco, hover con un toque de verde claro
-      border: "border-green-200", // Borde verde claro
-      button: "bg-green-600 hover:bg-green-700",
+      bg: "bg-white hover:bg-red-100", // Fondo blanco, hover con un toque de verde claro
+      border: "border-red-200", // Borde verde claro
+      button: "bg-red-600 hover:bg-red-400",
     },
     purple: {
       // Cambio aquí: Fondo sólido para la tarjeta y un hover más distintivo
-      bg: "bg-white hover:bg-purple-100", // Fondo blanco, hover con un toque de púrpura claro
-      border: "border-purple-200", // Borde púrpura claro
-      button: "bg-purple-600 hover:bg-purple-700",
+      bg: "bg-white hover:bg-blue-100", // Fondo blanco, hover con un toque de púrpura claro
+      border: "border-blue-200", // Borde púrpura claro
+      button: "bg-blue-600 hover:bg-blue-400",
     },
   };
 
@@ -103,7 +100,7 @@ const Certifications = () => {
 
   return (
     // Aplica el fondo oscuro a la sección principal
-    <div className="bg-[#26374c]">
+    <div className="bg-white">
       <div className="px-4 sm:px-6 mx-auto max-w-7xl py-12 md:py-24">
         {/* Animación para el encabezado */}
         <motion.div
@@ -114,17 +111,15 @@ const Certifications = () => {
           variants={headerVariants}
         >
           {/* Asegura que el texto del encabezado sea visible sobre el fondo oscuro */}
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent">
-            Impulsa tu futuro con certificaciones de reconocimiento{" "}
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-red-600">
+            Obtén certificaciones oficiales
           </h2>
           {/* Asegura que el texto del párrafo sea visible sobre el fondo oscuro */}
-          <p className="text-gray-300 max-w-2xl mx-auto">
+          <p className="text-white max-w-2xl mx-auto">
             {" "}
             {/* Cambiado a un gris claro */}
-            Obtén credenciales respaldadas por líderes mundiales en tecnología y
-            educación. Nuestros certificados no solo validan tus habilidades,
-            sino que también te posicionan como un profesional altamente
-            competitivo y demandado a nivel global.
+            Certificaciones reconocidas internacionalmente que impulsarán tu
+            carrera profesional
           </p>
         </motion.div>
 
@@ -154,7 +149,7 @@ const Certifications = () => {
                 }}
               >
                 <Card
-                  className={`h-full flex flex-col justify-between transition-all duration-300 ease-out
+                  className={`h-full flex flex-col justify-between transition-all duration-300 ease-out shadow-lg
                               ${
                                 colorVariants[
                                   cert.color as keyof typeof colorVariants
@@ -195,7 +190,7 @@ const Certifications = () => {
                   </div>
 
                   <CardFooter className="pt-4">
-                    <Link href={cert.link} className="w-full">
+                    <Link href={cert.link} className="w-full" target="_blank" rel="noopener noreferrer">
                       <Button
                         className={`w-full flex items-center justify-center space-x-2
                                     ${
@@ -215,8 +210,7 @@ const Certifications = () => {
                             damping: 20,
                           }}
                         >
-                          <span>Ir a los cursos</span>
-                          <LuArrowRight className="h-4 w-4" />
+                          <span>Ver mas detalles</span>
                         </motion.div>
                       </Button>
                     </Link>

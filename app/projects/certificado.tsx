@@ -3,15 +3,11 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
-// IMPORTANT: Place your certificate images in the /public directory.
-// For example: public/certificate-1.jpg, public/certificate-2.jpg, etc.
-// These should ideally be images of your actual certificates or mockups.
+
 const certificateImages = [
-  '/certificado01.png', 
-  '/certificado02.png', 
-  '/certificado03.png',
-  '/certificado04.png', 
-  // '/certificate-4.jpg',
+  '/certificadodelante.webp', 
+  '/certificadoatras.webp', 
+
 ];
 
 const Certificado = () => {
@@ -21,7 +17,7 @@ const Certificado = () => {
     // Set up an interval to change the displayed certificate image
     const certTimer = setInterval(() => {
       setCurrentCertIndex((prevIndex) => (prevIndex + 1) % certificateImages.length);
-    }, 4000); // Change certificate every 4 seconds (4000 milliseconds)
+    }, 5000); // Change certificate every 4 seconds (4000 milliseconds)
 
     // Cleanup function to clear the interval when the component unmounts
     return () => {
@@ -30,7 +26,7 @@ const Certificado = () => {
   }, []); // Empty dependency array means this effect runs only once after the initial render
 
   return (
-    <section className='bg-[#E1F5FE] py-20 '> {/* Added a section tag for better semantic structure and padding */}
+    <section className='bg-white py-20 '> {/* Added a section tag for better semantic structure and padding */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
         {/* Title */}
         <h2 className='text-4xl md:text-5xl font-extrabold text-[#26374c] mb-8 leading-tight'>

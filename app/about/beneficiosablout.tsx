@@ -64,7 +64,7 @@ const Beneficiosabout = () => {
 
 
   return (
-    <div className="bg-[#26374c] text-[#E1F5FE] py-1 px-4 sm:px-8 lg:px-16">
+    <div className="bg-white text-slate-900 py-1 px-4 sm:px-8 lg:px-16">
       <motion.div
         className="max-w-7xl mx-auto text-center"
         initial="hidden"
@@ -98,12 +98,12 @@ const Beneficiosabout = () => {
                       className="object-contain"
                     />
                   </div>
-                  <CardTitle className="text-xl font-bold text-[#E1F5FE] mb-2 leading-tight">
+                  <CardTitle className="text-xl font-bold text-white mb-2 leading-tight">
                     {benefit.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="p-0">
-                  <p className="text-slate-400 text-sm leading-relaxed">
+                  <p className="text-white text-sm leading-relaxed">
                     {benefit.description}
                   </p>
                 </CardContent>

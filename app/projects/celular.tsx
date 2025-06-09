@@ -54,7 +54,7 @@ const Celular = () => {
   };
 
   return (
-    <section className="bg-[#E1F5FE] py-24 md:py-36 overflow-hidden">
+    <section className="bg-white py-24 md:py-36 overflow-hidden">
       {/* Main content: Text and Phone */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-center gap-16 md:gap-24 mb-24 md:mb-36">
         {/* Left Section: Text Content with Framer Motion */}
@@ -175,7 +175,7 @@ const Celular = () => {
 
           <Link href="/cursosall" className="block mb-6">
           <motion.button
-            className="bg-[#006394] hover:bg-[#26374c] text-white font-bold py-3 px-8 rounded-xl text-lg md:text-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105"
+            className="bg-red-600 hover:bg-[#26374c] text-white font-bold py-3 px-8 rounded-xl text-lg md:text-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105"
             variants={ctaVariants} // Use ctaVariants for the button's hover state as well
             whileHover="hover"
             >

@@ -121,6 +121,15 @@ export default async function CourseDetail({
   const encodedPremiumMessage = encodeURIComponent(premiumMessage);
   const premiumWhatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedPremiumMessage}`;
 
+  // Calcula el precio con descuento si existe
+  const precioConDescuento =
+    course.precio && course.descuento
+      ? (course.precio * (1 - course.descuento)).toFixed(2)
+      : null;
+  const porcentajeDescuento = course.descuento
+    ? (course.descuento * 100).toFixed(0)
+    : null;
+
   return (
     <>
       <Navbar />
@@ -139,6 +148,7 @@ export default async function CourseDetail({
                   <span>Clases empiezan el </span>
                   <span className="font-bold">{startDate}</span>
                 </div>
+               
               </div>
 
               {/* Title */}
@@ -170,13 +180,14 @@ export default async function CourseDetail({
                 </div>
               )}
 
-              {/* Buttons - Stacked on mobile */}
+              {/* Prices and Buttons - Stacked on mobile */}
               <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full">
                 {/* Premium Button */}
                 <Button
                   className="w-full bg-white hover:bg-gray-50 text-gray-900 font-semibold py-4 sm:py-5 px-2 sm:px-4 rounded-lg sm:rounded-xl transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-[1.02] flex items-center justify-center gap-2 sm:gap-3 border border-gray-300"
                   asChild
                 >
+                  {/* El '<a>' es el único hijo directo de Button */}
                   <a href={premiumWhatsappUrl} target="_blank" rel="noopener noreferrer">
                     <span className="text-sm sm:text-base md:text-lg text-gray-900">
                       Suscripción Premium →
@@ -184,21 +195,57 @@ export default async function CourseDetail({
                   </a>
                 </Button>
 
-                {/* Buy Button */}
+                {/* Buy Button with Price */}
                 <Button
-                  className={`w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 sm:py-5 px-2 sm:px-4 rounded-lg sm:rounded-xl transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-[1.02] flex items-center justify-center gap-2 sm:gap-3`}
+                  className={`w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-2 sm:px-4 rounded-lg sm:rounded-xl transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-[1.02] flex items-center justify-center gap-2 sm:gap-3 relative overflow-hidden`}
                   asChild
                 >
-                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                    <span className="text-sm sm:text-base md:text-lg">
-                      Comprar Curso
-                    </span>
-                    {course.precio && (
-                      <span className="ml-2 font-bold">
-                        S/{(course.precio * (1 - (course.descuento || 0))).toFixed(2)}
+                  {/* SOLUCIÓN: Envuelve el <a> y el div del descuento en un solo elemento padre */}
+                  {/* Aquí usamos un div como contenedor único para el botón con descuento */}
+                  <div className="flex items-center justify-center w-full h-full relative cursor-pointer">
+                    {" "}
+                    {/* Añadido relative aquí para el absolute de la etiqueta */}
+                    <a
+                      href={whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-full h-full"
+                    >
+                      <span className="text-sm sm:text-base md:text-lg">
+                        Comprar 
                       </span>
+                      {course.precio && (
+                        <span className="ml-2 flex items-baseline gap-2">
+                          {" "}
+                          {/* Changed flex-col to items-baseline for better alignment */}
+                          {precioConDescuento ? (
+                            <>
+                              <span className="font-bold text-xl sm:text-2xl">
+                                {" "}
+                                {/* Increased size for emphasis */}
+                                S/{precioConDescuento} {/* <--- ¡CORREGIDO AQUÍ! */}
+                              </span>
+                              <span className="line-through text-base sm:text-lg opacity-75 mr-1">
+                                {" "}
+                                {/* Adjusted size and added margin-right */}
+                                S/{course.precio.toFixed(2)}
+                              </span>
+                            </>
+                          ) : (
+                            <span className="font-bold text-xl sm:text-2xl">
+                              S/{course.precio.toFixed(2)}
+                            </span>
+                          )}
+                        </span>
+                      )}
+                    </a>
+                    {/* Discount "flag" or "tag" on the button - ahora es hijo directo del <div> contenedor */}
+                    {porcentajeDescuento && (
+                      <div className="absolute top-0 right-0 bg-green-500 text-white text-xs font-bold py-1 px-2 rounded-bl-lg">
+                        -{porcentajeDescuento}%
+                      </div>
                     )}
-                  </a>
+                  </div>
                 </Button>
               </div>
             </div>
@@ -279,11 +326,11 @@ export default async function CourseDetail({
                     >
                       <AccordionTrigger className="text-base sm:text-lg font-semibold hover:no-underline px-4 sm:px-6 py-3 sm:py-4 bg-gray-50 hover:bg-gray-100 transition-colors duration-200">
                         <span className="text-left text-gray-900">
-                           {temario.title}
+                          {temario.title}
                         </span>
                       </AccordionTrigger>
-                      <AccordionContent className="bg-white px-4 sm:px-6 py-3 sm:py-4">
-                        <ul className="list-disc list-inside space-y-1 sm:space-y-2 text-gray-700">
+                      <AccordionContent className="bg-white px-4 sm:px-6 py-3 sm:py-6">
+                        <ul className=" text-gray-700">
                           {temario.items.map((item, itemIndex) => (
                             <li
                               key={`temario-item-${index}-${itemIndex}`}

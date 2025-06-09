@@ -1,176 +1,158 @@
 [
   {
-  "id": "programacion-ia",
-  "slug": "programacion-ia",
-  "category": "Inteligencia Artificial",
-  "src": "/Group65.png",
-  "name": "IA desde Cero",
-  "titulo": "Programación desde cero con Inteligencia Artificial",
-  "descripcion": "Aprende a programar desde cero integrando la Inteligencia Artificial en todas las etapas del desarrollo de software. Curso presencial en Miraflores, Lima - Perú.",
-  "fechatext": "Disponible desde el sábado 28 de junio",
-  "about": "Este curso está diseñado para aquellos que desean aprender a programar desde cero, integrando la Inteligencia Artificial en cada etapa del desarrollo de software. A lo largo de 8 horas, los estudiantes adquirirán conocimientos fundamentales de programación y aprenderán a utilizar herramientas de IA para optimizar su proceso de aprendizaje y desarrollo.",
-  "profesores": [
-    {
-      "nombre": "Alvaro Felipe Chávez",
-      "imagen": "/image-1.jpg",
-      "usuarioSocial": "@alvaro",
-      "enlacePerfil": "https://vercel.com/"
-    },
-    {
-      "nombre": "Alexys Lozada",
-      "imagen": "/image-2.jpg",
-      "usuarioSocial": "@alexyslozada",
-      "enlacePerfil": "/perfil/alexys"
-    },
-    {
-      "nombre": "Beto Quiroga",
-      "imagen": "/image-3.jpg",
-      "usuarioSocial": "@betoquiroga",
-      "enlacePerfil": "/perfil/beto"
-    }
-  ],
-  "paraQuienEs": [
-    "Principiantes sin experiencia previa en programación.",
-    "Profesionales de otras áreas que buscan una transición al desarrollo de software.",
-    "Estudiantes interesados en integrar la IA desde el inicio de su aprendizaje de código.",
-    "Cualquier persona curiosa sobre cómo la IA puede potenciar el desarrollo de software."
-  ],
-  "conocimientosPrevios": [
-    "No se requieren conocimientos previos de programación.",
-    "Familiaridad básica con el uso de computadoras e internet."
-  ],
-   "temarios": [
+    "id": "analisis-cuencas-hidrograficas-qgis",
+    "slug": "analisis-cuencas-hidrograficas-qgis",
+    "category": "Ingenieria de cuencas",
+    "src": "/bannercuencas.webp",
+    "name": "ANALISIS DE CUENCAS HIDROGRAFICAS CON QGIS",
+    "titulo": "ANALISIS DE CUENCAS HIDROGRAFICAS CON QGIS",
+    "descripcion": "Este curso tiene como objetivo principal formar profesionales y estudiantes en la aplicación de herramientas SIG avanzadas (QGIS) para el análisis hidrológico integral. ",
+    "fechatext": "Disponible desde el lunes 16 de junio",
+    "about": "Este curso tiene como objetivo principal formar profesionales y estudiantes en la aplicación de herramientas SIG avanzadas (QGIS) para el análisis hidrológico integral. Aprenderás a realizar la delimitación de cuencas hidrográficas, el cálculo preciso de parámetros morfométricos, la elaboración de balances hídricos preliminares y la generación de mapas temáticos especializados para la gestión de recursos hídricos. Fortalecerás tu competencia para desarrollar estudios técnicos en hidrología, empleando tecnologías geoespaciales con precisión y eficiencia para enfrentar problemáticas ambientales y de recursos hídricos.",
+    "profesores": [
       {
-        "title": "Módulo 1: Fundamentos de Programación",
+        "nombre": "Eliser Mejía Herrera",
+        "imagen": "/profesorcuencas.webp",
+        "usuarioSocial": "@Eliser",
+        "enlacePerfil": "https://www.linkedin.com/in/eliser-mej%C3%ADa-herrera-3892189b/"
+      }
+    ],
+    "paraQuienEs": [
+      "Para estudiantes y profesionales que quieran usar QGIS en el análisis de cuencas.",
+      "Ideal para ingenieros, geógrafos e hidrólogos que trabajen con SIG.",
+      "Perfecto si te interesa la gestión del agua con herramientas geoespaciales.",
+      "Enfocado en quienes buscan aplicar QGIS al estudio de cuencas hidrográficas."
+    ],
+    "conocimientosPrevios": [
+      "No se requiere experiencia previa con QGIS, aunque se recomienda tener conocimientos básicos en SIG o hidrología."
+    ],
+    "temarios": [
+      {
+        "title": "MÓDULO 1: INTRODUCCIÓN A SISTEMAS DE INFORMACIÓN GEOGRÁFICA (SIG) Y QGIS PARA CUENCAS HIDROGRÁFICAS",
         "items": [
-          "Introducción a la programación y su importancia en la era de la IA",
-          "Conceptos básicos: variables, tipos de datos, operadores",
-          "Estructuras de control de flujo: condicionales y bucles",
-          "Funciones: definición, invocación y parámetros",
-          "Introducción a la programación orientada a objetos (POO)"
+          "1.1 - ¿Qué es un SIG y por qué es útil en el estudio de cuencas hidrográficas?",
+          "1.2 - Principales componentes de un SIG",
+          "1.3 - Visión general de QGIS y su ecosistema",
+          "1.4 - Concepto de cuenca hidrográfica y su importancia en la gestión territorial",
+          "1.6 - Interfaz de QGIS y exploración de herramientas clave",
+          "1.7 - Descripción de elementos vectoriales y Ráster",
+          "1.8 - Creación de elementos vectoriales",
+          "1.9 - Edición de capas vectoriales",
+          "1.10 - Calculadora de campos en QGIS"
         ]
       },
       {
-        "title": "Módulo 2: Algoritmos y Estructuras de Datos",
+        "title": "MÓDULO 2: MANEJO AVANZADO DE DATOS VECTORIALES Y RÁSTER EN QGIS",
         "items": [
-          "Concepto de algoritmo y su diseño",
-          "Estructuras de datos fundamentales: arreglos, listas, diccionarios/mapas",
-          "Algoritmos de búsqueda y ordenamiento básicos",
-          "Complejidad algorítmica (Big O notation)",
-          "Aplicación de algoritmos en problemas reales"
+          "2.1 - Tipos de geometría vectorial: puntos, líneas y polígonos",
+          "2.2 - Estructura de atributos en capas vectoriales",
+          "2.3 - Digitalización manual y edición de precisión",
+          "2.4 - Conceptos clave en capas ráster: resolución espacial, píxeles, valor nulo",
+          "2.5 - Corrección y reproyección de capas ráster",
+          "2.6 - Práctica: Crear una capa vectorial desde cero para un área de estudio",
+          "2.7 - Práctica: Uso del panel de atributos para gestionar datos",
+          "2.8 - Práctica: Herramientas de edición avanzada en QGIS",
+          "2.9 - Práctica: Añadir y unir imágenes ráster (mosaicos)"
         ]
       },
       {
-        "title": "Módulo 3: Desarrollo Web Básico con IA",
+        "title": "MÓDULO 3: FUENTES DE DATOS GEOESPACIALES Y SISTEMAS DE PROYECCIONES CARTOGRÁFICAS",
         "items": [
-          "Introducción a HTML, CSS y JavaScript para el frontend",
-          "Creación de interfaces de usuario sencillas",
-          "Uso de IA para generar fragmentos de código HTML/CSS/JS",
-          "Automatización de tareas de desarrollo web con herramientas de IA",
-          "Principios de diseño responsivo asistido por IA"
+          "3.1 - Fuentes de datos geoespaciales para el estudio hidrológico",
+          "3.2 - Proyecciones y sistemas de referencia espacial (EPSG, UTM, WGS84)",
+          "3.3 - Consideraciones para trabajar con datos en estudios hidrológicos",
+          "3.4 - Práctica: Descarga de datos del SRTM, Teselas de terreno o servicios geoespaciales nacionales",
+          "3.5 - Práctica: Descarga de capas Shapefiles de entidades gubernamentales o repositorios libres",
+          "3.6 - Práctica: Georreferenciación de una imagen ráster en QGIS",
+          "3.7 - Práctica: Clipping y reproyección de una capa DEM para ajustarla al área de estudio",
+          "3.8 - Práctica: Corrección de huecos en DEMs (Fill Sinks) para análisis hidrológico"
         ]
       },
       {
-        "title": "Módulo 4: Consumo y Uso de APIs y Servicios Web",
+        "title": "MÓDULO 4: DELIMITACIÓN AUTOMÁTICA DE CUENCAS HIDROGRÁFICAS CON MODELOS DIGITALES DE ELEVACIÓN (DEM) EN QGIS",
         "items": [
-          "¿Qué es una API? Conceptos RESTful",
-          "Consumo de APIs públicas (ej. APIs de datos, clima)",
-          "Integración de servicios web de terceros (ej. Stripe, Google Maps)",
-          "Uso de IA para entender y documentar APIs",
-          "Generación de código para llamadas a APIs con IA"
+          "4.1 - ¿Qué es un DEM y cómo se usa para análisis hidrológicos de cuencas?",
+          "4.2 - Principios del análisis de redes de drenaje y vertientes",
+          "4.3 - Algoritmos de llenado de depresiones (Fill Sinks) y dirección del flujo",
+          "4.4 - Práctica: Uso del complemento GRASS o SAGA GIS en QGIS para delimitar una cuenca",
+          "4.5 - Práctica: Procesamiento del DEM para análisis hidrológico: Fill sinks, Flow direction, Flow accumulation",
+          "4.6 - Práctica: Generación del cauce principal y delimitación de la cuenca hidrográfica en QGIS"
         ]
       },
+
       {
-        "title": "Módulo 5: Integración de IA en Proyectos de Software (Nivel Básico)",
+        "title": "MÓDULO 5: ANÁLISIS MORFOMÉTRICO Y DETERMINACIÓN DE PARÁMETROS DE CUENCAS HIDROGRÁFICAS",
         "items": [
-          "Introducción a los modelos de lenguaje grandes (LLMs)",
-          "Uso de APIs de IA (ej. OpenAI GPT, Gemini API)",
-          "Generación de texto: resúmenes, descripciones",
-          "Generación de código: funciones, clases, scripts",
-          "Asistencia de IA en depuración y optimización de código"
+          "5.1 - Determinación de redes de drenaje y su clasificación (orden de Strahler)",
+          "5.2 - Parámetros morfométricos básicos de cuencas: densidad de drenaje, pendiente media, etc.",
+          "5.3 - Importancia de los parámetros morfométricos en la modelación hidrológica",
+          "5.4 - Práctica: Generación de la red de drenaje a partir del DEM procesado en QGIS",
+          "5.5 - Práctica: Determinación de parámetros morfológicos de la cuenca",
+          "5.6 - Práctica: Medición de parámetros morfométricos con herramientas de QGIS (longitud de cauce, densidad de drenaje, pendiente)"
         ]
       },
+
       {
-        "title": "Módulo 6: Buenas Prácticas y Herramientas con IA",
+        "title": "MÓDULO 6: ELABORACIÓN DE MAPAS TEMÁTICOS PARA CUENCAS HIDROGRÁFICAS Y GENERACIÓN DE INFORMES TÉCNICOS",
         "items": [
-          "Control de versiones con Git y GitHub asistido por IA",
-          "Entornos de desarrollo integrados (IDE) y sus funcionalidades de IA",
-          "Manejo de errores y depuración inteligente",
-          "Escritura de código limpio y mantenible con sugerencias de IA",
-          "Colaboración en proyectos de software con herramientas de IA"
-        ]
-      },
-      {
-        "title": "Módulo 7: Publicación y Mantenimiento de Proyectos",
-        "items": [
-          "Conceptos de hosting y dominios",
-          "Despliegue de aplicaciones web sencillas (ej. Vercel, Netlify)",
-          "Monitoreo básico de aplicaciones con ayuda de IA",
-          "Actualizaciones y mantenimiento de proyectos",
-          "Resolución de problemas post-despliegue con asistencia de IA"
-        ]
-      },
-      {
-        "title": "Módulo 8: Proyecto Final y Próximos Pasos",
-        "items": [
-          "Desarrollo de un proyecto práctico aplicando lo aprendido",
-          "Integración de múltiples herramientas y conceptos",
-          "Presentación del proyecto y feedback",
-          "Recursos para continuar aprendiendo sobre programación e IA",
-          "Tendencias futuras en el desarrollo de software con IA"
+          "6.1 - Elementos Cartográficos esenciales de un mapa temático",
+          "6.2 - Buenas prácticas para presentación de mapas en informes técnicos",
+          "6.3 - Estructura mínima de un informe de análisis espacial en SIG",
+          "6.4 - Práctica: Composición de mapas con el diseñador de impresión de QGIS",
+          "6.5 - Práctica: Inserción de leyendas, escalas, flecha de norte, y metadatos cartográficos",
+          "6.6 - Práctica: Exportación de mapas en alta resolución y armado de un informe básico con resultados del curso"
         ]
       }
     ],
-  "fecha": "2025-06-28T00:00:00",
-  "learnings": [
-    "Comprender las bases de la programación",
-    "Comprender los requerimientos de un proyecto",
-    "Traducir los requerimientos a buenos prompts para la IA",
-    "Entender y analizar el código que entrega la IA",
-    "Publicar el proyecto en internet",
-    "Hacer mejoras al proyecto luego de publicado"
-  ],
-  "details": {
-    "date": "28 Jun 2025",
-    "duration": "8 horas",
-    "level": "Básico",
-    "offer": "Mira las primeras clases gratis"
+    "fecha": "2025-06-28T00:00:00",
+    "learnings": [
+      "Introducción y manejo básico de QGIS para análisis hidrológicos",
+      "Manejo avanzado de datos vectoriales y ráster en QGIS",
+      "Aplicación de sistemas de proyección cartográfica adecuados",
+      "Elaboración de mapas temáticos profesionales para cuencas hidrográficas",
+      "Generación de informes técnicos basados en análisis geoespaciales"
+    ],
+    "details": {
+      "date": "16 junio 2025",
+      "duration": "15 horas",
+      "level": "Básico",
+      "offer": "Mira las primeras clases gratis"
+    },
+    "remainingSeats": "52 estudiantes",
+    "precio": 198.00,
+    "descuento": 0.50
   },
-  "remainingSeats": "19 estudiantes",
-  "precio": 28,
-  "descuento": 0.15 
-},
   {
     "id": "desarrollo-web",
     "slug": "desarrollo-web",
-    "category": "desarrollo web" ,
-  "src": "/Group65.png",
-  "name": "IA desde Cero",
-  "titulo": "Programación desde cero con Inteligencia Artificial",
-  "descripcion": "Aprende a programar desde cero integrando la Inteligencia Artificial en todas las etapas del desarrollo de software. Curso presencial en Miraflores, Lima - Perú.",
-  "fechatext": "Disponible desde el sábado 28 de junio",
-  "about": "Este curso está diseñado para aquellos que desean aprender a programar desde cero, integrando la Inteligencia Artificial en cada etapa del desarrollo de software. A lo largo de 8 horas, los estudiantes adquirirán conocimientos fundamentales de programación y aprenderán a utilizar herramientas de IA para optimizar su proceso de aprendizaje y desarrollo.",
-  "profesores": [ 
-    {
-      "nombre": "Alvaro Felipe Chávez",
-      "imagen": "/image-1.jpg", 
-      "usuarioSocial": "@alvaro",
-      "enlacePerfil": "https://vercel.com/" 
-    },
-    {
-      "nombre": "Alexys Lozada",
-      "imagen": "/image-2.jpg",
-      "usuarioSocial": "@alexyslozada",
-      "enlacePerfil": "/perfil/alexys"
-    },
-    {
-      "nombre": "Beto Quiroga",
-      "imagen": "/image-3.jpg",
-      "usuarioSocial": "@betoquiroga",
-      "enlacePerfil": "/perfil/beto"
-    }
-  ],
-   "paraQuienEs": [
+    "category": "desarrollo web",
+    "src": "/Group65.png",
+    "name": "IA desde Cero",
+    "titulo": "Programación desde cero con Inteligencia Artificial",
+    "descripcion": "Aprende a programar desde cero integrando la Inteligencia Artificial en todas las etapas del desarrollo de software. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 28 de junio",
+    "about": "Este curso está diseñado para aquellos que desean aprender a programar desde cero, integrando la Inteligencia Artificial en cada etapa del desarrollo de software. A lo largo de 8 horas, los estudiantes adquirirán conocimientos fundamentales de programación y aprenderán a utilizar herramientas de IA para optimizar su proceso de aprendizaje y desarrollo.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
       "Principiantes sin experiencia previa en programación.",
       "Profesionales de otras áreas que buscan una transición al desarrollo de software.",
       "Estudiantes interesados en integrar la IA desde el inicio de su aprendizaje de código.",
@@ -278,39 +260,38 @@
       "offer": "Mira las primeras clases gratis"
     },
     "remainingSeats": "16 esdudiantes"
-
   },
   {
     "id": "marketing-digital",
     "slug": "marketing-digital",
-    "category": "Inteligencia Artificial" ,
-  "src": "/Group65.png",
-  "name": "IA desde Cero",
-  "titulo": "Programación desde cero con Inteligencia Artificial",
-  "descripcion": "Aprende a programar desde cero integrando la Inteligencia Artificial en todas las etapas del desarrollo de software. Curso presencial en Miraflores, Lima - Perú.",
-  "fechatext": "Disponible desde el sábado 28 de junio",
-  "about": "Este curso está diseñado para aquellos que desean aprender a programar desde cero, integrando la Inteligencia Artificial en cada etapa del desarrollo de software. A lo largo de 8 horas, los estudiantes adquirirán conocimientos fundamentales de programación y aprenderán a utilizar herramientas de IA para optimizar su proceso de aprendizaje y desarrollo.",
-  "profesores": [ 
-    {
-      "nombre": "Alvaro Felipe Chávez",
-      "imagen": "/image-1.jpg", 
-      "usuarioSocial": "@alvaro",
-      "enlacePerfil": "https://vercel.com/" 
-    },
-    {
-      "nombre": "Alexys Lozada",
-      "imagen": "/image-2.jpg",
-      "usuarioSocial": "@alexyslozada",
-      "enlacePerfil": "/perfil/alexys"
-    },
-    {
-      "nombre": "Beto Quiroga",
-      "imagen": "/image-3.jpg",
-      "usuarioSocial": "@betoquiroga",
-      "enlacePerfil": "/perfil/beto"
-    }
-  ],
-   "paraQuienEs": [
+    "category": "Inteligencia Artificial",
+    "src": "/Group65.png",
+    "name": "IA desde Cero",
+    "titulo": "Programación desde cero con Inteligencia Artificial",
+    "descripcion": "Aprende a programar desde cero integrando la Inteligencia Artificial en todas las etapas del desarrollo de software. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 28 de junio",
+    "about": "Este curso está diseñado para aquellos que desean aprender a programar desde cero, integrando la Inteligencia Artificial en cada etapa del desarrollo de software. A lo largo de 8 horas, los estudiantes adquirirán conocimientos fundamentales de programación y aprenderán a utilizar herramientas de IA para optimizar su proceso de aprendizaje y desarrollo.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
       "Principiantes sin experiencia previa en programación.",
       "Profesionales de otras áreas que buscan una transición al desarrollo de software.",
       "Estudiantes interesados en integrar la IA desde el inicio de su aprendizaje de código.",
@@ -418,39 +399,38 @@
       "offer": "Mira las primeras clases gratis"
     },
     "remainingSeats": "32 estudiantes"
-
   },
   {
     "id": "desarrollo-web-ia",
     "slug": "desarrollo-web-ia",
-    "category": "desarrollo web" ,
-  "src": "/paypal.jpg",
-  "name": "IA desde Cero",
-  "titulo": "Programación desde cero con Inteligencia Artificial",
-  "descripcion": "Aprende a programar desde cero integrando la Inteligencia Artificial en todas las etapas del desarrollo de software. Curso presencial en Miraflores, Lima - Perú.",
-  "fechatext": "Disponible desde el sábado 28 de junio",
-  "about": "Este curso está diseñado para aquellos que desean aprender a programar desde cero, integrando la Inteligencia Artificial en cada etapa del desarrollo de software. A lo largo de 8 horas, los estudiantes adquirirán conocimientos fundamentales de programación y aprenderán a utilizar herramientas de IA para optimizar su proceso de aprendizaje y desarrollo.",
-  "profesores": [ 
-    {
-      "nombre": "Alvaro Felipe Chávez",
-      "imagen": "/image-1.jpg", 
-      "usuarioSocial": "@alvaro",
-      "enlacePerfil": "https://vercel.com/" 
-    },
-    {
-      "nombre": "Alexys Lozada",
-      "imagen": "/image-2.jpg",
-      "usuarioSocial": "@alexyslozada",
-      "enlacePerfil": "/perfil/alexys"
-    },
-    {
-      "nombre": "Beto Quiroga",
-      "imagen": "/image-3.jpg",
-      "usuarioSocial": "@betoquiroga",
-      "enlacePerfil": "/perfil/beto"
-    }
-  ],
-   "paraQuienEs": [
+    "category": "desarrollo web",
+    "src": "/paypal.jpg",
+    "name": "IA desde Cero",
+    "titulo": "Programación desde cero con Inteligencia Artificial",
+    "descripcion": "Aprende a programar desde cero integrando la Inteligencia Artificial en todas las etapas del desarrollo de software. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 28 de junio",
+    "about": "Este curso está diseñado para aquellos que desean aprender a programar desde cero, integrando la Inteligencia Artificial en cada etapa del desarrollo de software. A lo largo de 8 horas, los estudiantes adquirirán conocimientos fundamentales de programación y aprenderán a utilizar herramientas de IA para optimizar su proceso de aprendizaje y desarrollo.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
       "Principiantes sin experiencia previa en programación.",
       "Profesionales de otras áreas que buscan una transición al desarrollo de software.",
       "Estudiantes interesados en integrar la IA desde el inicio de su aprendizaje de código.",
@@ -558,39 +538,38 @@
       "offer": "Mira las primeras clases gratis"
     },
     "remainingSeats": "25 estudiantes"
-
   },
   {
     "id": "robotica",
     "slug": "robotica",
-    "category": "desarrollo web" ,
-  "src": "/audi.jpg",
-  "name": "IA desde Cero",
-  "titulo": "Programación desde cero con Inteligencia Artificial",
-  "descripcion": "Aprende a programar desde cero integrando la Inteligencia Artificial en todas las etapas del desarrollo de software. Curso presencial en Miraflores, Lima - Perú.",
-  "fechatext": "Disponible desde el sábado 28 de junio",
-  "about": "Este curso está diseñado para aquellos que desean aprender a programar desde cero, integrando la Inteligencia Artificial en cada etapa del desarrollo de software. A lo largo de 8 horas, los estudiantes adquirirán conocimientos fundamentales de programación y aprenderán a utilizar herramientas de IA para optimizar su proceso de aprendizaje y desarrollo.",
-  "profesores": [ 
-    {
-      "nombre": "Alvaro Felipe Chávez",
-      "imagen": "/image-1.jpg", 
-      "usuarioSocial": "@alvaro",
-      "enlacePerfil": "https://vercel.com/" 
-    },
-    {
-      "nombre": "Alexys Lozada",
-      "imagen": "/image-2.jpg",
-      "usuarioSocial": "@alexyslozada",
-      "enlacePerfil": "/perfil/alexys"
-    },
-    {
-      "nombre": "Beto Quiroga",
-      "imagen": "/image-3.jpg",
-      "usuarioSocial": "@betoquiroga",
-      "enlacePerfil": "/perfil/beto"
-    }
-  ],
-   "paraQuienEs": [
+    "category": "desarrollo web",
+    "src": "/audi.jpg",
+    "name": "IA desde Cero",
+    "titulo": "Programación desde cero con Inteligencia Artificial",
+    "descripcion": "Aprende a programar desde cero integrando la Inteligencia Artificial en todas las etapas del desarrollo de software. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 28 de junio",
+    "about": "Este curso está diseñado para aquellos que desean aprender a programar desde cero, integrando la Inteligencia Artificial en cada etapa del desarrollo de software. A lo largo de 8 horas, los estudiantes adquirirán conocimientos fundamentales de programación y aprenderán a utilizar herramientas de IA para optimizar su proceso de aprendizaje y desarrollo.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
       "Principiantes sin experiencia previa en programación.",
       "Profesionales de otras áreas que buscan una transición al desarrollo de software.",
       "Estudiantes interesados en integrar la IA desde el inicio de su aprendizaje de código.",
@@ -698,39 +677,38 @@
       "offer": "Mira las primeras clases gratis"
     },
     "remainingSeats": "25 estudiantes"
-
   },
   {
     "id": "derecho",
     "slug": "derecho",
-    "category": "desarrollo web" ,
-  "src": "/visa.jpg",
-  "name": "IA desde Cero",
-  "titulo": "Programación desde cero con Inteligencia Artificial",
-  "descripcion": "Aprende a programar desde cero integrando la Inteligencia Artificial en todas las etapas del desarrollo de software. Curso presencial en Miraflores, Lima - Perú.",
-  "fechatext": "Disponible desde el sábado 28 de junio",
-  "about": "Este curso está diseñado para aquellos que desean aprender a programar desde cero, integrando la Inteligencia Artificial en cada etapa del desarrollo de software. A lo largo de 8 horas, los estudiantes adquirirán conocimientos fundamentales de programación y aprenderán a utilizar herramientas de IA para optimizar su proceso de aprendizaje y desarrollo.",
-  "profesores": [ 
-    {
-      "nombre": "Alvaro Felipe Chávez",
-      "imagen": "/image-1.jpg", 
-      "usuarioSocial": "@alvaro",
-      "enlacePerfil": "https://vercel.com/" 
-    },
-    {
-      "nombre": "Alexys Lozada",
-      "imagen": "/image-2.jpg",
-      "usuarioSocial": "@alexyslozada",
-      "enlacePerfil": "/perfil/alexys"
-    },
-    {
-      "nombre": "Beto Quiroga",
-      "imagen": "/image-3.jpg",
-      "usuarioSocial": "@betoquiroga",
-      "enlacePerfil": "/perfil/beto"
-    }
-  ],
-   "paraQuienEs": [
+    "category": "desarrollo web",
+    "src": "/visa.jpg",
+    "name": "IA desde Cero",
+    "titulo": "Programación desde cero con Inteligencia Artificial",
+    "descripcion": "Aprende a programar desde cero integrando la Inteligencia Artificial en todas las etapas del desarrollo de software. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 28 de junio",
+    "about": "Este curso está diseñado para aquellos que desean aprender a programar desde cero, integrando la Inteligencia Artificial en cada etapa del desarrollo de software. A lo largo de 8 horas, los estudiantes adquirirán conocimientos fundamentales de programación y aprenderán a utilizar herramientas de IA para optimizar su proceso de aprendizaje y desarrollo.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
       "Principiantes sin experiencia previa en programación.",
       "Profesionales de otras áreas que buscan una transición al desarrollo de software.",
       "Estudiantes interesados en integrar la IA desde el inicio de su aprendizaje de código.",
@@ -838,8 +816,5 @@
       "offer": "Mira las primeras clases gratis"
     },
     "remainingSeats": "19 estudiantes"
-
   }
-  
-  
 ]

@@ -8,25 +8,25 @@ import Link from "next/link";
 import { useState } from "react";
 
 
-// --- Datos de los Cursos (con 'purchaseUrl' añadido) ---
+// --- Datos de los Cursos (sin cambios) ---
 const courses = [
   {
     id: 1,
-    title: "Ceramic Arts: Traditional Techniques",
+    title: "ANALISIS DE CUENCAS HIDROGRAFICAS CON QGIS",
     description:
       "Create unique ceramic vessels at home, learn clay modeling, design, firing, and glaze techniques for decorative pieces.",
     categoryIcon: <Tag className="h-4 w-4" />,
     category: "100% online",
-    originalPrice: "219.99",
-    discountedPrice: "10.00",
+    originalPrice: "198.00",
+    discountedPrice: "99.00",
     imageSrc:
-      "https://images.unsplash.com/photo-1550319422-e4f7114a84b2?q=80&w=2835&auto=format&fit=crop",
-    bgColor: "#C3B7A8",
+      "bannercuencas.webp",
+    bgColor: "#E25822",
     gradientColor: "#A69C8F",
-    textColor: "#3E3831",
+    textColor: "white",
     buttonBgColor: "#3E3831",
     buttonTextColor: "#FFFFFF",
-    purchaseUrl: "https://leanding-club-de-ingenieros.vercel.app/cursos/gestion-riesgos-ejecucion-obras", // <-- ENLACE DEL CURSO 1
+    purchaseUrl: "/cursos/analisis-cuencas-hidrograficas-qgis",
   },
   {
     id: 2,
@@ -44,7 +44,7 @@ const courses = [
     textColor: "#2A363B",
     buttonBgColor: "#2A363B",
     buttonTextColor: "#FFFFFF",
-    purchaseUrl: "https://www.camaralima.org.pe/", // <-- ENLACE DEL CURSO 2
+    purchaseUrl: "https://www.camaralima.org.pe/",
   },
   {
     id: 3,
@@ -62,15 +62,15 @@ const courses = [
     textColor: "#4C4433",
     buttonBgColor: "#4C4433",
     buttonTextColor: "#FFFFFF",
-    purchaseUrl: "/cursos/fotografia-digital", // <-- ENLACE DEL CURSO 3
+    purchaseUrl: "/cursos/fotografia-digital",
   },
 ];
 
-// --- Variantes de Animación con Transición Suavizada ---
+// --- Variantes de Animación (sin cambios) ---
 const slideTransition = {
-    type: "tween",
-    duration: 0.7, // Duración aumentada para un movimiento más lento
-    ease: [0.56, 0.03, 0.12, 1.04], // Curva de ease personalizada para suavidad
+  type: "tween",
+  duration: 0.7,
+  ease: [0.56, 0.03, 0.12, 1.04],
 };
 
 const slideVariants = {
@@ -105,15 +105,15 @@ const textItemVariants = {
 };
 
 const imageVariants = {
-    enter: { scale: 0.8, opacity: 0 },
-    center: {
-        scale: 1,
-        opacity: 1,
-        transition: {
-            scale: { duration: 0.6, ease: [0.34, 1.56, 0.64, 1] },
-            opacity: { duration: 0.5 }
-        }
-    },
+  enter: { scale: 0.8, opacity: 0 },
+  center: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      scale: { duration: 0.6, ease: [0.34, 1.56, 0.64, 1] },
+      opacity: { duration: 0.5 }
+    }
+  },
 }
 
 export default function CoursesCarouselFinal() {
@@ -141,13 +141,14 @@ export default function CoursesCarouselFinal() {
         key={courseIndex}
         className="absolute inset-0"
         style={{
-            background: `radial-gradient(circle at 50% 50%, ${activeCourse.gradientColor}00, ${activeCourse.bgColor} 80%)`,
+          background: `radial-gradient(circle at 50% 50%, ${activeCourse.gradientColor}00, ${activeCourse.bgColor} 80%)`,
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.5 }}
         transition={{ duration: 1.2, ease: "easeInOut" }}
       />
 
+      {/* Contenedor principal del contenido del carrusel */}
       <div className="relative flex h-full w-full max-w-7xl items-center justify-center p-4">
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
@@ -157,45 +158,42 @@ export default function CoursesCarouselFinal() {
             initial="enter"
             animate="center"
             exit="exit"
-            // MODIFICACIÓN CLAVE AQUÍ:
-            // En móviles (por defecto), la imagen (`order-first`) va primero.
-            // En pantallas medianas (`md:grid-cols-2`), se usa el orden por defecto del grid.
             className="absolute grid w-full grid-cols-1 items-center gap-10 px-4 md:grid-cols-2 md:gap-20"
           >
-            {/* --- Sección de Imagen (Ahora primera en móvil) --- */}
+            {/* --- Sección de Imagen --- */}
             <motion.div
-              className="relative [perspective:1000px] order-first md:order-last" // Añadido `order-first md:order-last`
+              className="relative [perspective:1000px] order-first md:order-last"
               variants={imageVariants}
               initial="enter"
               animate="center"
             >
               <motion.div
-                  className="h-full w-full rounded-2xl shadow-2xl [transform-style:preserve-3d]"
-                  whileHover={{ rotateY: -10, rotateX: 5, scale: 1.02 }}
-                  transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                className="h-full w-full rounded-2xl shadow-2xl [transform-style:preserve-3d]"
+                whileHover={{ rotateY: -10, rotateX: 5, scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 200, damping: 20 }}
               >
-                  <img
-                      src={activeCourse.imageSrc}
-                      alt={activeCourse.title}
-                      className="h-full w-full rounded-2xl object-cover"
-                      style={{
-                          animation: 'kenburns 20s ease-in-out infinite alternate-reverse',
-                          transformOrigin: 'center center',
-                      }}
-                  />
-                  <style jsx global>{`
-                      @keyframes kenburns {
-                          0% { transform: scale(1) translate(0, 0); }
-                          100% { transform: scale(1.1) translate(-2%, 2%); }
-                      }
-                  `}</style>
+                <img
+                  src={activeCourse.imageSrc}
+                  alt={activeCourse.title}
+                  className="h-full w-full rounded-2xl object-cover"
+                  style={{
+                    animation: 'kenburns 20s ease-in-out infinite alternate-reverse',
+                    transformOrigin: 'center center',
+                  }}
+                />
+                <style jsx global>{`
+                          @keyframes kenburns {
+                              0% { transform: scale(1) translate(0, 0); }
+                              100% { transform: scale(1.1) translate(-2%, 2%); }
+                          }
+                        `}</style>
               </motion.div>
             </motion.div>
 
-            {/* --- Sección de Texto (Ahora segunda en móvil) --- */}
+            {/* --- Sección de Texto --- */}
             <motion.div
               variants={textContainerVariants}
-              className="flex flex-col space-y-4" // No se necesita `order-last` aquí, `order-first` de la imagen ya lo posiciona.
+              className="flex flex-col space-y-4"
               style={{ color: activeCourse.textColor }}
             >
               <motion.h1
@@ -226,18 +224,17 @@ export default function CoursesCarouselFinal() {
 
               <motion.div variants={textItemVariants} className="pt-4">
                 <span className="text-lg opacity-70 line-through">
-                  PEN {activeCourse.originalPrice}
+                  S/ {activeCourse.originalPrice}
                 </span>
                 <p className="flex items-baseline">
                   <span className="mr-2 text-sm font-semibold">95% Disc.</span>
                   <span className="text-5xl font-extrabold tracking-tight">
-                    PEN {activeCourse.discountedPrice}
+                    S/ {activeCourse.discountedPrice}
                   </span>
                 </p>
 
-                {/* --- BOTÓN FUNCIONAL --- */}
                 <Button
-                  asChild // Permite que el botón se comporte como su hijo (el Link)
+                  asChild
                   className="mt-6 w-full rounded-full sm:w-auto px-12 py-7 text-lg font-bold shadow-lg"
                   style={{
                     backgroundColor: activeCourse.buttonBgColor,
@@ -250,10 +247,10 @@ export default function CoursesCarouselFinal() {
                   >
                     <Link
                       href={activeCourse.purchaseUrl}
-                      target="_blank" // Abre el enlace en una nueva pestaña
-                      rel="noopener noreferrer" // Buena práctica de seguridad
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      Comprar por PEN {activeCourse.discountedPrice}
+                      Comprar por S/ {activeCourse.discountedPrice}
                     </Link>
                   </motion.div>
                 </Button>
@@ -261,23 +258,26 @@ export default function CoursesCarouselFinal() {
             </motion.div>
           </motion.div>
         </AnimatePresence>
-
-        {/* --- Controles de Navegación --- */}
-        <button
-          onClick={() => paginate(-1)}
-          className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/60 p-3 text-gray-900 transition hover:bg-white hover:scale-110 active:scale-95 md:left-2"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft className="h-7 w-7" />
-        </button>
-        <button
-          onClick={() => paginate(1)}
-          className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/60 p-3 text-gray-900 transition hover:bg-white hover:scale-110 active:scale-95 md:right-2"
-          aria-label="Next slide"
-        >
-          <ChevronRight className="h-7 w-7" />
-        </button>
       </div>
+
+      {/* --- Controles de Navegación (FUERA DEL CONTENEDOR DE CONTENIDO) --- */}
+      {/* <-- CAMBIO CLAVE: Botones movidos aquí y clases de responsividad añadidas */}
+      <button
+        onClick={() => paginate(-1)}
+        className="absolute top-1/2 -translate-y-1/2 z-20 rounded-full bg-white/60 p-3 text-gray-900 transition hover:bg-white hover:scale-110 active:scale-95 hidden md:flex items-center justify-center md:left-10"
+        aria-label="Previous slide"
+      >
+        <ChevronLeft className="h-7 w-7" />
+      </button>
+
+      <button
+        onClick={() => paginate(1)}
+        className="absolute top-1/2 -translate-y-1/2 z-20 rounded-full bg-white/60 p-3 text-gray-900 transition hover:bg-white hover:scale-110 active:scale-95 hidden md:flex items-center justify-center md:right-10"
+        aria-label="Next slide"
+      >
+        <ChevronRight className="h-7 w-7" />
+      </button>
+
 
       {/* --- Puntos Indicadores --- */}
       <div className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 space-x-3">
@@ -285,9 +285,8 @@ export default function CoursesCarouselFinal() {
           <button
             key={i}
             onClick={() => goToSlide(i)}
-            className={`h-2.5 w-2.5 rounded-full backdrop-blur-sm transition-all duration-300 ${
-              courseIndex === i ? "w-8 bg-white" : "bg-white/40 hover:bg-white/70"
-            }`}
+            className={`h-2.5 w-2.5 rounded-full backdrop-blur-sm transition-all duration-300 ${courseIndex === i ? "w-8 bg-white" : "bg-white/40 hover:bg-white/70"
+              }`}
             aria-label={`Go to slide ${i + 1}`}
           />
         ))}
