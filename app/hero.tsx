@@ -1,26 +1,25 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { Button } from "@/components/ui/button"; // Asegúrate que la ruta sea correcta
-import { AnimatePresence, motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { AnimatePresence, motion, useDragControls } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star, Tag } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
 
 // --- Datos de los Cursos (sin cambios) ---
 const courses = [
   {
     id: 1,
-    title: "ANALISIS DE CUENCAS HIDROGRAFICAS CON QGIS",
+    title: "ANÁLISIS DE CUENCAS HIDROGRÁFICAS CON QGIS",
     description:
-      "Create unique ceramic vessels at home, learn clay modeling, design, firing, and glaze techniques for decorative pieces.",
+      "Crea vasijas de cerámica únicas en casa, aprende modelado en arcilla, diseño, cocción y técnicas de esmaltado para piezas decorativas.",
     categoryIcon: <Tag className="h-4 w-4" />,
     category: "100% online",
     originalPrice: "198.00",
     discountedPrice: "99.00",
-    imageSrc:
-      "bannercuencas.webp",
+    imageSrc: "bannercuencas.webp",
     bgColor: "#E25822",
     gradientColor: "#A69C8F",
     textColor: "white",
@@ -105,16 +104,17 @@ const textItemVariants = {
 };
 
 const imageVariants = {
-  enter: { scale: 0.8, opacity: 0 },
-  center: {
-    scale: 1,
-    opacity: 1,
-    transition: {
-      scale: { duration: 0.6, ease: [0.34, 1.56, 0.64, 1] },
-      opacity: { duration: 0.5 }
-    }
-  },
+    enter: { scale: 0.8, opacity: 0 },
+    center: {
+        scale: 1,
+        opacity: 1,
+        transition: {
+            scale: { duration: 0.6, ease: [0.34, 1.56, 0.64, 1] },
+            opacity: { duration: 0.5 }
+        }
+    },
 }
+
 
 export default function CoursesCarouselFinal() {
   const [[page, direction], setPage] = useState([0, 0]);
@@ -131,9 +131,32 @@ export default function CoursesCarouselFinal() {
     setPage([slideIndex, newDirection]);
   };
 
+  // MEJORA: Implementación del gesto de swipe (deslizar)
+  const swipeConfidenceThreshold = 10000;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const onDragEnd = (e: any, { offset, velocity }: any) => {
+    const swipe = Math.abs(offset.x) * velocity.x;
+
+    if (swipe < -swipeConfidenceThreshold) {
+      paginate(1); // Swipe a la izquierda (siguiente)
+    } else if (swipe > swipeConfidenceThreshold) {
+      paginate(-1); // Swipe a la derecha (anterior)
+    }
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      paginate(1);
+    }, 7000); 
+
+    return () => clearInterval(interval);
+  }, [page]); 
+
   return (
+    // MEJORA: Se cambió `h-screen` por `min-h-screen` y se añadió padding vertical `py-20`.
+    // Esto asegura que todo el contenido sea visible en móviles sin ser cortado y le da un respiro.
     <motion.main
-      className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden"
+      className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden py-20"
       animate={{ backgroundColor: activeCourse.bgColor }}
       transition={{ duration: 1.0, ease: "easeInOut" }}
     >
@@ -147,10 +170,12 @@ export default function CoursesCarouselFinal() {
         animate={{ opacity: 0.5 }}
         transition={{ duration: 1.2, ease: "easeInOut" }}
       />
-
+      
       {/* Contenedor principal del contenido del carrusel */}
-      <div className="relative flex h-full w-full max-w-7xl items-center justify-center p-4">
+      {/* MEJORA: Padding ajustado en móvil `px-4` y en desktop `sm:px-6 lg:px-8` */}
+      <div className="relative flex h-full w-full max-w-7xl items-center justify-center px-4 sm:px-6 lg:px-8">
         <AnimatePresence initial={false} custom={direction}>
+          {/* MEJORA: Se añaden las propiedades `drag` para habilitar el deslizamiento horizontal */}
           <motion.div
             key={page}
             custom={direction}
@@ -158,11 +183,16 @@ export default function CoursesCarouselFinal() {
             initial="enter"
             animate="center"
             exit="exit"
-            className="absolute grid w-full grid-cols-1 items-center gap-10 px-4 md:grid-cols-2 md:gap-20"
+            drag="x" // Habilita el arrastre en el eje X
+            dragConstraints={{ left: 0, right: 0 }} // Limita el arrastre para que no se salga de la pantalla
+            dragElastic={0.2} // Añade un poco de "resistencia" elástica al arrastrar
+            onDragEnd={onDragEnd} // Llama a la función cuando el usuario suelta el slide
+            className="absolute grid w-full grid-cols-1 items-center gap-8 md:grid-cols-2"
           >
             {/* --- Sección de Imagen --- */}
+            {/* MEJORA: se ajusta el `order` para móviles y escritorio */}
             <motion.div
-              className="relative [perspective:1000px] order-first md:order-last"
+              className="relative order-first md:order-last [perspective:1000px] px-2"
               variants={imageVariants}
               initial="enter"
               animate="center"
@@ -176,43 +206,40 @@ export default function CoursesCarouselFinal() {
                   src={activeCourse.imageSrc}
                   alt={activeCourse.title}
                   className="h-full w-full rounded-2xl object-cover"
-                  style={{
-                    animation: 'kenburns 20s ease-in-out infinite alternate-reverse',
-                    transformOrigin: 'center center',
-                  }}
+                   style={{
+                     animation: 'kenburns 20s ease-in-out infinite alternate-reverse',
+                     transformOrigin: 'center center',
+                   }}
                 />
-                <style jsx global>{`
-                          @keyframes kenburns {
-                              0% { transform: scale(1) translate(0, 0); }
-                              100% { transform: scale(1.1) translate(-2%, 2%); }
-                          }
-                        `}</style>
+                
               </motion.div>
             </motion.div>
 
             {/* --- Sección de Texto --- */}
+             {/* MEJORA: Se añade `text-center md:text-left` y `items-center md:items-start`
+                 para centrar el texto en móviles y alinearlo a la izquierda en desktop. */}
             <motion.div
               variants={textContainerVariants}
-              className="flex flex-col space-y-4"
+              className="flex flex-col space-y-4 text-center items-center md:text-left md:items-start"
               style={{ color: activeCourse.textColor }}
             >
               <motion.h1
                 variants={textItemVariants}
-                className="text-4xl font-extrabold tracking-tighter lg:text-5xl"
+                className="text-3xl font-extrabold tracking-tighter sm:text-4xl lg:text-5xl"
               >
                 {activeCourse.title}
               </motion.h1>
 
               <motion.p
                 variants={textItemVariants}
-                className="text-base leading-relaxed opacity-90 lg:text-lg"
+                className="text-base leading-relaxed opacity-90 lg:text-lg max-w-md"
               >
                 {activeCourse.description}
               </motion.p>
 
               <motion.div
                 variants={textItemVariants}
-                className="flex items-center space-x-4 text-sm font-medium"
+                className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4 text-sm font-medium"
               >
                 <div className="flex items-center">{activeCourse.categoryIcon} <span className="ml-2">{activeCourse.category}</span></div>
                 <div className="flex items-center">
@@ -226,7 +253,7 @@ export default function CoursesCarouselFinal() {
                 <span className="text-lg opacity-70 line-through">
                   S/ {activeCourse.originalPrice}
                 </span>
-                <p className="flex items-baseline">
+                <p className="flex items-baseline justify-center md:justify-start">
                   <span className="mr-2 text-sm font-semibold">95% Disc.</span>
                   <span className="text-5xl font-extrabold tracking-tight">
                     S/ {activeCourse.discountedPrice}
@@ -242,8 +269,8 @@ export default function CoursesCarouselFinal() {
                   }}
                 >
                   <motion.div
-                    whileHover={{ scale: 1.05, boxShadow: `0px 10px 30px ${activeCourse.buttonBgColor}50` }}
-                    whileTap={{ scale: 0.95 }}
+                     whileHover={{ scale: 1.05, boxShadow: `0px 10px 30px ${activeCourse.buttonBgColor}50` }}
+                     whileTap={{ scale: 0.95 }}
                   >
                     <Link
                       href={activeCourse.purchaseUrl}
@@ -260,11 +287,13 @@ export default function CoursesCarouselFinal() {
         </AnimatePresence>
       </div>
 
-      {/* --- Controles de Navegación (FUERA DEL CONTENEDOR DE CONTENIDO) --- */}
-      {/* <-- CAMBIO CLAVE: Botones movidos aquí y clases de responsividad añadidas */}
+      {/* --- Controles de Navegación (Izquierda/Derecha) --- */}
+      {/* MEJORA: Se ocultan en móvil (`hidden`) y se muestran en tablet en adelante (`md:flex`) */}
       <button
         onClick={() => paginate(-1)}
-        className="absolute top-1/2 -translate-y-1/2 z-20 rounded-full bg-white/60 p-3 text-gray-900 transition hover:bg-white hover:scale-110 active:scale-95 hidden md:flex items-center justify-center md:left-10"
+        className="absolute top-1/2 -translate-y-1/2 z-20 rounded-full bg-white/60 p-3 text-gray-900 transition hover:bg-white hover:scale-110 active:scale-95
+        left-4 md:left-10 lg:left-2  2xl:left-28
+        hidden md:flex items-center justify-center"
         aria-label="Previous slide"
       >
         <ChevronLeft className="h-7 w-7" />
@@ -272,7 +301,9 @@ export default function CoursesCarouselFinal() {
 
       <button
         onClick={() => paginate(1)}
-        className="absolute top-1/2 -translate-y-1/2 z-20 rounded-full bg-white/60 p-3 text-gray-900 transition hover:bg-white hover:scale-110 active:scale-95 hidden md:flex items-center justify-center md:right-10"
+        className="absolute top-1/2 -translate-y-1/2 z-20 rounded-full bg-white/60 p-3 text-gray-900 transition hover:bg-white hover:scale-110 active:scale-95
+        right-4 md:right-10 lg:right-2   2xl:right-28
+        hidden md:flex items-center justify-center"
         aria-label="Next slide"
       >
         <ChevronRight className="h-7 w-7" />
