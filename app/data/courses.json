@@ -1,0 +1,18 @@
+[
+  {
+    "id": "curso-01",
+    "fullTitle": "Analisis de cuencas",
+    "slug": "analisis-cuencas-hidrograficas-qgis",
+    "shortDescription": "Aprende a identificar y mitigar riesgos",
+    "bannerColor": "bg-emerald-600",
+    "template": "riesgos" 
+  },
+  {
+    "id": "curso-02",
+    "fullTitle": "Seguridad en Obras",
+    "slug": "seguridad-en-obras-de-construccion",
+    "shortDescription": "Normativas esenciales de seguridad",
+    "bannerColor": "bg-red-600",
+    "template": "seguridad"
+  }
+]
