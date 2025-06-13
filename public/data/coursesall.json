@@ -188,7 +188,7 @@
     "precio": 199.0,
     "descuento": 0.5025125628140703
   },
-  
+
   {
     "id": "hidrogeologia-minera-aplicada-captaciones-aguas-subterraneas",
     "slug": "hidrogeologia-minera-aplicada-captaciones-aguas-subterraneas",
@@ -287,5 +287,679 @@
     "remainingSeats": "240 estudiantes",
     "precio": 180.0,
     "descuento": 0.3944444444444444
+  },
+
+  {
+    "id": "metodo-icam-investigacion-incidentes-accidentes",
+    "slug": "metodo-icam-investigacion-incidentes-accidentes",
+    "category": "Seguridad y Salud en el Trabajo",
+    "src": "/metodo-icam/banner.webp",
+    "name": "Método ICAM",
+    "titulo": "Método ICAM para Investigación de Incidentes/Accidentes",
+    "descripcion": "Aprende el método ICAM (Incident Cause Analysis Method) para investigar incidentes y accidentes, identificando causas raíz y desarrollando acciones preventivas y correctivas efectivas.",
+    "fechatext": null,
+    "curso": "CURSO ",
+    "about": "Este curso te capacitará en el uso del Método ICAM, una herramienta robusta para la investigación de incidentes y accidentes laborales. Dominarás el proceso desde el enfoque general y la recolección de datos hasta el análisis de causas y la elaboración de informes y conclusiones.",
+    "profesores": [
+      {
+        "nombre": "Ing. Joseph Marlon Romero Colqui",
+        "imagen": "/metodo-icam/profesor.webp",
+        "usuarioSocial": "@josephromero",
+        "enlacePerfil": "https://www.linkedin.com/in/joseph-romero-colqui-9a6aa01b5/"
+      }
+    ],
+    "paraQuienEs": [
+      "Profesionales y técnicos de Seguridad y Salud en el Trabajo (SST).",
+      "Supervisores y jefes de área.",
+      "Auditores internos de sistemas de gestión de seguridad.",
+      "Gerentes de operaciones y producción.",
+      "Personal involucrado en la prevención e investigación de incidentes y accidentes laborales."
+    ],
+    "conocimientosPrevios": [
+      "Interés en Seguridad y Salud en el Trabajo.",
+      "Conocimientos básicos de gestión de riesgos (opcional)."
+    ],
+    "certificado": {
+      "imageSrc": "/metodo-icam/certificado.webp"
+    },
+    "temarios": [
+      {
+        "title": "Módulo 01: Enfoque general",
+        "items": [
+          "Accidente-incidente.",
+          "Peligro y Riesgo.",
+          "Clasificación de los accidentes.",
+          "Tipología de los accidentes en la Industria.",
+          "¿Qué accidentes investigar?",
+          "¿Quién debe investigar? Investigaciones de rutina e investigaciones especializadas.",
+          "Error Humano y factores que inciden en él según J. Razón.",
+          "ICAM en el contexto de las derivaciones del esquema de Queso Suizo."
+        ]
+      },
+      {
+        "title": "Módulo 02: Desarrollo ICAM",
+        "items": [
+          "Esquema de los 7 pasos.",
+          "Respuesta a Emergencia y Aseguramiento del Sitio.",
+          "El Equipo de Investigación: Personas, Hardware y otros recursos.",
+          "Movilización al sitio de incidente.",
+          "Planificación de la Investigación.",
+          "Método para la Recopilación de Datos según Categorías: PEEPO.",
+          "Entrevista a testigos: abordajes y criterios.",
+          "Croquis, fotografía y vídeos: usos y abusos."
+        ]
+      },
+      {
+        "title": "Módulo 03: Organización de Datos",
+        "items": [
+          "Diagramas STEP y líneas de tiempo.",
+          "Esquema de los 5 Por Qué.",
+          "Árbol de Causas.",
+          "Diagrama Espina de Pescado."
+        ]
+      },
+      {
+        "title": "Módulo 04: Análisis ICAM",
+        "items": [
+          "Cuadro de secuencia de eventos.",
+          "Factores Contribuyentes y Causas Principales.",
+          "Análisis de causa raíz: técnicas y trampas.",
+          "Acciones Preventivas y Correctivas.",
+          "Reporte de Hallazgos."
+        ]
+      },
+      {
+        "title": "Módulo 05: Cierre y Conclusiones",
+        "items": [
+          "Desarrollo de ejercicios prácticos de investigación de incidentes."
+        ]
+      }
+    ],
+    "fecha": null,
+    "learnings": [
+      "Comprender la relación entre accidentes, incidentes, peligros y riesgos.",
+      "Aplicar el Método ICAM para la investigación de incidentes, desde la planificación hasta el reporte.",
+      "Utilizar herramientas para la recopilación y organización de datos, como PEEPO, diagramas STEP y el Árbol de Causas.",
+      "Realizar análisis de causa raíz y determinar acciones preventivas y correctivas.",
+      "Desarrollar habilidades prácticas en la investigación de incidentes/accidentes."
+    ],
+    "details": {
+      "date": "Finalizado",
+      "duration": "90 horas",
+      "level": "Básico/Intermedio",
+      "offer": "Curso bono a elegir, Certificado Digital por 90 horas."
+    },
+    "remainingSeats": "650 estudiantes",
+    "precio": 199.0,
+    "descuento": 0.5025125628140703
+  },
+
+  {
+    "id": "gestion-seguridad-salud-trabajo-obras-publicas",
+    "slug": "gestion-seguridad-salud-trabajo-obras-publicas",
+    "category": "Seguridad y Salud en el Trabajo",
+    "src": "/gestion-de-seguridad/banner.webp",
+    "name": "Gestión SST",
+    "titulo": "Gestión de Seguridad y Salud en el Trabajo en Obras Públicas",
+    "descripcion": "Domina la normativa y los procesos clave para la gestión de la Seguridad y Salud en el Trabajo (SST) en obras públicas, desde la interpretación de leyes hasta la fiscalización de SUNAFIL.",
+    "fechatext": "Finalizado",
+    "curso": "CURSO DE ESPECIALIZACIÓN",
+    "about": "Este curso te proporcionará un conocimiento integral sobre la gestión de la Seguridad y Salud en el Trabajo aplicada específicamente a obras públicas. Cubrirás la interpretación e implementación de normativas clave como la Ley 29783, el D.S. 011-2019-TR y la Norma G.050, así como aspectos de contratación, tipos de obras, presupuesto y fiscalización.",
+    "profesores": [
+      {
+        "nombre": "Mg. Ing. Joseph Marlon Romero Colqui",
+        "imagen": "/gestion-de-seguridad/profesor.webp",
+        "usuarioSocial": "@josephromero",
+        "enlacePerfil": "https://www.linkedin.com/in/joseph-romero-colqui-9a6aa01b5/"
+      }
+    ],
+    "paraQuienEs": [
+      "Ingenieros y arquitectos involucrados en obras públicas.",
+      "Profesionales y técnicos en Seguridad y Salud en el Trabajo (SST).",
+      "Gestores de proyectos y supervisores de obra.",
+      "Funcionarios públicos y personal de Contraloría.",
+      "Estudiantes de ingeniería civil, arquitectura y carreras afines interesadas en SST en el sector público."
+    ],
+    "conocimientosPrevios": [
+      "Interés en Seguridad y Salud en el Trabajo.",
+      "Conocimientos básicos del sector construcción o administración pública (opcional)."
+    ],
+    "certificado": {
+      "imageSrc": "/gestion-de-seguridad/certificado.webp"
+    },
+    "temarios": [
+      {
+        "title": "MÓDULO 01: INTERPRETACIÓN E IMPLEMENTACIÓN DE LA LEY 29783",
+        "items": [
+          "Principios de la Ley.",
+          "Planificación y Evaluación del Sistema de Gestión de Seguridad y Salud en el Trabajo.",
+          "Comité de Seguridad y Salud en el Trabajo.",
+          "Auditorías SST.",
+          "Vigilancia Médica."
+        ]
+      },
+      {
+        "title": "MÓDULO 02: INTERPRETACIÓN E IMPLEMENTACIÓN DEL REGLAMENTO PARA EL SECTOR CONSTRUCCIÓN D.S. 011-2019-TR",
+        "items": [
+          "Derechos y Obligaciones del Empleador y Trabajador.",
+          "Planificación y Organización del Sistema de Gestión de Seguridad y Salud en el Trabajo.",
+          "Comité Técnico de Coordinación en Seguridad y Salud en el Trabajo.",
+          "Aplicación, Evaluación y Mejora Continua del Sistema de Gestión de Seguridad y Salud en el Trabajo.",
+          "Vigilancia de la Salud de los Trabajadores del Sector Construcción."
+        ]
+      },
+      {
+        "title": "MÓDULO 03: INTERPRETACIÓN E IMPLEMENTACIÓN DE LA NORMA G.050 SEGURIDAD DURANTE LA CONSTRUCCIÓN",
+        "items": [
+          "Requisitos del Lugar de Trabajo.",
+          "Equipos de Protección Personal.",
+          "Investigación y Reporte de Accidentes y Enfermedades."
+        ]
+      },
+      {
+        "title": "MÓDULO 04: TIPOS DE CONTRATOS EN OBRAS PÚBLICAS Y SU RELACIÓN CON SEGURIDAD Y SALUD EN EL TRABAJO",
+        "items": [
+          "Contratos a Suma Alzada.",
+          "Contratos por Precios Unitarios.",
+          "Sistema Mixto."
+        ]
+      },
+      {
+        "title": "MÓDULO 05: TIPOS DE OBRAS PÚBLICAS Y SU RELACIÓN CON SEGURIDAD Y SALUD EN EL TRABAJO",
+        "items": [
+          "Administración Directa.",
+          "Obras por Contrata.",
+          "Obras por Impuesto."
+        ]
+      },
+      {
+        "title": "MÓDULO 06: SISTEMA DE GESTIÓN DE SEGURIDAD Y SALUD EN EL TRABAJO EN OBRAS PÚBLICAS",
+        "items": [
+          "Presupuesto de Obra para Seguridad.",
+          "Interpretación del Expediente Técnico.",
+          "Metrados y Valorización."
+        ]
+      },
+      {
+        "title": "MÓDULO 07: INTERVENCIÓN DE LA CONTRALORÍA GENERAL DE LA REPÚBLICA",
+        "items": [
+          "Términos Generales.",
+          "Control Concurrente.",
+          "Informe de Visita de Control.",
+          "Acta de Vista."
+        ]
+      },
+      {
+        "title": "MÓDULO 08: FISCALIZACIÓN LABORAL E INSPECCIONES DE SUNAFIL",
+        "items": [
+          "Ley General de Inspección del Trabajo - Ley N°28806.",
+          "Acta de Infracción.",
+          "Infracciones en Materia de Seguridad y Salud en el Trabajo."
+        ]
+      }
+    ],
+    "fecha": null,
+    "learnings": [
+      "Interpretar e implementar la Ley 29783 y su reglamento en el sector construcción.",
+      "Aplicar la Norma G.050 en seguridad durante la construcción.",
+      "Entender la relación de los tipos de contratos y obras públicas con la SST.",
+      "Gestionar el Sistema de Gestión de Seguridad y Salud en el Trabajo en obras públicas.",
+      "Conocer la intervención de la Contraloría y la fiscalización de SUNAFIL."
+    ],
+    "details": {
+      "date": "Finalizado",
+      "duration": "90 horas Academicas",
+      "level": "Básico/Intermedio",
+      "offer": "Curso bono a elegir, Certificado Digital ."
+    },
+    "remainingSeats": "956 estudiantes",
+    "precio": 199.0,
+    "descuento": 0.5025125628140703
+  },
+
+  {
+    "id": "certificacion-punto-geodesico-orden-c",
+    "slug": "certificacion-punto-geodesico-orden-c",
+    "category": "Geodesia y Topografía",
+    "src": "/certificacion-de-punto/banner.webp",
+    "name": "Certificación Geodésica",
+    "titulo": "Certificación de punto geodésico orden C",
+    "descripcion": "Aprende el proceso completo para la certificación de puntos geodésicos de orden C, cubriendo desde pasos preliminares, trabajo de campo y gabinete, hasta la entrega y seguimiento del expediente.",
+    "fechatext": null,
+    "curso": "CURSO DE ESPECIALIZACIÓN",
+    "about": "Este curso te capacitará en la metodología y los requisitos para la certificación de puntos geodésicos de orden C, fundamentales para proyectos de ingeniería y topografía. Aprenderás las técnicas de campo y gabinete, el uso de equipos GNSS y el manejo de software de post-procesamiento.",
+    "profesores": [
+      {
+        "nombre": "ING. PEREZ MENESES, KEVIN JOSEPH",
+        "imagen": "/certificacion-de-punto/profesor.webp",
+        "usuarioSocial": null,
+        "enlacePerfil": null
+      }
+    ],
+    "paraQuienEs": [
+      "Ingenieros agrícolas, civiles y geógrafos.",
+      "Topógrafos y profesionales del levantamiento catastral.",
+      "Especialistas en geomática y sistemas de información geográfica (SIG).",
+      "Estudiantes de ingeniería y carreras afines interesadas en geodesia y topografía.",
+      "Profesionales que requieran certificar puntos geodésicos para sus proyectos."
+    ],
+    "conocimientosPrevios": [
+      "Conocimientos básicos de topografía y geodesia.",
+      "Familiaridad con el uso de equipos GNSS (GPS)."
+    ],
+    "certificado": {
+      "imageSrc": "/certificacion-de-punto/certificado.webp"
+    },
+    "temarios": [
+      {
+        "title": "Módulo 01: PASOS PREELIMINARES",
+        "items": [
+          "Creación de usuario.",
+          "Solicitud de código.",
+          "Fabricación de placa geodésica.",
+          "Calculo de tiempo por lectura.",
+          "Verificar la operatividad de la E.R.P."
+        ]
+      },
+      {
+        "title": "Módulo 02: TRABAJO DE CAMPO",
+        "items": [
+          "Registro fotográfico según la norma vigente del IGN.",
+          "Ubicación estratégica del punto geodésico.",
+          "Dimensiones del punto a certificar.",
+          "Monumentación e incrustación de placa geodésica.",
+          "Lectura en modo estático en equipo GNSS."
+        ]
+      },
+      {
+        "title": "Módulo 03: TRABAJO DE GABINETE",
+        "items": [
+          "Verificación de certificados.",
+          "Pago de derecho de datos para la certificación.",
+          "Solicitud de datos mediante correo E-MAIL.",
+          "Post procesamiento de datos de datos (LEYCA, INFINITY)."
+        ]
+      },
+      {
+        "title": "Módulo 04: ENTREGA Y SEGUIMIENTOS",
+        "items": [
+          "Elaboración de expediente a certificar.",
+          "Envío de expediente al IGN."
+        ]
+      },
+      {
+        "title": "Módulo 05: SEGUIMIENTO Y EVALUACIÓN",
+        "items": ["Control y seguimiento de certificación.", "Examen final."]
+      }
+    ],
+    "fecha": "Finzalizado",
+    "learnings": [
+      "Conocer los pasos preliminares para la certificación de un punto geodésico.",
+      "Ejecutar el trabajo de campo para la recolección de datos geodésicos.",
+      "Realizar el post-procesamiento de datos en gabinete con software especializado.",
+      "Elaborar y enviar el expediente para la certificación ante el IGN.",
+      "Gestionar el seguimiento y evaluación del proceso de certificación."
+    ],
+    "details": {
+      "date": "Finalizado",
+      "duration": "70 Horas Academicas",
+      "level": "Básico/Intermedio/Avanzado",
+      "offer": "Descarga de Materiales, Certificado digital "
+    },
+    "remainingSeats": "1150 estudiantes",
+    "precio": 180.0,
+    "descuento": 0.5055555555555555
+  },
+
+  {
+    "id": "calculo-trabajo-izaje",
+    "slug": "calculo-trabajo-izaje",
+    "category": "Seguridad Industrial",
+    "src": "/calculo-de-trabajo-de-izage/banner.webp",
+    "name": "Cálculo en Izaje",
+    "titulo": "CURSO CALCULO DE TRABAJO EN IZAJE",
+    "descripcion": "Aprende los fundamentos, cálculos críticos y tensiones de eslingas para operaciones de izaje seguras y eficientes.",
+    "fechatext": "Finalizado",
+    "curso": "CURSO",
+    "about": "Este curso te proporcionará los conocimientos esenciales para entender y aplicar los cálculos necesarios en operaciones de izaje. Dominarás desde los fundamentos teóricos hasta el cálculo de izaje crítico y la tensión de eslingas, asegurando la seguridad y optimización de las maniobras.",
+    "profesores": [
+      {
+        "nombre": "Ing. Hilary C. Saldaña Correa"
+      }
+    ],
+    "certificado": {
+      "imageSrc": "/calculo-de-trabajo-de-izage/certificado.webp"
+    },
+    "paraQuienEs": [
+      "Profesionales y técnicos que realicen o supervisen operaciones de izaje.",
+      "Personal de seguridad y salud en el trabajo (SST).",
+      "Ingenieros y estudiantes de carreras afines a la construcción, minería o industria.",
+      "Operadores de equipos de izaje y aparejadores.",
+      "Cualquier persona interesada en mejorar la seguridad y eficiencia en el manejo de cargas."
+    ],
+    "conocimientosPrevios": [
+      "Interés en la seguridad industrial y operaciones de izaje.",
+      "Conocimientos básicos de matemática (aritmética y trigonometría)."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 01: FUNDAMETOS TEÓRICOS DE TRABAJOS EN IZAJE",
+        "items": [
+          "Marco jurídico.",
+          "Partes de un equipo de Izaje.",
+          "Condiciones de operación de Izaje.",
+          "Requisitos de Certificación.",
+          "Eslingas y accesorios de izaje."
+        ]
+      },
+      {
+        "title": "Módulo 02: CÁLCULO DE IZAJE CRÍTICO",
+        "items": [
+          "Cálculo del centro de gravedad.",
+          "Interpretación Tabla de Carga.",
+          "Izaje Crítico.",
+          "Cálculo de porcentaje de trabajo."
+        ]
+      },
+      {
+        "title": "Módulo 03: CÁLCULO DE ESLINGAS",
+        "items": [
+          "Cálculo de tensión en eslingas diagonales.",
+          "Cálculo de tensión en eslingas verticales.",
+          "Cálculo de tensión en tres eslingas."
+        ]
+      }
+    ],
+    "fecha": "Finzalizado",
+    "learnings": [
+      "Comprender los fundamentos teóricos y el marco jurídico de los trabajos en izaje.",
+      "Realizar cálculos de izaje crítico, incluyendo centro de gravedad y porcentaje de trabajo.",
+      "Calcular la tensión y seleccionar eslingas adecuadas para diferentes configuraciones."
+    ],
+    "details": {
+      "date": "Finalizado",
+      "duration": "90 horas Academicas",
+      "level": "Básico/Intermedio",
+      "offer": "Descarga de Material , Certificado Digital "
+    },
+    "remainingSeats": "1512 Estudiantes",
+    "precio": 199.0,
+    "descuento": 0.5025125628140703
+  },
+
+  {
+    "id": "modelamiento-hidraulico-hec-ras",
+    "slug": "modelamiento-hidraulico-hec-ras",
+    "category": "Hidráulica y Recursos Hídricos",
+    "src": "/modelamiento-hidraulico/banner.webp",
+    "name": "HEC-RAS",
+    "titulo": "MODELAMIENTO HIDRÁULICO CON HEC-RAS",
+    "descripcion": "Aprende a realizar modelamiento hidráulico avanzado con HEC-RAS 2D, desde la configuración del entorno hasta la interpretación de resultados y análisis de flujos hiperconcentrados.",
+    "fechatext": "Finalizado",
+    "curso": "CURSO DE ESPECIALIZACIÓN",
+    "about": "Este curso te sumergirá en el uso del software HEC-RAS para el modelamiento hidráulico, cubriendo desde sus fundamentos teóricos y la construcción de mallados con RAS Mapper, hasta la simulación de flujos permanentes, no permanentes e hiperconcentrados, y la interpretación de sus resultados.",
+    "profesores": [
+      {
+        "nombre": "ING. Gilberth Eduardo Cruzado Mendoza",
+        "imagen": "/modelamiento-hidraulico/profesor.webp",
+        "usuarioSocial": "@Gilberth",
+        "enlacePerfil": "https://www.linkedin.com/in/gilberth-eduardo-cruzado-mendoza-a29009124/"
+      }
+    ],
+    "paraQuienEs": [
+      "Ingenieros hidráulicos, civiles y ambientales.",
+      "Profesionales que trabajen en proyectos de gestión de recursos hídricos, inundaciones o diseño de infraestructura hidráulica.",
+      "Estudiantes de ingeniería afines interesados en modelamiento numérico.",
+      "Investigadores y consultores en hidrología e hidráulica."
+    ],
+    "conocimientosPrevios": [
+      "Conocimientos básicos de hidráulica e hidrología.",
+      "Familiaridad con el manejo de software de diseño (AutoCAD, ArcGIS) es deseable."
+    ],
+    "certificado": {
+      "imageSrc": "/modelamiento-hidraulico/certificado.webp"
+    },
+    "temarios": [
+      {
+        "title": "Módulo 01: Introducción al programa y fundamentos teóricos",
+        "items": [
+          "Fundamentos del modelo numérico HEC RAS en 2D.",
+          "Interfaz del programa HEC RAS.",
+          "Instalación del programa HEC RAS."
+        ]
+      },
+      {
+        "title": "Módulo 02: RAS Mapper: Construcción del mallado y edición de las condiciones de contorno",
+        "items": [
+          "Tratamiento de los MDTs.",
+          "Construcción y edición del mallado.",
+          "Asignación del coeficiente de rugosidad de Manning.",
+          "Configuración de las condiciones de frontera."
+        ]
+      },
+      {
+        "title": "Módulo 03: Flujo permanente y no permanente",
+        "items": [
+          "Configuración para un análisis de flujo permanente.",
+          "Configuración para un análisis de flujo no permanente."
+        ]
+      },
+      {
+        "title": "Módulo 04: Corrida e interpretación de resultados",
+        "items": [
+          "Creación de plan de corrida.",
+          "Visualización, interpretación y análisis de resultados.",
+          "Exportación de resultados."
+        ]
+      },
+      {
+        "title": "Módulo 05: Flujos hiperconcentrados",
+        "items": [
+          "Definición de parámetros reológicos.",
+          "Selección de modelo reológico.",
+          "Selección de parámetros reológicos."
+        ]
+      }
+    ],
+    "fecha": "Finzalizado",
+    "learnings": [
+      "Comprender los fundamentos y la interfaz del software HEC-RAS para modelamiento 2D.",
+      "Dominar el uso de RAS Mapper para la construcción del mallado y configuración de condiciones de contorno.",
+      "Configurar y ejecutar análisis de flujo permanente y no permanente.",
+      "Interpretar y analizar los resultados de las simulaciones hidráulicas.",
+      "Aplicar HEC-RAS para el modelamiento de flujos hiperconcentrados."
+    ],
+    "details": {
+      "date": "Finalizado",
+      "duration": "90 horas Academicas",
+      "level": "Básico/Intermedio",
+      "offer": "Descarga de Materiales, Certificado digital ."
+    },
+    "remainingSeats": "2100 estudiantes",
+    "precio": 180.0,
+    "descuento": 0.45
+  },
+
+  {
+    "id": "hidrologia-aplicada-proyectos-hidraulicos",
+    "slug": "hidrologia-aplicada-proyectos-hidraulicos",
+    "category": "Hidrología e Hidráulica",
+    "src": "/hidrologia-aplicada/banner.webp",
+    "name": "Hidrología Aplicada",
+    "titulo": "CURSO DE ESPECIALIZACIÓN HIDROLOGÍA APLICADA A PROYECTOS HIDRÁULICOS",
+    "descripcion": "Domina la hidrología aplicada a proyectos hidráulicos, desde los fundamentos y tratamiento de información cartográfica hasta la modelación con HEC-HMS y ArcGIS.",
+    "fechatext": "Finalizado",
+    "curso": "CURSO DE ESPECIALIZACIÓN",
+    "about": "Este curso te proporcionará una sólida base en hidrología aplicada, esencial para el desarrollo de proyectos hidráulicos. Aprenderás a gestionar información cartográfica, delimitar cuencas, realizar análisis hidrológicos y utilizar softwares como ArcGIS y HEC-HMS para simular eventos y estimar caudales.",
+    "profesores": [
+      {
+        "nombre": "ING. Gilberth Eduardo Cruzado Mendoza",
+        "imagen": "/hidrologia-aplicada/profesor.webp",
+        "usuarioSocial": "@Gilberth",
+        "enlacePerfil": "https://www.linkedin.com/in/gilberth-eduardo-cruzado-mendoza-a29009124/"
+      }
+    ],
+    "paraQuienEs": [
+      "Ingenieros hidráulicos, civiles y ambientales.",
+      "Profesionales que trabajen en diseño y planificación de proyectos hidráulicos.",
+      "Especialistas en recursos hídricos y gestión de cuencas.",
+      "Estudiantes de ingeniería y carreras afines interesadas en hidrología e hidráulica.",
+      "Consultores en estudios hidrológicos y ambientales."
+    ],
+    "conocimientosPrevios": [
+      "Conocimientos básicos de hidrología.",
+      "Familiaridad con software de geoprocesamiento (GIS) es recomendable."
+    ],
+    "certificado": {
+      "imageSrc": "/hidrologia-aplicada/certificado.webp"
+    },
+    "temarios": [
+      {
+        "title": "Módulo 01: Fundamentos de la hidrología",
+        "items": [
+          "Ciclo hidrológico: Precipitación, infiltración, evaporación, escorrentía.",
+          "Conceptos básicos: Cuencas hidrográficas, caudales y balances hídricos."
+        ]
+      },
+      {
+        "title": "Módulo 02: Tratamiento de información cartográfica",
+        "items": [
+          "Obtención y tratamiento de información espacial.",
+          "Levantamiento topográfico espacial y de cuencas.",
+          "Parámetros geomorfológicos."
+        ]
+      },
+      {
+        "title": "Módulo 03: Delimitación de cuencas",
+        "items": [
+          "Delimitación de una cuenca utilizando ArcGIS.",
+          "Determinación de parámetros geomorfológicos."
+        ]
+      },
+      {
+        "title": "Módulo 04: Análisis y tratamientos hidrológicos",
+        "items": [
+          "Tratamiento de información hidrológica.",
+          "Análisis de frecuencias y selección de periodo de retorno.",
+          "Construcción de curvas IDF."
+        ]
+      },
+      {
+        "title": "Módulo 05: Hidrología en cuencas",
+        "items": [
+          "Tiempo de concentración.",
+          "Relación lluvia-escorrentía.",
+          "Precipitación total y efectiva.",
+          "Tipos de aforos."
+        ]
+      },
+      {
+        "title": "Módulo 06: Modelación de información hidrológica",
+        "items": [
+          "Introducción a los modelos de simulación hidrológica (HEC – HMS).",
+          "Simulación de eventos y estimación de caudales con HEC – HMS."
+        ]
+      }
+    ],
+    "fecha": "Finzalizado",
+    "learnings": [
+      "Comprender los fundamentos del ciclo hidrológico y sus componentes.",
+      "Obtener, tratar y analizar información cartográfica para delimitación de cuencas.",
+      "Realizar análisis hidrológicos, incluyendo curvas IDF y análisis de frecuencias.",
+      "Aplicar conceptos de hidrología en cuencas, como tiempo de concentración y tipos de aforos.",
+      "Utilizar ArcGIS y HEC-HMS para la modelación y simulación hidrológica."
+    ],
+    "details": {
+      "date": "Finalizado",
+      "duration": "120 horas Academicas",
+      "level": "Intermedio/Avanzado",
+      "offer": "Acceso a los instaladores de los softwares, Descarga de Material ,Certificado Digital "
+    },
+    "remainingSeats": "2869 estudiantes",
+    "precio": 199.0,
+    "descuento": 0.5025125628140703
+  },
+  {
+    "id": "modelacion-hidrogeologica-mineria",
+    "slug": "modelacion-hidrogeologica-mineria",
+    "category": "Hidrogeología",
+    "src": "/modelacion-hidrologica-en-minaria/banner.webp",
+    "name": "Modelación Hidrogeológica",
+    "titulo": "CURSO MODELACIÓN HIDROGEOLÓGICA EN MINERÍA",
+    "descripcion": "Aprende a crear y calibrar modelos hidrogeológicos 2D y 3D para escenarios mineros, incluyendo tajos abiertos, relaveras y el estado preminado.",
+    "fechatext": "Finalizado",
+    "curso": "CURSO DE ESPECIALIZACIÓN",
+    "about": "Este curso te brindará las herramientas y conocimientos para realizar modelaciones hidrogeológicas aplicadas al sector minero. Cubrirás desde los principios del flujo de agua subterránea hasta la creación de modelos conceptuales y numéricos (2D y 3D), su calibración y aplicación en distintos escenarios mineros como tajos abiertos y relaveras, así como la calibración automatizada con Fepest.",
+    "profesores": [
+      {
+        "nombre": "ING. LUIS MANOTUPA DUEÑAS",
+        "imagen": "/modelacion-hidrologica-en-minaria/profesor.webp",
+        "usuarioSocial": null,
+        "enlacePerfil": null
+      }
+    ],
+    "paraQuienEs": [
+      "Ingenieros de minas, geólogos e hidrogeólogos.",
+      "Profesionales que trabajen en la industria minera o consultoría ambiental.",
+      "Especialistas en gestión de recursos hídricos subterráneos.",
+      "Estudiantes de ingeniería y ciencias de la tierra interesados en hidrogeología minera.",
+      "Investigadores y consultores en impacto ambiental minero."
+    ],
+    "conocimientosPrevios": [
+      "Conocimientos básicos de hidrogeología y geología.",
+      "Familiaridad con conceptos de modelación numérica (deseable)."
+    ],
+    "certificado": {
+      "imageSrc": "/modelacion-hidrologica-en-minaria/certificado.webp"
+    },
+    "temarios": [
+      {
+        "title": "Módulo 01: Principios del flujo y transporte de solutos",
+        "items": [
+          "Principios del flujo y transporte de solutos de agua subterránea en las zonas saturadas e insaturadas.",
+          "Creación de modelos conceptuales."
+        ]
+      },
+      {
+        "title": "Módulo 02: Creación e importación de modelos numéricos",
+        "items": [
+          "Creación de modelos numéricos 2D a 3D.",
+          "Importación de modelos geológicos en modelos numéricos.",
+          "Tipos de condiciones de contorno y cuándo usarlas."
+        ]
+      },
+      {
+        "title": "Módulo 03: Fundamentos y modelación de acuíferos",
+        "items": [
+          "Fundamentos de la calibración estacionaria y transitoria del modelo.",
+          "Modelación de un acuífero en estado preminado."
+        ]
+      },
+      {
+        "title": "Módulo 04: Modelación de escenarios mineros y calibración",
+        "items": [
+          "Modelación de un tajo Abierto y postcierre.",
+          "Moderación de una Relavera y postcierre.",
+          "Calibración Automatizada con Fepest."
+        ]
+      }
+    ],
+    "fecha": null,
+    "learnings": [
+      "Comprender los principios del flujo y transporte de agua subterránea y crear modelos conceptuales.",
+      "Desarrollar y utilizar modelos numéricos hidrogeológicos 2D y 3D, importando modelos geológicos y aplicando condiciones de contorno.",
+      "Dominar la calibración estacionaria y transitoria de modelos.",
+      "Aplicar la modelación a escenarios mineros como tajos abiertos, relaveras y condiciones preminadas.",
+      "Realizar calibración automatizada de modelos con Fepest."
+    ],
+    "details": {
+      "date": "Finalizado",
+      "duration": "90 horas Academicas",
+      "level": "Básico/Intermedio",
+      "offer": "Certificado digital, Curso bono: HIDROGEOLOGÍA MINERA APLICADA A CAPTACIONES DE AGUAS SUBTERRÁNEAS."
+    },
+    "remainingSeats": "786 estudiantes",
+    "precio": 180.0,
+    "descuento": 0.45
   }
 ]

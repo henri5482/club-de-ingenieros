@@ -582,12 +582,12 @@ export default async function CourseDetail({
                         />
                       </div>
                       <div className="p-4">
-                        <h3 className=" text-base text-lg font-semibold text-gray-900">
+                        <h3 className=" text-base md:text-lg font-semibold text-gray-900">
                           {relatedCourse.titulo}
                         </h3>
-                        <p className="text-red-600 font-medium mt-2">
+                        {/* <p className="text-red-600 font-medium mt-2">
                           {relatedCourse.details.date}
-                        </p>
+                        </p> */}
                       </div>
                     </div>
                   </Link>
