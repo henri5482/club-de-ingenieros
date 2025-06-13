@@ -879,6 +879,7 @@
     "precio": 199.0,
     "descuento": 0.5025125628140703
   },
+
   {
     "id": "modelacion-hidrogeologica-mineria",
     "slug": "modelacion-hidrogeologica-mineria",
@@ -961,5 +962,567 @@
     "remainingSeats": "786 estudiantes",
     "precio": 180.0,
     "descuento": 0.45
-  }
+  },
+
+  {
+    "id": "modelamiento-geologico-3d-leapfrog",
+    "slug": "modelamiento-geologico-3d-leapfrog",
+    "category": "Geología y Minería",
+    "src": "/modelamiento-geologico-3d/banner.webp",
+    "name": "Leapfrog Geo",
+    "titulo": "CURSO DE ESPECIALIZACIÓN MODELAMIENTO GEOLÓGICO 3D CON LEAPFROG",
+    "descripcion": "Domina el modelamiento geológico 3D con Leapfrog Geo en niveles básico, intermedio y avanzado, ",
+    "fechatext": "Finalizado",
+    "curso": "CURSO DE ESPECIALIZACIÓN",
+    "about": "Este curso te capacitará integralmente en el uso de Leapfrog Geo para el modelamiento geológico 3D, cubriendo desde la interfaz y organización de proyectos, creación de topografías y georreferenciación, hasta la construcción de modelos geológicos complejos (deposicionales, con fallas y vetas), actualización dinámica, visualización de datos, modelos predictivos y la generación de modelos de bloques.",
+    "profesores": [
+      {
+        "nombre": "Ing. Dany Henry Yomona Cueva",
+        "imagen": "/modelamiento-geologico-3d/profesor.webp",
+        "usuarioSocial": null,
+        "enlacePerfil": null
+      }
+    ],
+    "paraQuienEs": [
+      "Geólogos, ingenieros de minas y profesionales del sector minero.",
+      "Técnicos en geología y exploración minera.",
+      "Estudiantes de geología, ingeniería de minas y ciencias de la tierra.",
+      "Consultores y diseñadores de proyectos geológicos y mineros.",
+      "Cualquier profesional interesado en la visualización y modelamiento 3D de datos geológicos."
+    ],
+    "conocimientosPrevios": [
+      "Conocimientos básicos de geología y minería.",
+      "Familiaridad con el manejo de datos geológicos (sondajes, muestreos)."
+    ],
+    "certificado": {
+      "imageSrc": "/modelamiento-geologico-3d/certificado.webp"
+    },
+    "temarios": [
+      {
+        "title": "NIVEL BÁSICO",
+        "items": [
+          "Módulo 01: Trabajar con Proyectos.",
+          "Módulo 02: Creación de una topografía.",
+          "Módulo 03: Importar base de datos canales y sondajes.",
+          "Módulo 04: Georreferenciación."
+        ]
+      },
+      {
+        "title": "NIVEL INTERMEDIO",
+        "items": [
+          "Módulo 05: Construcción de un modelo geológico.",
+          "Módulo 06: Construcción de un modelo geológico deposicional.",
+          "Módulo 07: Actualización dinámica."
+        ]
+      },
+      {
+        "title": "NIVEL AVANZADO",
+        "items": [
+          "Módulo 08: Mostrar y presentación de datos.",
+          "Módulo 09: Modelos predictivos.",
+          "Módulo 10: Generación de videos.",
+          "Módulo 11: Modelo de bloques."
+        ]
+      }
+    ],
+    "fecha": "Finzalizado",
+    "learnings": [
+      "Dominar la interfaz y funcionalidades básicas de Leapfrog Geo para la organización de proyectos.",
+      "Crear topografías 3D a partir de diversas fuentes de datos y georreferenciar información geológica.",
+      "Construir modelos geológicos complejos, incluyendo fallas, vetas, diques e intrusivos.",
+      "Generar modelos geológicos deposicionales y gestionar actualizaciones dinámicas de datos.",
+      "Visualizar y presentar datos geológicos en 3D, crear modelos predictivos y de bloques para estimación de recursos."
+    ],
+    "details": {
+      "date": "Finalizado",
+      "duration": "360 horas Academicas",
+      "level": "Básico, Intermedio, Avanzado",
+      "offer": "Descarga de Materiales, Certificado digital"
+    },
+    "remainingSeats": "6522 estudiantes",
+    "precio": 399.0,
+    "descuento": 0.6015037593984962
+  },
+
+  {
+    "id": "clasificacion-nube-puntos-lidar-fotogrametria",
+    "slug": "clasificacion-nube-puntos-lidar-fotogrametria",
+    "category": "Topografía y Geomática",
+    "src": "/clasificacion-de-nube/banner.webp",
+    "name": "Nube de Puntos",
+    "titulo": "CURSO CLASIFICACIÓN DE NUBE DE PUNTOS CON SISTEMA LIDAR Y FOTOGRAMETRÍA",
+    "descripcion": "Aprende a clasificar nubes de puntos LiDAR y fotogramétricas utilizando Microstation y Terrasolid, desde la introducción a los sistemas LiDAR hasta la edición",
+    "fechatext": "Finalizado",
+    "curso": "CURSO",
+    "about": "Este curso te capacitará en la clasificación de nubes de puntos obtenidas con sistemas LiDAR y fotogrametría. Cubrirás desde los fundamentos de los sistemas LiDAR y la introducción al software Microstation y Terrasolid, hasta la corrección de errores, edición, generación de curvas de nivel y control de calidad de las nubes de puntos.",
+    "profesores": [
+      {
+        "nombre": "ING. George Steven Zavala Luyo",
+        "imagen": "/clasificacion-de-nube/profesor.webp",
+        "usuarioSocial": null,
+        "enlacePerfil": null
+      }
+    ],
+    "certificado": {
+      "imageSrc": "/clasificacion-de-nube/certificado.webp"
+    },
+    "paraQuienEs": [
+      "Topógrafos y geomáticos.",
+      "Ingenieros civiles, forestales y ambientales.",
+      "Profesionales que trabajen con datos LiDAR y fotogramétricos.",
+      "Especialistas en sistemas de información geográfica (SIG).",
+      "Estudiantes de ingeniería y carreras afines interesadas en el procesamiento de nubes de puntos."
+    ],
+    "conocimientosPrevios": [
+      "Conocimientos básicos de topografía y fotogrametría.",
+      "Familiaridad con el uso de software CAD/GIS es deseable."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 01: Introducción a los sistemas LiDAR y software",
+        "items": [
+          "Introducción a los sistemas lidar.",
+          "Introducción al software Microstation y Terrasolid.",
+          "Instalación de software.",
+          "Crear Proyecto Drone para data Lidar zenmuse L1 y Wizard Process Drone data (Slip trajectory, Cut overlap, Smoothen and remove noise, Thin points to inactive, Clasificacion de terreno, Clasificacion por altura, Clasificación de objetos encima del terreno, Clasificación de arboles según altura)."
+        ]
+      },
+      {
+        "title": "Módulo 02: Alineación y verificación de nubes de puntos LiDAR",
+        "items": [
+          "Strip Alignment nube de puntos Lidar (Corrección de errores generados en la nube de puntos por errores de IMU y GPS).",
+          "Verificacion de errores en XYZ.",
+          "Determinar densidad de nube de puntos lidar.",
+          "Definir Proyecto para áreas extensas.",
+          "Utilizacion de Macros para procesamiento automatizado."
+        ]
+      },
+      {
+        "title": "Módulo 03: Edición y generación de productos de nubes de puntos LiDAR",
+        "items": [
+          "Crear Perfiles en la nube de puntos.",
+          "Edición de la nube de puntos lidar.",
+          "Generacion de curvas de nivel y como exportarlo a Autocad y Civil 3D.",
+          "Control de calidad.",
+          "Creacion de clases para cada elemento de la nube de puntos.",
+          "Dibujar componentes en la nube de puntos lidar(Pista, veredas, etc).",
+          "Agregar puntos sintéticos y breaklines."
+        ]
+      },
+      {
+        "title": "Módulo 04: Procesamiento de nubes de puntos fotogramétricas",
+        "items": [
+          "Introducción a la fotogrametría.",
+          "Rutinas para clasificación automática.",
+          "Edición de la nube de puntos.",
+          "Creación de superficies.",
+          "Utilización de Macros para procesamiento automatizado.",
+          "Control de calidad."
+        ]
+      }
+    ],
+    "fecha": null,
+    "learnings": [
+      "Comprender los fundamentos de los sistemas LiDAR y la fotogrametría.",
+      "Utilizar Microstation y Terrasolid para procesar nubes de puntos.",
+      "Corregir errores en nubes de puntos LiDAR (Strip Alignment).",
+      "Clasificar nubes de puntos según diferentes criterios (terreno, altura, objetos).",
+      "Generar curvas de nivel y exportarlas a AutoCAD y Civil 3D.",
+      "Realizar control de calidad de nubes de puntos.",
+      "Automatizar tareas de procesamiento con macros."
+    ],
+    "details": {
+      "date": "Finalizado",
+      "duration": "90 horas académicas",
+      "level": "Básico/Intermedio",
+      "offer": "Descarga de Materiales, Certificado digital ."
+    },
+    "remainingSeats": "1896 estudiantes",
+    "precio": 180.0,
+    "descuento": 0.45
+  },
+
+  {
+    "id": "optimizacion-recursos-hidricos-mineria",
+    "slug": "optimizacion-recursos-hidricos-mineria",
+    "category": "Minería e Hidrogeología",
+    "src": "/optimizacion-de-recursos/banner.webp",
+    "name": "Recursos Hídricos en Minería",
+    "titulo": "OPTIMIZACIÓN DE RECURSOS HÍDRICOS EN MINERÍA: CAPTACIÓN Y GESTIÓN DE AGUAS SUBTERRÁNEAS",
+    "descripcion": "Aprende a gestionar y optimizar los recursos hídricos en operaciones mineras, cubriendo desde fundamentos hidrogeológicos hasta técnicas de captación, monitoreo, bombeo y calidad de aguas subterráneas.",
+    "fechatext": "Finalizado",
+    "curso": "CURSO DE ESPECIALIZACIÓN",
+    "about": "Este curso de especialización aborda la optimización y gestión de recursos hídricos en el contexto minero. Profundizarás en los fundamentos de la hidrogeología, la prospección geofísica, el diseño de redes de monitoreo, la ingeniería de bombeo, la construcción de pozos y piezómetros, las pruebas hidráulicas y de bombeo, y la hidrogeoquímica para la calidad y protección de aguas subterráneas.",
+    "profesores": [
+      {
+        "nombre": "ING. YORDY JESÚS CAYCHO VILCA",
+        "imagen": "/optimizacion-de-recursos/profesor.webp",
+        "usuarioSocial": null,
+        "enlacePerfil": null
+      }
+    ],
+    "paraQuienEs": [
+      "Ingenieros de minas, geólogos e hidrogeólogos.",
+      "Profesionales que trabajen en la industria minera, consultoría ambiental o gestión de recursos hídricos.",
+      "Especialistas en impacto ambiental y cierre de minas.",
+      "Estudiantes de ingeniería y ciencias de la tierra interesados en la gestión del agua en minería.",
+      "Gestores ambientales y de proyectos mineros."
+    ],
+    "conocimientosPrevios": [
+      "Conocimientos básicos de geología e hidrogeología.",
+      "Familiaridad con conceptos de minería (deseable)."
+    ],
+    "certificado": {
+      "imageSrc": "/optimizacion-de-recursos/certificado.webp"
+    },
+    "temarios": [
+      {
+        "title": "Módulo 01: Fundamentos y conceptos de la hidrogeología minera",
+        "items": [
+          "Conceptos básicos de estructuras hidrogeológicas (acuífero, acuitardo, acuícludo).",
+          "Relación del tipo de roca, alteración, mineralización con respecto a la calidad del agua subterránea.",
+          "Geología estructural relacionada a la hidrogeología.",
+          "Hidráulica de Captaciones (Ley de Darcy, parámetros hidráulicos: conductividad hidráulica, transmisividad, coeficiente de almacenamiento).",
+          "Ejemplo Aplicativo."
+        ]
+      },
+      {
+        "title": "Módulo 02: Prospección Geofísica Aplicada a Hidrogeología",
+        "items": [
+          "Conceptos básicos de ensayos geofísicos (Sondajes eléctricos verticales, tomografía eléctrica, gravimetría).",
+          "Aplicaciones de tomografía Eléctrica.",
+          "Aplicaciones de sondajes eléctricos verticales.",
+          "Aplicaciones de gravimetría.",
+          "Ejemplo Aplicativo."
+        ]
+      },
+      {
+        "title": "Módulo 03: Redes de Monitoreo Hidrogeológico",
+        "items": [
+          "Concepto de redes de monitoreo hidrogeológico.",
+          "Concepto de piezómetros y su clasificación.",
+          "Concepto de pozo de bombeo y su clasificación.",
+          "Método alternativo de monitoreo hidrogeológico: Drenes horizontales."
+        ]
+      },
+      {
+        "title": "Módulo 04: Ingeniería de Bombeo en Minería a Tajo Abierto",
+        "items": [
+          "Desaguado en minería a tajo abierto.",
+          "Proceso de construcción de pozo de bombeo.",
+          "Tipos de motores y bombas para instalación de pozo de bombeo.",
+          "Tipos de tuberías para desaguado en minería a tajo abierto.",
+          "Estaciones de bombeo flotantes."
+        ]
+      },
+      {
+        "title": "Módulo 05: Proceso de construcción de pozos y piezómetros",
+        "items": [
+          "Concepto y clasificación de piezómetros.",
+          "Proceso de perforación para instalación de piezómetro.",
+          "Monitoreo y control de piezómetros.",
+          "Concepto y clasificación de pozos de bombeo.",
+          "Proceso de perforación para instalación de pozo de bombeo.",
+          "Instalación de un sistema de bombeo.",
+          "Monitoreo y control de pozos de bombeo.",
+          "Ejemplo Aplicativo"
+        ]
+      },
+      {
+        "title": "Módulo 06: Pruebas hidráulicas y pruebas de bombeo",
+        "items": [
+          "Prueba hidráulica Lefranc",
+          "Prueba hidráulica Lugeon",
+          "Diseño de instalación de piezómetros.",
+          "Tipos de Pruebas de Bombeo",
+          "Interpretación de Pruebas: Métodos en Régimen Permanente",
+          "Interpretación de Pruebas: Métodos en Régimen Variable",
+          "Ejemplo aplicativo de prueba hidráulica en Excel y prueba de bombeo en software AQTESOLV v4.5"
+        ]
+      },
+      {
+        "title": "Módulo 07: Hidrogeoquímica e Hidroquímica: Calidad de aguas subterráneas",
+        "items": [
+          "Hidrogeoquímica e Hidroquímica. Conceptos y Alcances",
+          "Características Físicas, Físico-químicas y Químicas del Agua",
+          "Datos Hidroquímicos y Técnicas Analíticas de Laboratorio",
+          "Diagramas Hidroquímicos",
+          "Calidad y Contaminación de Aguas",
+          "Protección de Acuíferos de las Captaciones",
+          "Métodos de Detección y Control de Contaminación de Acuíferos",
+          "Ejemplo aplicativo en software Diagrammes"
+        ]
+      },
+      {
+        "title": "Módulo 08: Calidad, Contaminación y Protección de Acuíferos",
+        "items": [
+          "Orígenes y clasificaciones de los procesos contaminantes.",
+          "Comportamiento y propiedades de los contaminantes orgánicos e inorgánicos.",
+          "Contaminación antrópica por fertilizantes o de origen mineral.",
+          "Protección de acuíferos de las captaciones.",
+          "Métodos de detección y control de contaminación de acuíferos.",
+          "Ejemplo aplicativo en software IGW2D"
+        ]
+      }
+    ],
+    "fecha": "Finzalizado",
+    "learnings": [
+      "Comprender los fundamentos de la hidrogeología minera y la relación entre geología, roca y calidad del agua subterránea.",
+      "Aplicar técnicas de prospección geofísica para estudios hidrogeológicos.",
+      "Diseñar e implementar redes de monitoreo hidrogeológico, incluyendo piezómetros y pozos de bombeo.",
+      "Conocer y aplicar la ingeniería de bombeo en minería a tajo abierto.",
+      "Realizar y interpretar pruebas hidráulicas (Lefranc, Lugeon) y pruebas de bombeo utilizando software especializado.",
+      "Analizar la hidrogeoquímica y calidad de aguas subterráneas, identificando contaminantes y métodos de protección de acuíferos."
+    ],
+    "details": {
+      "date": "Finalizado",
+      "duration": "140 horas académicas",
+      "level": "Intermedio/Avanzado",
+      "offer": "Descarga de Materiales, Certificado digital"
+    },
+    "remainingSeats": "7200 estudiantes",
+    "precio": 250.0,
+    "descuento": 0.564
+  },
+
+  {
+    "id": "estudio-hidrologico-acreditacion-hidrica-ana",
+    "slug": "estudio-hidrologico-acreditacion-hidrica-ana",
+    "category": "Hidrología y Gestión de Recursos Hídricos",
+    "src": "/estudio-hidrologico/banner.webp",
+    "name": "Acreditación Hídrica ANA",
+    "titulo": "ESTUDIO HIDROLÓGICO PARA LA ACREDITACIÓN HÍDRICA SUPERFICIAL SEGÚN LA ANA",
+    "descripcion": "Aprende a realizar estudios hidrológicos para la acreditación hídrica superficial conforme a la normativa de la Autoridad Nacional del Agua (ANA) en Perú, dominando desde el marco legal hasta el balance hídrico y la elaboración de informes técnicos.",
+    "fechatext": "Finalizado",
+    "curso": "CURSO DE ESPECIALIZACIÓN",
+    "about": "Este curso te proporcionará las habilidades necesarias para desarrollar estudios hidrológicos completos, cumpliendo con los requisitos de la Resolución Jefatural N° 007-2015-ANA para la acreditación hídrica superficial. Aprenderás a recolectar y analizar datos hidrometeorológicos, cuantificar oferta y demanda hídrica, y elaborar informes técnicos con el uso de herramientas como HEC-HMS y QGIS.",
+    "profesores": [
+      {
+        "nombre": "Ing. Rubén Omar Ortiz Vásquez",
+        "imagen": "/estudio-hidrologico/profesor.webp",
+        "usuarioSocial": "@RUBEN",
+        "enlacePerfil": "https://www.linkedin.com/in/vrortiz/"
+      },
+      {
+        "nombre": "Ing. Héctor Manuel Paredes Pinedo",
+        "imagen": "/estudio-hidrologico/profesor01.png",
+        "usuarioSocial": null,
+        "enlacePerfil": null
+      }
+    ],
+    "paraQuienEs": [
+      "Ingenieros civiles, agrícolas, ambientales e hidrólogos.",
+      "Profesionales y consultores que trabajen en la gestión de recursos hídricos.",
+      "Funcionarios públicos de entidades relacionadas con el agua (ANA, ministerios).",
+      "Estudiantes de ingeniería y carreras afines interesadas en la normativa hídrica.",
+      "Proyectistas y evaluadores de proyectos que requieran acreditación hídrica."
+    ],
+    "conocimientosPrevios": [
+      "Conocimientos básicos de hidrología y gestión de recursos hídricos.",
+      "Familiaridad con conceptos de GIS es deseable."
+    ],
+    "certificado": {
+      "imageSrc": "/estudio-hidrologico/certificado.webp"
+    },
+    "temarios": [
+      {
+        "title": "Módulo 01: INTRODUCCIÓN AL MARCO NORMATIVO",
+        "items": [
+          "Presentación de la Resolución Jefatural N° 007-2015-ANA: -Estructura del documento. -Objetivos y alcance.",
+          "Conceptos clave: -Definición de acreditación hídrica. -Competencias y funciones de la ANA relacionadas.",
+          "Importancia de los estudios hidrológicos en la gestión de recursos hídricos."
+        ]
+      },
+      {
+        "title": "Módulo 02: PROCEDIMIENTOS Y REQUISITOS NORMATIVOS DE LA ANA",
+        "items": [
+          "Detalle de los requisitos exigidos por la ANA para la presentación del estudio.",
+          "Etapas del procedimiento de acreditación: -Solicitud y evaluación técnica. -Aprobación y emisión de acreditaciones.",
+          "Análisis de ejemplos prácticos de resolución de solicitudes."
+        ]
+      },
+      {
+        "title": "Módulo 03: DESARROLLO METODOLÓGICO DEL ESTUDIO HIDROLÓGICO",
+        "items": [
+          "Recolección de datos hidrometeorológicos: -Fuentes confiables (estaciones SENAMHI, registros locales). -Uso de sistemas de información geográfica (GIS).",
+          "Análisis de la oferta hídrica: -Cuantificación de caudales medios y máximos. -Identificación de periodos de sequía y estiaje.",
+          "Demanda hídrica: -Clasificación por tipo de uso (agrícola y/o poblacional). -Balance hídrico: Oferta vs. Demanda.-Acreditación."
+        ]
+      },
+      {
+        "title": "Módulo 04: TALLER PRÁCTICO: DESARROLLO DE UN ESTUDIO HIDROLÓGICO",
+        "items": [
+          "Caso práctico: -Identificación de la cuenca y recopilación de datos. -Uso de herramientas como HEC-HMS o QGIS. -Elaboración del balance hídrico y conclusiones.",
+          "Elaboración del informe técnico: -Estructura y contenidos requeridos. -Verificación de cumplimiento normativo con la ANA."
+        ]
+      },
+      {
+        "title": "Módulo 05: EVALUACIÓN Y CONCLUSIONES",
+        "items": [
+          "Resumen de conceptos clave aprendidos.",
+          "Resolución de dudas frecuentes sobre el procedimiento.",
+          "Evaluación del taller práctico mediante análisis grupal."
+        ]
+      }
+    ],
+    "fecha": null,
+    "learnings": [
+      "Interpretar y aplicar el marco normativo de la ANA para la acreditación hídrica superficial (RJ N° 007-2015-ANA).",
+      "Conocer los procedimientos y requisitos para la presentación de estudios hidrológicos ante la ANA.",
+      "Desarrollar la metodología para la recolección de datos y análisis de la oferta y demanda hídrica.",
+      "Elaborar balances hídricos y sus conclusiones.",
+      "Realizar un estudio hidrológico práctico utilizando software especializado como HEC-HMS y QGIS.",
+      "Estructurar y presentar informes técnicos que cumplan con la normativa de la ANA."
+    ],
+    "details": {
+      "date": "Finalizado",
+      "duration": "100 horas académicas",
+      "level": "Intermedio",
+      "offer": "Instalador de Softwares,Descarga de Material,Certificado Digital ."
+    },
+    "remainingSeats": "11005 estudiantes",
+    "precio": 199.0,
+    "descuento": 0.4522613065326633
+  },
+
+  {
+    "id": "modelamiento-diseno-estructural-revit-robot",
+    "slug": "modelamiento-diseno-estructural-revit-robot",
+    "category": "Estructuras y Modelado BIM",
+    "src": "/modelamiento-diseño/banner.webp",
+    "name": "Revit Structure y Robot Structural",
+    "titulo": "MODELAMIENTO Y DISEÑO ESTRUCTURAL CON SOFTWARES REVIT STRUCTURE Y ROBOT STRUCTURAL",
+    "descripcion": "Aprende el modelado y diseño estructural avanzado utilizando Revit Structure y Robot Structural, integrando el flujo de trabajo BIM para proyectos de ingeniería civil.",
+    "fechatext": null,
+    "curso": "CURSO AVANZADO",
+    "about": "Este curso avanzado te sumergirá en el uso combinado de **Revit Structure** y **Robot Structural Analysis Professional** para el modelamiento y diseño estructural. Dominarás el flujo de trabajo BIM, desde la creación de modelos paramétricos hasta el análisis y dimensionamiento de elementos estructurales, optimizando tus proyectos de ingeniería.",
+    "profesores": [
+      {
+        "nombre": "Ing. José Víctor Becerra Cotrina",
+        "imagen": "/modelamiento-diseño/profesor.webp",
+        "usuarioSocial": null,
+        "enlacePerfil": null
+      }
+    ],
+    "paraQuienEs": [
+      "Ingenieros civiles y estructurales.",
+      "Diseñadores y modeladores BIM.",
+      "Arquitectos con interés en el diseño estructural.",
+      "Estudiantes de ingeniería civil y arquitectura.",
+      "Profesionales que busquen optimizar su flujo de trabajo en proyectos de estructuras."
+    ],
+    "conocimientosPrevios": [
+      "Conocimientos básicos de estructuras.",
+      "Familiaridad con entornos CAD o BIM (deseable)."
+    ],
+    "certificado": {
+      "imageSrc": "/modelamiento-diseño/certificado.webp"
+    },
+    "temarios": [],
+    "fecha": "Finzalizado",
+    "learnings": [
+      "Dominar el modelado de elementos estructurales en Revit Structure.",
+      "Realizar análisis y diseño estructural utilizando Robot Structural Analysis Professional.",
+      "Integrar el flujo de trabajo entre Revit y Robot para una gestión BIM eficiente.",
+      "Optimizar el diseño de estructuras de concreto y acero.",
+      "Generar documentación y reportes de diseño estructural."
+    ],
+    "details": {
+      "date": "Finalizado",
+      "duration": "100 horas académicas",
+      "level": "Avanzado",
+      "offer": "Descarga de Material, Certificado Digital "
+    },
+    "remainingSeats": "5896 estudiantes",
+    "precio": 259.00,
+  "descuento": 0.6177606177606177
+  },
+  {
+  "id": "supervision-calculo-izaje",
+  "slug": "supervision-calculo-izaje",
+  "category": "Ingeniería y Seguridad",
+  "src": "/supervicion-calculo/banner.webp",
+  "name": "Supervisión y Cálculo de Izaje",
+  "titulo": "CURSO DE ESPECIALIZACIÒN SUPERVISIÒN Y CALCULO DE IZAJE",
+  "descripcion": "Aprende la supervisión y cálculo de izaje, desde los fundamentos teóricos hasta la interpretación de normativas internacionales y el cálculo de eslingas.",
+  "fechatext": null,
+  "curso": "CURSO DE ESPECIALIZACIÓN",
+  "about": "Este curso de especialización te proporcionará los conocimientos necesarios para supervisar y calcular izajes de forma segura y eficiente. Cubrirás desde los fundamentos teóricos y el marco legal, hasta la interpretación de normativas internacionales (ASME) y el cálculo de izajes críticos y de eslingas.",
+  "profesores": [
+    {
+      "nombre": "Mg. Ing. Joseph Marlon Romero Colqui",
+      "imagen": "/supervicion-calculo/profesor.webp",
+      "usuarioSocial": null,
+      "enlacePerfil": null
+    }
+  ],
+  "paraQuienEs": [
+    "Ingenieros civiles, mecánicos, industriales y de seguridad.",
+    "Supervisores de izaje y personal de seguridad en obras de construcción y minería.",
+    "Técnicos y operadores de grúas.",
+    "Profesionales involucrados en el manejo de cargas.",
+    "Estudiantes de ingeniería y carreras afines."
+  ],
+  "conocimientosPrevios": [
+    "Conocimientos básicos de física y mecánica.",
+    "Familiaridad con conceptos de seguridad industrial (deseable)."
+  ],
+  "certificado": {
+    "imageSrc": "/supervicion-calculo/certificado.webp"
+  },
+  "temarios": [
+    {
+      "title": "Módulo 01: FUNDAMETOS TEÓRICOS DE TRABAJOS EN IZAJE",
+      "items": [
+        "Marco legal.",
+        "Partes de un equipo de Izaje.",
+        "Condiciones de operación de Izaje.",
+        "Requisitos de Certificación Eslingas y accesorios de izaje."
+      ]
+    },
+    {
+      "title": "Módulo 02 Y 03: INTERPRETACIÓN DE LA NORMATIVA LEGAL",
+      "items": [
+        "Interpretación de la normativa internacional ASME B30.26",
+        "Interpretación de la normativa internacional ASME B30.3",
+        "Interpretación de la normativa internacional ASME B30.5",
+        "Interpretación de la normativa internacional ASME B30.26"
+      ]
+    },
+    {
+      "title": "Módulo 04: CÁLCULO DE IZAJE CRÍTICO",
+      "items": [
+        "Cálculo del centro de gravedad",
+        "Interpretación Tabla de carga.",
+        "Carga Izaje Crítico.",
+        "Cálculo de porcentaje de trabajo."
+      ]
+    },
+    {
+      "title": "Módulo 05: CÁLCULO DE ESLINGAS",
+      "items": [
+        "Cálculo de tensión en eslingas diagonales.",
+        "Cálculo de tensión en eslingas verticales.",
+        "Cálculo de tensión en tres eslingas."
+      ]
+    }
+  ],
+  "fecha": null,
+  "learnings": [
+    "Comprender los fundamentos teóricos y el marco legal de los trabajos de izaje.",
+    "Identificar las partes de un equipo de izaje y sus condiciones de operación.",
+    "Interpretar las normativas internacionales ASME B30.26, B30.3 y B30.5.",
+    "Calcular izajes críticos y el porcentaje de trabajo.",
+    "Calcular la tensión en diferentes configuraciones de eslingas."
+  ],
+  "details": {
+    "date": "Finalizado",
+    "duration": "120 horas académicas",
+    "level": "Básico/Intermedio/Avanzado",
+    "offer": "Descarga de Material, Certificado Digital "
+  },
+  "remainingSeats": "6987 estudiantes",
+  "precio": 259.00,
+  "descuento": 0.6177606177606177
+}
 ]
