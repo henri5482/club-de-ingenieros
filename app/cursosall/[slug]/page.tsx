@@ -12,7 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import path from "path";
 
-// Interfaces
+// Interfaces (Keep these as they are)
 interface Temario {
   title: string;
   items: string[];
@@ -42,13 +42,16 @@ interface Course {
   descuento?: number;
   titulo: string;
   descripcion: string;
-  fechatext: string;
+  curso: string;
   docente?: string;
   docenteImage?: string;
   docenteBio?: string;
   profesores?: Profesor[];
   paraQuienEs?: string[];
   conocimientosPrevios?: string[];
+  certificado?: {
+    imageSrc: string; // Changed from title and content to imageSrc
+  };
   fecha: string;
   learnings: string[];
   details: CourseDetails;
@@ -57,7 +60,7 @@ interface Course {
   category?: string;
 }
 
-// Function to get all courses
+// Function to get all courses (Keep as is)
 async function getAllCourses(): Promise<Course[]> {
   try {
     const filePath = path.join(
@@ -97,7 +100,7 @@ export async function generateStaticParams() {
   }
 }
 
-// Función para mezclar array de manera aleatoria
+// Función para mezclar array de manera aleatoria (Keep as is)
 function shuffleArray<T>(array: T[]): T[] {
   const newArray = [...array];
   for (let i = newArray.length - 1; i > 0; i--) {
@@ -126,7 +129,7 @@ export default async function CourseDetail({
     );
   }
 
-  // Lógica para cursos relacionados con selección aleatoria
+  // Lógica para cursos relacionados con selección aleatoria (Keep as is)
   let relatedCourses: Course[] = [];
   if (course.category) {
     const sameCategoryCourses = allCourses.filter(
@@ -137,24 +140,85 @@ export default async function CourseDetail({
     relatedCourses = shuffleArray(sameCategoryCourses).slice(0, 3);
   }
 
-  const startDate = course.details.date;
-
   return (
     <>
       <Navbar />
       <div className="min-h-screen bg-white text-gray-800 py-12 px-2 md:px-8 pt-40">
         <div className="max-w-7xl mx-auto bg-white rounded-2xl p-4 md:p-8 shadow-lg">
           {/* Top Section: Title, description, and main content */}
+          {/*
+            APLICACIÓN DE CLASES 'ORDER' PARA CONTROLAR LA POSICIÓN:
+            - flex-col: En móviles, los elementos se apilan verticalmente.
+            - md:flex-row: En pantallas medianas y grandes, los elementos se ponen horizontalmente.
+
+            Orden en MÓVILES (default, sin prefijo md:):
+            - La imagen tendrá 'order-1' (aparece primero)
+            - El texto tendrá 'order-2' (aparece segundo)
+
+            Orden en ESCRITORIO (con prefijo md:):
+            - El texto tendrá 'md:order-1' (aparece primero, a la izquierda)
+            - La imagen tendrá 'md:order-2' (aparece segundo, a la derecha)
+          */}
           <div className="flex flex-col md:flex-row gap-8 mb-8">
-            {/* Left Column: Textual content */}
-            <div className="flex-1">
+
+            {/* Columna de Imagen y Detalles del Curso */}
+            <div className="md:w-1/2 order-1 md:order-2 bg-white rounded-2xl transition-all duration-300 overflow-hidden flex flex-col h-full transform hover:-translate-y-2 cursor-pointer group shadow-md md:shadow-none">
+              {/* Imagen: RESPONSIVA y no cortada */}
+              <div className="relative w-full aspect-video bg-gray-100 overflow-hidden rounded-t-2xl md:rounded-2xl">
+                <Image
+                  src={course.src}
+                  alt={course.name}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  priority
+                />
+              </div>
+              <div className="bg-white rounded-b-2xl md:rounded-2xl p-2 md:p-6 shadow-lg md:shadow-none">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center md:text-left">
+                    <p className="text-gray-500 text-sm uppercase tracking-wider mb-1">
+                      Fecha
+                    </p>
+                    <p className="font-semibold text-sm md:text-lg text-gray-800">
+                      {course.details.date}
+                    </p>
+                  </div>
+                  <div className="text-center md:text-left">
+                    <p className="text-gray-500 text-sm uppercase tracking-wider mb-1">
+                      Duración
+                    </p>
+                    <p className="font-semibold text-sm md:text-lg text-gray-800">
+                      {course.details.duration}
+                    </p>
+                  </div>
+                  <div className="text-center md:text-left">
+                    <p className="text-gray-500 text-sm uppercase tracking-wider mb-1">
+                      Estudiantes
+                    </p>
+                    <p className="font-semibold text-sm md:text-lg text-gray-800">
+                      {course.remainingSeats}
+                    </p>
+                  </div>
+                  {course.details.offer && (
+                    <div className="text-center md:text-left">
+                      <p className="text-gray-500 text-sm uppercase tracking-wider mb-1">
+                        Oferta
+                      </p>
+                      <p className="font-semibold text-sm md:text-lg text-red-600">
+                        {course.details.offer}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            {/* Columna de Contenido Textual (Título, Descripción, Aprenderás, Botones) */}
+            <div className="flex-1 md:w-1/2 order-2 md:order-1">
               <div className="flex flex-wrap gap-2 mb-4">
                 <div className="bg-red-600 text-white px-4 py-2 rounded-md font-semibold inline-block">
-                  PRÓXIMO LANZAMIENTO
-                </div>
-                <div className="bg-red-600 text-white px-4 py-2 rounded-md font-semibold inline-block">
-                  <span>Las clases empiezan el </span>
-                  <span className="font-bold">{startDate}</span>
+                  <span className="font-bold">{course.curso}</span>
                 </div>
               </div>
               <h1 className="text-2xl md:text-4xl font-bold mb-4 text-gray-900">
@@ -298,59 +362,6 @@ export default async function CourseDetail({
                 </div>
               </div>
             </div>
-
-            {/* Right Column: Image and course details */}
-            <div className="bg-white rounded-2xl transition-all duration-300 overflow-hidden flex flex-col h-full transform hover:-translate-y-2 cursor-pointer group">
-              {/* Imagen: RESPONSIVA y no cortada */}
-              <div className="relative w-full aspect-video bg-gray-100 overflow-hidden">
-                <Image
-                  src={course.src}
-                  alt={course.name}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-300"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  priority
-                />
-              </div>
-              <div className="bg-white rounded-lg p-2 md:p-6">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center md:text-left">
-                    <p className="text-gray-500 text-sm uppercase tracking-wider mb-1">
-                      Fecha
-                    </p>
-                    <p className="font-semibold text-sm md:text-lg text-gray-800">
-                      {course.details.date}
-                    </p>
-                  </div>
-                  <div className="text-center md:text-left">
-                    <p className="text-gray-500 text-sm uppercase tracking-wider mb-1">
-                      Duración
-                    </p>
-                    <p className="font-semibold text-sm md:text-lg text-gray-800">
-                      {course.details.duration}
-                    </p>
-                  </div>
-                  <div className="text-center md:text-left">
-                    <p className="text-gray-500 text-sm uppercase tracking-wider mb-1">
-                      Estudiantes
-                    </p>
-                    <p className="font-semibold text-sm md:text-lg text-gray-800">
-                      {course.remainingSeats}
-                    </p>
-                  </div>
-                  {course.details.offer && (
-                    <div className="text-center md:text-left">
-                      <p className="text-gray-500 text-sm uppercase tracking-wider mb-1">
-                        Oferta
-                      </p>
-                      <p className="font-semibold text-sm md:text-lg text-red-600">
-                        {course.details.offer}
-                      </p>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Syllabus and Professors Section */}
@@ -373,7 +384,7 @@ export default async function CourseDetail({
                     >
                       <AccordionTrigger className=" text-base md:text-lg font-semibold hover:no-underline px-6 py-4 bg-white hover:bg-red-50 transition-colors duration-200 text-gray-800">
                         <span className="text-left flex items-center">
-                      
+
                           {temario.title}
                         </span>
                       </AccordionTrigger>
@@ -511,26 +522,38 @@ export default async function CourseDetail({
                     </div>
                   )}
 
-                  {/* "Conocimientos Previos" Section */}
-                  {course.conocimientosPrevios && course.conocimientosPrevios.length > 0 && (
-                    <div className="mt-8 border-t border-gray-200 pt-6">
-                      <h2 className="text-xl font-bold mb-3 text-red-600">
-                        Conocimientos Previos
-                      </h2>
-                      <div className="bg-red-50 rounded-lg p-4">
-                        <ul className="list-disc list-inside space-y-2 text-gray-700">
-                          {course.conocimientosPrevios.map((item, index) => (
-                            <li
-                              key={`conocimientos-${index}`}
-                              className="text-sm"
-                            >
-                              {item}
-                            </li>
-                          ))}
-                        </ul>
+                  {/* Certificado Avalado Section */}
+                  <div className="mt-8 border-t border-gray-200 pt-6 text-center">
+                    <h2 className="text-2xl font-bold mb-5 text-red-600 drop-shadow-sm">
+                      Certificado Avalado
+                    </h2>
+                    {course.certificado && course.certificado.imageSrc ? (
+                      <Link href="/projects" passHref> {/* Changed link to /certificados as per previous request */}
+                        <div className="group relative bg-red-50 rounded-xl p-4 sm:p-6 flex justify-center items-center overflow-hidden shadow-2xl transition-all duration-500 ease-out transform hover:scale-[1.03] hover:shadow-red-300/70 cursor-pointer">
+                          {/* Container for the image with a defined aspect ratio */}
+                          <div className="relative w-full max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto rounded-lg border-2 border-red-300 bg-white overflow-hidden shadow-xl"
+                            style={{ paddingTop: 'calc(100% * 2 / 3)' }}> {/* Common certificate aspect ratio (3:2) */}
+                            <Image
+                              src={course.certificado.imageSrc}
+                              alt="Certificado del Curso"
+                              fill
+                              style={{ objectFit: 'contain' }} // Ensures the entire image is visible
+                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 60vw"
+                              className="absolute inset-0 transition-transform duration-500 group-hover:scale-105" // Smooth animation
+                            />
+                          </div>
+                          {/* Optional: Add a subtle overlay or text on hover for better UX */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-red-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                            <span className="text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-2 rounded-md bg-red-700/60 backdrop-blur-sm">Ver Detalles</span>
+                          </div>
+                        </div>
+                      </Link>
+                    ) : (
+                      <div className="bg-red-50 rounded-lg p-6 text-gray-600 italic border border-red-100 shadow-md">
+                        Certificado no disponible para este curso.
                       </div>
-                    </div>
-                  )}
+                    )}
+                  </div>
                 </div>
               </div>
             )}
