@@ -61,7 +61,7 @@ const testimonials: TestimonialItem[] = [
     id: 4,
     name: "Camila Vargas",
     role: "🇵🇪",
-    avatar: "/coment2.jpg",
+    avatar: "/alumno01.webp",
     comment:
       "El programa de hidrología fue clave para mi puesto actual en una ONG ambiental. Muy bien estructurado y con casos reales del Perú.",
     rating: 5,
@@ -70,7 +70,7 @@ const testimonials: TestimonialItem[] = [
     id: 5,
     name: "Jorge Alvarado",
     role: "🇵🇪",
-    avatar: "/coment3.jpg",
+    avatar: "/alumno04.webp",
     comment:
       "Me capacité en ingeniería geológica y minera. Actualmente trabajo en una empresa de exploración en Apurímac gracias al respaldo del curso y la certificación.",
     rating: 5,
@@ -79,7 +79,7 @@ const testimonials: TestimonialItem[] = [
     id: 6,
     name: "Natalie Yupanqui",
     role: "🇵🇪",
-    avatar: "/",
+    avatar: "/alumno02.webp",
     comment:
       "Tomé el curso de ingeniería eléctrica y fue muy completo. Me ayudó a validar conocimientos que ahora aplico en proyectos de electrificación rural.",
     rating: 5,
@@ -88,7 +88,7 @@ const testimonials: TestimonialItem[] = [
     id: 7,
     name: "Carlos Mejía",
     role: "🇵🇪",
-    avatar: "/",
+    avatar: "/alumno05.webp",
     comment:
       "Gracias al curso en gestión ambiental para ingenieros, hoy trabajo en una minera donde aplico directamente lo aprendido. ¡Recomendado!",
     rating: 5,

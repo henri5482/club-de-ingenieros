@@ -4,34 +4,39 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { FaLinkedin } from "react-icons/fa"; // Import the LinkedIn icon
 import {
-  PiBookOpenText, // Ícono para cursos genéricos
-  PiCodeSimple, // Ícono para código/Python
-  PiDatabase, // Ícono para bases de datos
+  PiHandshake, // Generic professional/placeholder icon
 } from "react-icons/pi";
 
 interface TeamMemberProps {
   image: string;
   name: string;
   role: string;
-  description?: string; // Hacemos la descripción opcional
- 
-  course: string; // Nombre del curso asociado
-  courseLink: string; // Enlace al curso
-  courseIcon: React.ReactNode; // Ícono del curso
+  description?: string; // Description is optional
+  course: string; // Course name (here used as "Mas informacion")
+  courseLink: string; // Link to the course/profile
+  iconType: string; // New prop to specify which icon to display based on role/link
 }
 
-
+// Function to get the appropriate icon component based on iconType
+const getIconComponent = (type: string) => {
+  switch (type) {
+    case "linkedin":
+      return <FaLinkedin size={20} className="text-white" />;
+    default:
+      return <PiHandshake size={20} className="text-white" />; // Default generic icon
+  }
+};
 
 const TeamMember: React.FC<TeamMemberProps> = ({
   image,
   name,
   role,
   description,
-  // social, // Eliminado del destructuring de props
   course,
   courseLink,
-  courseIcon,
+  iconType, // Use iconType instead of courseIcon directly
 }) => {
   return (
     <motion.div
@@ -39,10 +44,10 @@ const TeamMember: React.FC<TeamMemberProps> = ({
       whileHover={{ y: -5 }}
       transition={{ duration: 0.3 }}
     >
-      <div className="relative overflow-hidden w-full h-[250px]">
+      <div className="relative overflow-hidden w-full h-[240px]"> {/* Fixed height for consistent image size */}
         <Image
-          height={400}
-          width={600}
+          height={400} // Increased height for better quality if scaled
+          width={600} // Increased width for better quality if scaled
           src={image}
           alt={name}
           className="object-cover h-full w-full transition-transform duration-500 group-hover:scale-105"
@@ -61,12 +66,12 @@ const TeamMember: React.FC<TeamMemberProps> = ({
         <div className="mt-auto pt-4 border-t border-slate-900 flex items-center justify-between">
           <Link
             href={courseLink}
-           
             rel="noopener noreferrer"
+            target="_blank"
             className="flex items-center gap-2 text-red-600 hover:text-red-400 transition-colors duration-300 transform hover:translate-x-1"
           >
-            <div className="bg-red-600  p-2 rounded-full flex items-center justify-center">
-              {courseIcon}
+            <div className="bg-red-600 p-2 rounded-full flex items-center justify-center">
+              {getIconComponent(iconType)} {/* Render icon based on iconType */}
             </div>
             <span className="font-medium text-sm">{course}</span>
             <svg
@@ -84,7 +89,6 @@ const TeamMember: React.FC<TeamMemberProps> = ({
               />
             </svg>
           </Link>
-          {/* Los iconos sociales se han eliminado o se pueden reintroducir si es necesario en otro lugar */}
         </div>
       </div>
     </motion.div>
@@ -93,40 +97,36 @@ const TeamMember: React.FC<TeamMemberProps> = ({
 
 const teamMembers: TeamMemberProps[] = [
   {
-    name: "Carli Florida",
-    role: "Teacher In-house en Platzi",
-    image: "/profesorcuencas.webp",
-    // social: {}, // La propiedad 'social' en los datos puede quedarse, pero la interface y el destructuring se eliminaron
-    course: "Curso de Python",
-    courseLink: "/docentes",
-    courseIcon: <PiCodeSimple size={20} className="text-white" />,
+    name: "Oliver Hurtado",
+    role: "Ingeniero Civil - Hidráulico",
+    image: "/docente01.jpg",
+    course: "Mas informacion",
+    courseLink: "https://www.linkedin.com/in/oliver-hurtado-704a2b186/",
+    iconType: "linkedin", // All links now use LinkedIn icon
   },
   {
-    name: "Anibal Rojas",
-    role: "VP de Ingeniería en Platzi",
-    image: "/profesorcuencas.webp",
-    // social: {},
-    course: "Curso de ChatGPT para Empresas",
-    courseLink: "/docentes",
-    courseIcon: <PiBookOpenText size={20} className="text-white" />,
+    name: "Kevin Navarro Chancan",
+    role: "Ingeniero Agrícola ",
+    image: "/docente02.jpg",
+    course: "Mas informacion",
+    courseLink: "https://www.linkedin.com/in/kevin-navarro-chancan-29b834173/",
+    iconType: "linkedin", // All links now use LinkedIn icon
   },
   {
-    name: "Carolina Castañeda",
-    role: "Online Tech Teacher en Platzi",
-    image: "/profesorcuencas.webp",
-    // social: {},
-    course: "Curso de Bases de Datos con SQL",
-    courseLink: "/docentes",
-    courseIcon: <PiDatabase size={20} className="text-white" />,
+    name: "Rubén Ortiz Vásquez",
+    role: "Especialista en Recursos Hídricos",
+    image: "/docente03.webp",
+    course: "Mas informacion",
+    courseLink: "https://www.linkedin.com/in/vrortiz/",
+    iconType: "linkedin", // All links now use LinkedIn icon
   },
   {
-    name: "Luis Martinez",
-    role: "Platform Engineer en Deel",
-    image: "/profesorcuencas.webp",
-    // social: {},
-    course: "Curso de Django",
-    courseLink: "/docentes",
-    courseIcon: <PiCodeSimple size={20} className="text-white" />,
+    name: "Gilberth Cruzado Mendoza",
+    role: "Ingeniero Hidráulico",
+    image: "/docente04.webp",
+    course: "Mas informacion",
+    courseLink: "https://www.linkedin.com/in/gilberth-eduardo-cruzado-mendoza-a29009124/",
+    iconType: "linkedin", // All links now use LinkedIn icon
   },
 ];
 
