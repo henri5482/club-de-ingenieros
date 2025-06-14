@@ -54,17 +54,17 @@ export const metadata: Metadata = {
       },
     ],
     locale: 'es_ES', // o 'es_PE' si está enfocado en Perú
-    type: 'website',
+    type: 'website',      
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Club de Ingenieros | Formación Especializada',
     description: 'Cursos y certificaciones en ingeniería civil, mecánica, eléctrica, industrial y más. Actualiza tus conocimientos con expertos.',
     creator: '@ClubIngenieros', // OPCIONAL: REEMPLAZA CON TU USUARIO DE TWITTER
-    images: ['https://www.clubdeingenieros.com/clubdeingenieros.png'], // RUTA A TU IMAGEN DE TWITTER
+    images: ['https://www.clubdeingeniero.com/clubdeingenieros.png'], // RUTA A TU IMAGEN DE TWITTER
   },
   alternates: {
-    canonical: 'https://www.clubdeingenieros.com', // IMPORTANTE PARA SEO
+    canonical: 'https://www.clubdeingeniero.com', // IMPORTANTE PARA SEO
   },
 };
 

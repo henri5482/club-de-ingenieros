@@ -28,11 +28,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Análisis de Cuencas Hidrográficas con QGIS | Club de Ingenieros',
     description: 'Curso profesional sobre análisis de cuencas hidrográficas utilizando QGIS, ideal para ingenieros y profesionales del sector hídrico y ambiental.',
-    url: 'https://clubdeingenieros.vercel.app/cursos/analisis-cuencas-hidrograficas-qgis',
+    url: 'https://www.clubdeingeniero.com/cursos/analisis-cuencas-hidrograficas-qgis',
     type: 'website',
     images: [
       {
-        url: 'https://clubdeingenieros.vercel.app/banner.webp', // Imagen específica para este curso
+        url: 'https://www.clubdeingeniero.com/banner.webp', // Imagen específica para este curso
         width: 1200,
         height: 630,
         alt: 'Análisis de Cuencas Hidrográficas con Software QGIS - Club de Ingenieros',
@@ -51,13 +51,13 @@ export const metadata: Metadata = {
     title: 'Análisis de Cuencas Hidrográficas con QGIS | Club de Ingenieros',
     description: 'Domina el análisis hidrológico con QGIS en este curso certificado para ingenieros y especialistas ambientales.',
     images: {
-      url: 'https://clubdeingenieros.vercel.app/banner.webp', // Imagen optimizada para Twitter
+      url: 'https://www.clubdeingeniero.com/banner.webp', // Imagen optimizada para Twitter
       alt: 'Curso profesional de QGIS para análisis de cuencas',
     },
   },
 
   alternates: {
-    canonical: 'https://clubdeingenieros.vercel.app/banner.webp',
+    canonical: 'https://www.clubdeingeniero.com/banner.webp',
   },
 
   robots: {
@@ -72,11 +72,11 @@ export const metadata: Metadata = {
   },
 
   // Metadatos adicionales importantes
-  metadataBase: new URL('https://clubdeingenieros.vercel.app'),
+  metadataBase: new URL('https://www.clubdeingeniero.com'),
   authors: [
     { 
       name: 'Club de Ingenieros', 
-      url: 'https://clubdeingenieros.vercel.app' 
+      url: 'https://www.clubdeingeniero.com' 
     }
   ],
   category: 'Ingeniería Civil | Hidrología',
