@@ -23,6 +23,24 @@ interface CourseCardProps {
   imageUrl: string;
 }
 
+interface SocialLinks {
+  linkedin?: string | null;
+  facebook?: string | null;
+  twitter?: string | null;
+  instagram?: string | null;
+}
+
+interface Docente {
+  id: string;
+  name: string;
+  title: string;
+  profession: string;
+  image: string;
+  bio: string;
+  social?: SocialLinks;
+  courses: CourseCardProps[];
+}
+
 const CourseCard: React.FC<CourseCardProps> = ({ name, url, imageUrl }) => {
   return (
     <motion.div
@@ -58,10 +76,10 @@ const CourseCard: React.FC<CourseCardProps> = ({ name, url, imageUrl }) => {
 };
 
 const Docentes = () => {
-  const [selectedDocente, setSelectedDocente] = useState<(typeof docentesData)[0] | null>(null);
+  const [selectedDocente, setSelectedDocente] = useState<Docente | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = (docente: (typeof docentesData)[0]) => {
+  const openModal = (docente: Docente) => {
     setSelectedDocente(docente);
     setIsModalOpen(true);
   };
@@ -275,9 +293,9 @@ const Docentes = () => {
                       Cursos Dictados:
                     </h5>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {selectedDocente.courses.map((course, index) => (
+                      {selectedDocente.courses.map((course) => (
                         <CourseCard
-                          key={index}
+                          key={`${course.name}-${course.url}`}
                           name={course.name}
                           url={course.url}
                           imageUrl={course.imageUrl}
