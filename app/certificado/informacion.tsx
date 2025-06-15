@@ -22,8 +22,12 @@ const Informacion = () => {
 
   const faqItems = [
     {
-      question: "¿Cuándo recibiré el mío?",
-      answer: "Si eres Plus, cuando completes un curso que hayas comprado recibirás tu certificado personalizado al instante.",
+      question: "¿Cuándo recibiré mi certificado?", // Slightly rephrased for clarity
+      answer: "Si eres VIP, al completar cualquier curso que hayas comprado, recibirás tu certificado personalizado al instante.", // Changed 'Plus' to 'VIP'
+    },
+    {
+      question: "¿Quién avala mis certificados?", // NEW QUESTION ADDED
+      answer: "Todos nuestros certificados están orgullosamente avalados por la Cámara de Comercio de Lima, el Club de Ingenieros y Educare Internacional, garantizando su reconocimiento y validez.", // NEW ANSWER ADDED
     },
     {
       question: "¿Dónde puedo verlos?",
@@ -31,7 +35,7 @@ const Informacion = () => {
     },
     {
       question: "¿En qué formato son?",
-      answer: "Los certificados son digitales y vienen en formato PDF de alta calidad, listos para imprimir o compartir online.",
+      answer: "Los certificados son digitales (formato PDF de alta calidad) y también ofrecemos la opción de un certificado físico. Ambos están listos para compartir online o exhibir.", // Expanded to mention physical certificate too
     },
     {
       question: "¿Cuánto duran?",
@@ -50,8 +54,8 @@ const Informacion = () => {
           viewport={{ once: true, amount: 0.5 }}
           variants={questionVariants}
         >
-          <h2 className='text-2xl md:text-6xl font-extrabold text-[#26374c] leading-tight drop-shadow-sm'>
-            Todo lo que tienes que saber sobre los certificados
+          <h2 className='text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#26374c] leading-tight drop-shadow-sm'> {/* Increased font size for main heading */}
+            Todo lo que tienes que saber sobre los <span className="text-red-600">Certificados</span>
           </h2>
         </motion.div>
 
@@ -68,7 +72,7 @@ const Informacion = () => {
                 transition={{ delay: index * 0.1 }} // Stagger animation for each item
               >
                 <AccordionItem value={`item-${index}`} className="border-b border-gray-200">
-                  <AccordionTrigger className="text-xl md:text-2xl font-semibold text-[#26374c] hover:no-underline py-6">
+                  <AccordionTrigger className="text-xl md:text-2xl font-semibold text-[#26374c] hover:no-underline py-6 text-left"> {/* Added text-left for better alignment on smaller screens */}
                     {item.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-lg text-[#26374c] pb-4 pr-8">

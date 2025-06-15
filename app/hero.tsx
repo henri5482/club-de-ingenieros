@@ -3,10 +3,10 @@
 
 import { Button } from "@/components/ui/button";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { AnimatePresence, motion, useDragControls } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star, Tag } from "lucide-react";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // --- Datos de los Cursos (sin cambios) ---
 const courses = [
@@ -14,7 +14,7 @@ const courses = [
     id: 1,
     title: "ANÁLISIS DE CUENCAS HIDROGRÁFICAS CON QGIS",
     description:
-      "Crea vasijas de cerámica únicas en casa, aprende modelado en arcilla, diseño, cocción y técnicas de esmaltado para piezas decorativas.",
+      "Este curso tiene como objetivo principal formar profesionales y estudiantes en la aplicación de herramientas SIG avanzadas (QGIS) para el análisis hidrológico integral.",
     categoryIcon: <Tag className="h-4 w-4" />,
     category: "100% online",
     originalPrice: "198.00",
@@ -27,42 +27,42 @@ const courses = [
     buttonTextColor: "#FFFFFF",
     purchaseUrl: "/cursos/analisis-cuencas-hidrograficas-qgis",
   },
-  {
-    id: 2,
-    title: "Modern Painting: Abstract Expressionism",
-    description:
-      "Dive into the world of abstract art. Learn the techniques of masters like Pollock and de Kooning to express your emotions.",
-    categoryIcon: <Tag className="h-4 w-4" />,
-    category: "In-person workshops",
-    originalPrice: "349.99",
-    discountedPrice: "25.00",
-    imageSrc:
-      "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?q=80&w=2872&auto=format&fit=crop",
-    bgColor: "#A8BCC3",
-    gradientColor: "#8FA5AF",
-    textColor: "#2A363B",
-    buttonBgColor: "#2A363B",
-    buttonTextColor: "#FFFFFF",
-    purchaseUrl: "https://www.camaralima.org.pe/",
-  },
-  {
-    id: 3,
-    title: "Digital Photography: Mastering Light",
-    description:
-      "Understand the science and art of light in photography. Master studio lighting, natural light, and post-processing.",
-    categoryIcon: <Tag className="h-4 w-4" />,
-    category: "Advanced Level",
-    originalPrice: "299.99",
-    discountedPrice: "20.00",
-    imageSrc:
-      "https://images.unsplash.com/photo-1505238680356-667803448bb6?q=80&w=2850&auto=format&fit=crop",
-    bgColor: "#D1C4A7",
-    gradientColor: "#B5A98F",
-    textColor: "#4C4433",
-    buttonBgColor: "#4C4433",
-    buttonTextColor: "#FFFFFF",
-    purchaseUrl: "/cursos/fotografia-digital",
-  },
+  // {
+  //   id: 2,
+  //   title: "Modern Painting: Abstract Expressionism",
+  //   description:
+  //     "Dive into the world of abstract art. Learn the techniques of masters like Pollock and de Kooning to express your emotions.",
+  //   categoryIcon: <Tag className="h-4 w-4" />,
+  //   category: "In-person workshops",
+  //   originalPrice: "349.99",
+  //   discountedPrice: "25.00",
+  //   imageSrc:
+  //     "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?q=80&w=2872&auto=format&fit=crop",
+  //   bgColor: "#A8BCC3",
+  //   gradientColor: "#8FA5AF",
+  //   textColor: "#2A363B",
+  //   buttonBgColor: "#2A363B",
+  //   buttonTextColor: "#FFFFFF",
+  //   purchaseUrl: "https://www.camaralima.org.pe/",
+  // },
+  // {
+  //   id: 3,
+  //   title: "Digital Photography: Mastering Light",
+  //   description:
+  //     "Understand the science and art of light in photography. Master studio lighting, natural light, and post-processing.",
+  //   categoryIcon: <Tag className="h-4 w-4" />,
+  //   category: "Advanced Level",
+  //   originalPrice: "299.99",
+  //   discountedPrice: "20.00",
+  //   imageSrc:
+  //     "https://images.unsplash.com/photo-1505238680356-667803448bb6?q=80&w=2850&auto=format&fit=crop",
+  //   bgColor: "#D1C4A7",
+  //   gradientColor: "#B5A98F",
+  //   textColor: "#4C4433",
+  //   buttonBgColor: "#4C4433",
+  //   buttonTextColor: "#FFFFFF",
+  //   purchaseUrl: "/cursos/fotografia-digital",
+  // },
 ];
 
 // --- Variantes de Animación (sin cambios) ---
@@ -274,7 +274,6 @@ export default function CoursesCarouselFinal() {
                   >
                     <Link
                       href={activeCourse.purchaseUrl}
-                      target="_blank"
                       rel="noopener noreferrer"
                     >
                       Comprar por S/ {activeCourse.discountedPrice}

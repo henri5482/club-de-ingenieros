@@ -20,7 +20,7 @@ const Sellos = () => {
       // It updates the currentSealIndex to the next image in the array.
       // The modulo operator (%) ensures it loops back to the first image after the last one.
       setCurrentSealIndex((prevIndex) => (prevIndex + 1) % sealImages.length);
-    }, 3500); // Change seal image every 5 seconds (5000 milliseconds)
+    }, 3500); // Change seal image every 3.5 seconds (3500 milliseconds)
 
     // Cleanup function: This runs when the component unmounts or before the effect re-runs.
     // It's crucial to clear the interval to prevent memory leaks.
@@ -37,16 +37,28 @@ const Sellos = () => {
           ¡Obtén tu <span className="text-red-600">Certificado</span>{" "}
           Personalizado!
         </h1>
+        {/* Updated Text Content */}
         <p className="text-lg md:text-xl text-[#26374c] mb-6 max-w-md">
-          Si eres <strong className="font-semibold text-red-600">Plus</strong>,
+          Si eres de nuestra comunidad <strong className="font-bold text-red-600">VIP</strong>,
           al completar cualquier curso que hayas comprado, recibirás un
-          certificado único firmado por el profesor. ¡Comparte tus logros!
+          certificado único firmado y avalado por{" "}
+          <strong className="font-bold text-red-600">
+            Club de Ingenieros
+          </strong>
+          ,{" "}
+          <strong className="font-bold text-red-600">
+            Cámara de Comercio de Lima
+          </strong>{" "}
+          y{" "}
+          <strong className="font-bottom-full text-red-600">
+            Educare Internacional
+          </strong>
+          . ¡Comparte tus logros!
         </p>
         <Link href="/cursosall" className="inline-block">
-        
-        <button className="bg-red-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
-          Explorar Cursos
-        </button>
+          <button className="bg-red-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+            Explorar Cursos
+          </button>
         </Link>
       </div>
 
@@ -77,7 +89,6 @@ const Sellos = () => {
           ))}
         </div>
       </div>
-      
     </div>
   );
 };
