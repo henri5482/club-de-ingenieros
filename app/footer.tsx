@@ -27,20 +27,19 @@ const Footer = () => {
     {
       title: "Soporte al cliente",
       links: [
-        { name: "Política de privacidad", href: "/legal/privacidad" },
-        { name: "Términos y condiciones", href: "/legal/terminos" },
-        { name: "Política de reembolsos", href: "/legal/reembolsos" },
-        { name: "haste premium", href: "/premium" },
+        { name: "Política de privacidad", href: "/politicadeprivacidad" },
+        { name: "Términos y condiciones", href: "/terminosycondiciones" },
+        { name: "haste premium", href: "https://wa.me/51927545815?text=Hola%20quiero%hacerme%20vip" },
       ],
     },
   ];
 
   // Data for "Nuestros productos" section links
   const productLinks = [
-    { name: "Recursos gratis", href: "/recursos-gratis" },
-    { name: "Cursos gratis", href: "/cursos-gratis" },
-    { name: "Blog", href: "/blog" },
-    { name: "Comunidad", href: "/comunidad" },
+    { name: "Recursos gratis", href: "#" },
+    { name: "Cursos gratis", href: "#" },
+    { name: "Blog", href: "#" },
+    { name: "Comunidad", href: "#" },
   ];
 
   // Data for social media links
@@ -70,7 +69,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#FAFAFA] border-t border-gray-200 text-gray-800">
+    <footer className="bg-[#FAFAFA] border-t max-md:pb-20 border-gray-200 text-gray-800">
       <div className="container mx-auto px-4 py-8 sm:px-6 md:px-8 lg:px-12 xl:px-16 md:py-12 lg:py-16">
         {/* Top section: Logo and back to top */}
         <div className="hidden md:flex justify-between items-center">
@@ -250,25 +249,19 @@ const Footer = () => {
           </div>
           <nav className="flex flex-wrap justify-center gap-x-3 sm:gap-x-4 gap-y-1 sm:gap-y-2 items-center">
             <Link
-              href="/legal/terminos"
+              href="/terminosycondiciones"
               className="text-gray-600 hover:text-[#0a5c8a] text-xs sm:text-sm whitespace-nowrap"
             >
               Términos de servicio
             </Link>
             <span className="hidden sm:inline text-gray-400">|</span>
             <Link
-              href="/legal/privacidad"
+              href="/politicadeprivacidad"
               className="text-gray-600 hover:text-[#0a5c8a] text-xs sm:text-sm whitespace-nowrap"
             >
               Política de privacidad
             </Link>
-            <span className="hidden sm:inline text-gray-400">|</span>
-            <Link
-              href="/sitemap"
-              className="text-gray-600 hover:text-[#0a5c8a] text-xs sm:text-sm whitespace-nowrap"
-            >
-              Mapa del sitio
-            </Link>
+           
           </nav>
         </div>
       </div>

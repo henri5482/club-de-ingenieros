@@ -43,7 +43,7 @@ const testimonials: TestimonialItem[] = [
     id: 2,
     name: "Fiorella Huamán",
     role: "🇵🇪",
-    avatar: "/avatar2.jpg",
+    avatar: "/avatar04.webp",
     comment:
       "Estudié ingeniería civil y el curso de estructuras me ayudó bastante. Gracias a esto ahora trabajo en una consultora que diseña obras públicas en Cusco.",
     rating: 5,
@@ -52,7 +52,7 @@ const testimonials: TestimonialItem[] = [
     id: 3,
     name: "Renzo Paredes",
     role: "🇵🇪",
-    avatar: "/avatar3.jpg",
+    avatar: "/avatar05.webp",
     comment:
       "El curso de hidráulica aplicada fue excelente. Aprendí a usar herramientas que ahora aplico en mi trabajo como ingeniero agrícola en Cajamarca.",
     rating: 4,

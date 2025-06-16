@@ -8,33 +8,37 @@ const Beneficios = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInViewContainer = useInView(containerRef, { once: true, amount: 0.1 });
 
-  const benefits = [
-    {
-      id: 1,
-      icon: '/clubdeingenieros.png',
-      title: 'Obtén un gran descuento si eres estudiante',
-      description: 'Prepárate un año en EDteam a mitad de precio y consigue tu primer empleo antes de acabar tu carrera.',
-    },
-    {
-      id: 2,
-      icon: '/clubdeingenieros.png',
-      title: 'Trae amigos y estudia gratis',
-      description: 'Ayuda a tus contactos a obtener un descuento en EDteam y gana suscripciones premium.',
-    },
-    {
-      id: 3,
-      icon: '/clubdeingenieros.png',
-      title: 'Regala educación a tus seres queridos',
-      description: 'Obsequia un curso o una suscripción y ayuda a las personas que más quieres a avanzar en su carrera.',
-    },
-  ];
+ const benefits = [
+  {
+    id: 1,
+    icon: '/clubdeingenieros.png',
+    title: 'Descuento especial para estudiantes de ingeniería',
+    description:
+      'Accede a nuestros cursos certificados con hasta 50% de descuento y prepárate para conseguir el trabajo que siempre soñaste antes de egresar.',
+  },
+  {
+    id: 2,
+    icon: '/clubdeingenieros.png',
+    title: 'Comparte y estudia gratis',
+    description:
+      'Invita a otros ingenieros a unirse al Club y obtén suscripciones gratuitas o descuentos exclusivos como recompensa por tu recomendación.',
+  },
+  {
+    id: 3,
+    icon: '/clubdeingenieros.png',
+    title: 'Regala futuro profesional',
+    description:
+      'Obsequia cursos a tus familiares o colegas y ayúdalos a crecer profesionalmente con formación de calidad y certificación oficial.',
+  },
+];
+
 
   const titleVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
+      transition: { duration: 0.8, ease: 'easeOut' },
     },
   };
 
@@ -46,8 +50,8 @@ const Beneficios = () => {
       transition: {
         delay: i * 0.2 + 0.3,
         duration: 0.7,
-        ease: "easeOut",
-        type: "spring",
+        ease: 'easeOut',
+        type: 'spring',
         stiffness: 70,
         damping: 10,
       },
@@ -59,7 +63,7 @@ const Beneficios = () => {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.8, ease: "easeOut", delay: 0.4 },
+      transition: { duration: 0.8, ease: 'easeOut', delay: 0.4 },
     },
   };
 
@@ -68,28 +72,26 @@ const Beneficios = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut", delay: 0.6 },
+      transition: { duration: 0.8, ease: 'easeOut', delay: 0.6 },
     },
   };
 
   return (
     <section className="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden" ref={containerRef}>
-      {/* Background element - consider if it's truly needed or adds too much complexity */}
       <div className="absolute inset-0 z-0"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.h2
           className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-red-600 text-center mb-12 md:mb-16 leading-tight"
           initial="hidden"
-          animate={isInViewContainer ? "visible" : "hidden"}
+          animate={isInViewContainer ? 'visible' : 'hidden'}
           variants={titleVariants}
         >
-          Aprovecha los beneficios y crece con <span className="text-red-600]">Nosotros</span> {/* Changed highlight color for consistency */}
+          Aprovecha los beneficios 
         </motion.h2>
 
-        {/* Grid layout changes from 1 column to 2 columns on large screens */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Column: Benefit Cards */}
+          {/* Tarjetas de beneficios */}
           <div className="flex flex-col space-y-8">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -97,10 +99,9 @@ const Beneficios = () => {
                 className="flex items-start text-left bg-white p-6 rounded-lg shadow-xl border border-transparent hover:border-red-600 transition-all duration-300"
                 custom={index}
                 initial="hidden"
-                animate={isInViewContainer ? "visible" : "hidden"}
+                animate={isInViewContainer ? 'visible' : 'hidden'}
                 variants={benefitCardVariants}
               >
-                {/* Icon Container with subtle styling */}
                 <div className="flex-shrink-0 mr-4 mt-1">
                   <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#00c2a8]/15">
                     <Image
@@ -108,53 +109,47 @@ const Beneficios = () => {
                       alt={`${benefit.title} icon`}
                       width={24}
                       height={24}
-                      // Use `sizes` prop for better image optimization across different viewports
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
                 </div>
-                {/* Text Content for the Benefit */}
                 <div>
                   <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-1">
                     {benefit.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-slate-700">
-                    {benefit.description}
-                  </p>
+                  <p className="text-sm sm:text-base text-slate-700">{benefit.description}</p>
                 </div>
               </motion.div>
             ))}
           </div>
 
-          {/* Right Column: Main Image/Video and Community Text */}
-          <div className="flex flex-col items-center justify-center mt-12 lg:mt-0"> {/* Added margin top for small screens */}
+          {/* Imagen destacada y mensaje */}
+          <div className="flex flex-col items-center justify-center mt-12 lg:mt-0">
             <motion.div
-              className="w-full relative rounded-lg overflow-hidden shadow-2xl bg-gray-800 max-w-md lg:max-w-none" // Constrain max-width on smaller screens
+              className="w-full relative rounded-lg overflow-hidden shadow-2xl bg-gray-800 max-w-md lg:max-w-none"
               initial="hidden"
-              animate={isInViewContainer ? "visible" : "hidden"}
+              animate={isInViewContainer ? 'visible' : 'hidden'}
               variants={mediaVariants}
-              style={{ paddingBottom: '65%' }} // A 16:9 aspect ratio (56.25%) is common; 65% is slightly taller. Adjust as needed for your image.
+              style={{ paddingBottom: '65%' }}
             >
               <Image
-                src="/Group65.png"
-                alt="Course cover: Bioseguridad y Prevención de Riesgos Hospitalario"
+                src="/about01.webp"
+                alt="beneficios"
                 layout="fill"
-                objectFit="contain" // `contain` is good for ensuring the whole image is visible
+                objectFit="contain"
                 className="rounded-lg"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw" // Added sizes for better image optimization
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
               />
-              {/* Overlay for subtle dimming/effect */}
               <div className="absolute inset-0 bg-black opacity-10"></div>
             </motion.div>
 
-            {/* Community Text below the image */}
             <motion.p
               className="mt-8 text-base sm:text-lg text-slate-700 font-medium text-center max-w-md mx-auto"
               initial="hidden"
-              animate={isInViewContainer ? "visible" : "hidden"}
+              animate={isInViewContainer ? 'visible' : 'hidden'}
               variants={communityTextVariants}
             >
-              Más que una empresa, somos una comunidad que se preocupa por ti
+              En Club de Ingenieros nos dedicamos a formar profesionales altamente competitivos. Más que una empresa, somos una comunidad comprometida con tu desarrollo laboral.
             </motion.p>
           </div>
         </div>

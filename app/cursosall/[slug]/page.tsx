@@ -251,7 +251,7 @@ export default async function CourseDetail({
                   asChild
                 >
                   <a
-                    href={`https://wa.me/51987654321?text=Hola%2C%20quisiera%20saber%20mas%20sobre%20la%20suscripcion%20premium%20`}
+                    href={`https://wa.me/51927545815?text=Hola%2C%20quisiera%20saber%20mas%20sobre%20la%20suscripcion%20premium%20`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -281,7 +281,7 @@ export default async function CourseDetail({
                     asChild
                   >
                     <a
-                      href={`https://wa.me/51987654321?text=Hola%2C%20estoy%20interesado%20en%20comprar%20el%20curso%20*${encodeURIComponent(course.titulo)}*%20a%20S/%20${(
+                      href={`https://wa.me/51927545815?text=Hola%2C%20estoy%20interesado%20en%20comprar%20el%20curso%20*${encodeURIComponent(course.titulo)}*%20a%20S/%20${(
                         (course.precio ?? 0) * (1 - (course.descuento ?? 0))
                       ).toFixed(2)}.`}
                       target="_blank"
@@ -528,7 +528,7 @@ export default async function CourseDetail({
                       Certificado Avalado
                     </h2>
                     {course.certificado && course.certificado.imageSrc ? (
-                      <Link href="/projects" passHref> {/* Changed link to /certificados as per previous request */}
+                      <Link href="/certificado" passHref> {/* Changed link to /certificados as per previous request */}
                         <div className="group relative bg-red-50 rounded-xl p-4 sm:p-6 flex justify-center items-center overflow-hidden shadow-2xl transition-all duration-500 ease-out transform hover:scale-[1.03] hover:shadow-red-300/70 cursor-pointer">
                           {/* Container for the image with a defined aspect ratio */}
                           <div className="relative w-full max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto rounded-lg border-2 border-red-300 bg-white overflow-hidden shadow-xl"

@@ -112,7 +112,7 @@ export default async function CourseDetail({
   }
 
   const startDate = course.details.date;
-  const whatsappNumber = "51987654321"; // Reemplaza con tu número de WhatsApp
+  const whatsappNumber = "51927545815"; // Reemplaza con tu número de WhatsApp
   const whatsappMessage = `Hola, estoy interesado en el curso "${course.titulo}" que comienza el ${startDate}. ¿Podrían brindarme más información?`;
   const encodedMessage = encodeURIComponent(whatsappMessage);
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;

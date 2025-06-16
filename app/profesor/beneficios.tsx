@@ -9,28 +9,28 @@ import Image from "next/image"; // Para los iconos y placeholders
 const benefitsData = [
   {
     id: 1,
-    icon: "/billetera.png", // Reemplazar con tu ícono real (ej: Lucide icon o SVG)
+    icon: "/clubdeingenieros.png", // Reemplazar con tu ícono real (ej: Lucide icon o SVG)
     title: "Precios muy competitivos",
     description:
       "Recibirás puntualmente los pagos por todos los cursos que dictes con nosotros.",
   },
   {
     id: 2,
-    icon: "/bolso.png", // Reemplazar con tu ícono real
+    icon: "/clubdeingenieros.png", // Reemplazar con tu ícono real
     title: "Compramos tus equipos",
     description:
       "Cubriremos el 100% de los equipos que necesites para dictar tus cursos en EDteam.",
   },
   {
     id: 3,
-    icon: "/images/icon-commissions.png", // Reemplazar con tu ícono real
+    icon: "/clubdeingenieros.png", // Reemplazar con tu ícono real
     title: "Te pagamos comisiones",
     description:
       "Las compras de tu curso, las vistas y tus respuestas a los estudiantes generan ingresos extra para ti.",
   },
   {
     id: 4,
-    icon: "/images/icon-support.png", // Reemplazar con tu ícono real
+    icon: "/clubdeingenieros.png", // Reemplazar con tu ícono real
     title: "Te ayudamos con tu curso",
     description:
       "Nuestro equipo te acompañará en todas las etapas de tu curso para que solo te enfoques en enseñar.",

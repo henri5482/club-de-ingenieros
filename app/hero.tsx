@@ -153,10 +153,9 @@ export default function CoursesCarouselFinal() {
   }, [page]); 
 
   return (
-    // MEJORA: Se cambió `h-screen` por `min-h-screen` y se añadió padding vertical `py-20`.
-    // Esto asegura que todo el contenido sea visible en móviles sin ser cortado y le da un respiro.
+
     <motion.main
-      className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden py-20"
+      className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden  max-sm:pt-20 max-md:pt-56 "
       animate={{ backgroundColor: activeCourse.bgColor }}
       transition={{ duration: 1.0, ease: "easeInOut" }}
     >
@@ -171,8 +170,7 @@ export default function CoursesCarouselFinal() {
         transition={{ duration: 1.2, ease: "easeInOut" }}
       />
       
-      {/* Contenedor principal del contenido del carrusel */}
-      {/* MEJORA: Padding ajustado en móvil `px-4` y en desktop `sm:px-6 lg:px-8` */}
+
       <div className="relative flex h-full w-full max-w-7xl items-center justify-center px-4 sm:px-6 lg:px-8">
         <AnimatePresence initial={false} custom={direction}>
           {/* MEJORA: Se añaden las propiedades `drag` para habilitar el deslizamiento horizontal */}
@@ -187,7 +185,7 @@ export default function CoursesCarouselFinal() {
             dragConstraints={{ left: 0, right: 0 }} // Limita el arrastre para que no se salga de la pantalla
             dragElastic={0.2} // Añade un poco de "resistencia" elástica al arrastrar
             onDragEnd={onDragEnd} // Llama a la función cuando el usuario suelta el slide
-            className="absolute grid w-full grid-cols-1 items-center gap-8 md:grid-cols-2"
+            className="absolute grid w-full grid-cols-1 items-center gap-8 md:grid-cols-2 "
           >
             {/* --- Sección de Imagen --- */}
             {/* MEJORA: se ajusta el `order` para móviles y escritorio */}

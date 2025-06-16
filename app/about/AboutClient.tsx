@@ -35,7 +35,7 @@ const AboutClient = () => {
             </div>
             <div className="w-full md:w-1/2 text-center md:text-left">
               <p className="text-base sm:text-xl font-bold lg:text-3xl text-white leading-relaxed drop-shadow-md">
-                Aquellos que se unen a nuestra comunidad...
+               Con más de 10 años de experiencia, ayudamos a ingenieros a alcanzar su empleo soñado a través de cursos certificados orientados al mercado laboral.
               </p>
             </div>
           </div>

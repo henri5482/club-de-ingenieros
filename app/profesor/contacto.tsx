@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import { Loader2 } from "lucide-react"; // Importar icono de cargando de Lucide
 import React, { useState } from "react"; // Asegúrate de importar React
 
-const WHATSAPP_PHONE_NUMBER = "51918237837"; // ¡CAMBIA ESTO por tu número de WhatsApp real con código de país! (ej: 51912345678)
+const WHATSAPP_PHONE_NUMBER = "51927545815"; // ¡CAMBIA ESTO por tu número de WhatsApp real con código de país! (ej: 51912345678)
 
 const Contacto = () => {
   const [formData, setFormData] = useState({
@@ -187,7 +187,7 @@ Por favor, adjunto mi CV en este chat.
               {/* Nota para el CV */}
               <motion.div variants={itemVariants}>
                 <p className="text-sm text-slate-400 mt-4 text-center">
-                  Una vez que hagas clic en Enviar y Contactar por WhatsApp, serás redirigido a un chat de WhatsApp. Por favor, **adjunta tu CV manualmente** en ese chat.
+                  Una vez que hagas clic en Enviar y Contactar por WhatsApp, serás redirigido a un chat de WhatsApp. Por favor, adjunta tu CV manualmente en ese chat.
                 </p>
               </motion.div>
 

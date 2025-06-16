@@ -1,9 +1,9 @@
 // components/floating-buttons.tsx
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { FaWhatsapp, FaFacebookF, FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaFacebookF, FaWhatsapp } from "react-icons/fa";
 import { HiOutlineDotsVertical } from "react-icons/hi";
 
 // --- Types ---
@@ -76,12 +76,12 @@ const FloatingButtons: React.FC = () => {
   const [showMoreOptions, setShowMoreOptions] = useState(false);
 
   const moreOptionsData: MoreOption[] = [
-    { text: "¿Por qué estudiar en la UTP?", href: "/por-que-utp", icon: <FaArrowRight /> },
-    { text: "Sueños que se cumplen", href: "/suenos", icon: <FaArrowRight /> },
-    { text: "Últimas noticias", href: "/noticias", icon: <FaArrowRight /> },
-    { text: "Experiencia UTP", href: "/experiencia", icon: <FaArrowRight /> },
-    { text: "Tenemos el horario que buscas", href: "/horarios", icon: <FaArrowRight /> },
-    { text: "Conoce nuestras sedes", href: "/sedes", icon: <FaArrowRight /> },
+    { text: "Inicio", href: "/", icon: <FaArrowRight /> },
+    { text: "Cursos", href: "/cursosall", icon: <FaArrowRight /> },
+    { text: "Certificado", href: "/certificado", icon: <FaArrowRight /> },
+    { text: "Profesores", href: "/docentes", icon: <FaArrowRight /> },
+    { text: "Sobre Nosotros", href: "/about", icon: <FaArrowRight /> },
+    // { text: "Trabaja con nosotros", href: "/profesor", icon: <FaArrowRight /> },
   ];
 
   const containerVariants = {
@@ -116,7 +116,7 @@ const FloatingButtons: React.FC = () => {
         <SocialFloatingButton
           icon={<FaWhatsapp />}
           label="WhatsApp"
-          href="https://wa.me/YOUR_PHONE_NUMBER?text=Hola%20quiero%20más%20información" // REMEMBER TO REPLACE!
+          href="https://wa.me/51927545815?text=Hola%20quiero%20más%20información" // REMEMBER TO REPLACE!
           bgColor="bg-green-500"
           hoverBgColor="hover:bg-green-600"
         />

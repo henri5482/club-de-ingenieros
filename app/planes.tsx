@@ -127,7 +127,7 @@ const planesData: Plan[] = [
     type: 'expert',
     audience: 'empresas',
     billingCycle: 'anual',
-    price: 9999,
+    price: 5700,
     currency: 'S/',
     features: [
       { text: 'Usuarios ilimitados', included: true },
@@ -146,7 +146,7 @@ const Planes = () => {
   const filteredPlanes = planesData.filter(plan => plan.audience === currentAudience);
 
   // --- NUEVA CONSTANTE PARA EL NÚMERO DE WHATSAPP ---
-  const WHATSAPP_NUMBER = '51936972560';
+  const WHATSAPP_NUMBER = '51927545815';
 
   // Variantes para Framer Motion: Animaciones más rápidas y dinámicas
   const headingVariants = {

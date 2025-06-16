@@ -12,7 +12,7 @@ const links = [
   { href: "/certificado", label: "Certificados" },
   { href: "/docentes", label: "Profesores" },
   { href: "/about", label: "Nosotros" },
-  { href: "/profesor", label: "Trabaja con nosotros" },
+  // { href: "/profesor", label: "Trabaja con nosotros" },
 ];
 
 const Navbar = () => {
