@@ -1,9 +1,7 @@
 // app/cursos/analisis-cuencas-hidrograficas-qgis/page.tsx
 'use client'; // Necesario porque contiene componentes cliente o lógica de estado
 
-import Footer from '@/app/footer';
 import Navbar from '@/app/navbar';
-import Link from 'next/link';
 // Asumiendo que estos componentes son reutilizables o se adaptarán para este curso
 import Certificado from './certificado';
 import CourseDetailsCard from './CoursePurchaseCard';
@@ -12,10 +10,13 @@ import Hero from './hero'; // Asumiendo Hero es aún necesario por encima de las
 import Planes from './planes';
 import Promocion from './promocion';
 import Temario from './temario';
+import Footer from '@/app/footer';
 
 
 export default function AnalisisCuencasHidrograficasQGISPage() { // Renombrado el componente principal
   return (
+    <>
+   <Navbar/> 
     <div className="flex flex-col min-h-screen bg-gray-50 text-gray-800"> {/* Set background and text color for the whole page */}
       {/* Schema.org Structured Data para el curso */}
       <script
@@ -77,5 +78,7 @@ export default function AnalisisCuencasHidrograficasQGISPage() { // Renombrado e
       <Promocion/>
       {/* <Footer /> */}
     </div>
+    <Footer/>
+    </>
   );
 }
