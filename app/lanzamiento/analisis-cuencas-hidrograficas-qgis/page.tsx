@@ -17,7 +17,7 @@ export default function AnalisisCuencasHidrograficasQGISPage() { // Renombrado e
   return (
     <>
    <Navbar/> 
-    <div className="flex flex-col min-h-screen bg-gray-50 text-gray-800"> {/* Set background and text color for the whole page */}
+    <div className="flex flex-col min-h-screen py-20 bg-gray-50 text-gray-800"> {/* Set background and text color for the whole page */}
       {/* Schema.org Structured Data para el curso */}
       <script
         type="application/ld+json"
