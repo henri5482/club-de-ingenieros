@@ -4,6 +4,6 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 
 export const Analytics = () => {
   return (
-    <GoogleAnalytics gaId="G-GK36Q1Q5RM" />
+    <GoogleAnalytics gaId="G-EK501511RW" /> 
   );
 };
