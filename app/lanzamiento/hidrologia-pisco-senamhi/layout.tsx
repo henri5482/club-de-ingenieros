@@ -1,41 +1,43 @@
 import FloatingButtons from '@/app/floating-buttons';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Metadata } from 'next';
-
 export const metadata: Metadata = {
-  title: 'Análisis de Cuencas Hidrográficas con QGIS | Club de Ingenieros',
-   verification: {
+  title: 'Curso de Hidrología Aplicada con PISCO, R y HEC-HMS | Club de Ingenieros',
+  verification: {
     google: "s7rwNtOiZLTsTJkm10Dj-B1CNfnpkSjX7iDkXcjEVF4",
   },
-  description: 'Aprende análisis de cuencas hidrográficas con QGIS para gestión de recursos hídricos, prevención de desastres y planificación territorial. Curso completo con certificación.',
-  keywords: [
-    'análisis cuencas hidrográficas', 
-    'QGIS', 
-    'hidrología', 
-    'recursos hídricos', 
-    'GIS', 
-    'sistemas de información geográfica', 
-    'delimitación cuencas', 
-    'modelado hidrológico', 
-    'curso QGIS', 
-    'ingeniería hídrica', 
-    'Perú',
-    'gestión de cuencas',
-    'análisis hidrológico'
+  description:
+    'Curso virtual profesional para dominar el análisis hidrológico aplicado con datos PISCO y SENAMHI, Quantile Mapping en R y modelado distribuido con HEC-HMS. Certificación digital de 120 horas académicas. Aprende con herramientas como QGIS, R, Excel y más.',
+   keywords: [
+    'curso hidrología aplicada',
+    'curso PISCO SENAMHI',
+    'Quantile Mapping R',
+    'simulación hidrológica HEC-HMS',
+    'curso R hidrología',
+    'modelado hidrológico distribuido',
+    'QGIS cuencas hidrográficas',
+    'curso online hidrología Perú',
+    'curso SIG hidrológico',
+    'curso HEC-HMS con certificado',
+    'Club de Ingenieros hidrología',
+    'hidrología ambiental',
+    'corrección de datos climáticos',
+    'curso certificado hidrología',
+    'curso hidrología Perú'
   ],
-  
-  // OpenGraph optimizado para mostrar imágenes
+
   openGraph: {
-    title: 'Análisis de Cuencas Hidrográficas con QGIS | Club de Ingenieros',
-    description: 'Curso profesional sobre análisis de cuencas hidrográficas utilizando QGIS, ideal para ingenieros y profesionales del sector hídrico y ambiental.',
-    url: 'https://www.clubdeingeniero.com/cursos/analisis-cuencas-hidrograficas-qgis',
+    title: 'Curso Virtual: Hidrología Aplicada con PISCO, R y HEC-HMS | Club de Ingenieros',
+    description:
+      'Domina el análisis de cuencas con datos de PISCO y SENAMHI, aplica Quantile Mapping en R y simula eventos con HEC-HMS. Curso online certificado por Educare Internacional y la Cámara de Comercio de Lima.',
+    url: 'https://www.clubdeingeniero.com/lanzamiento/hidrologia-pisco-senamhi',
     type: 'website',
     images: [
       {
-        url: 'https://www.clubdeingeniero.com/banner.webp', // Imagen específica para este curso
+        url: 'https://www.clubdeingeniero.com/hidrologia-aplicada-con-pisco/banner.webp',
         width: 1200,
         height: 630,
-        alt: 'Análisis de Cuencas Hidrográficas con Software QGIS - Club de Ingenieros',
+        alt: 'Curso de Hidrología Aplicada con QGIS, R y HEC-HMS - Club de Ingenieros',
         type: 'image/jpeg',
       },
     ],
@@ -43,21 +45,21 @@ export const metadata: Metadata = {
     locale: 'es_PE',
   },
 
-  // Twitter Cards optimizado
   twitter: {
     card: 'summary_large_image',
-    site: '@ClubIngenierosPE', // Cuenta Twitter específica
+    site: '@ClubIngenierosPE',
     creator: '@ClubIngenierosPE',
-    title: 'Análisis de Cuencas Hidrográficas con QGIS | Club de Ingenieros',
-    description: 'Domina el análisis hidrológico con QGIS en este curso certificado para ingenieros y especialistas ambientales.',
+    title: 'Curso Profesional de Hidrología Aplicada con R y HEC-HMS',
+     description:
+      'Aprende modelado hidrológico y simulación distribuida con HEC-HMS, corrección de datos climáticos en R y análisis de datos de PISCO y SENAMHI. Curso certificado de 120 horas académicas.',
     images: {
-      url: 'https://www.clubdeingeniero.com/banner.webp', // Imagen optimizada para Twitter
-      alt: 'Curso profesional de QGIS para análisis de cuencas',
+      url: 'https://www.clubdeingeniero.com/hidrologia-aplicada-con-pisco/banner.webp',
+      alt: 'Curso profesional de QGIS, R y HEC-HMS para análisis de cuencas',
     },
   },
 
   alternates: {
-    canonical: 'https://www.clubdeingeniero.com/banner.webp',
+    canonical: 'https://www.clubdeingeniero.com/lanzamiento/hidrologia-pisco-senamhi',
   },
 
   robots: {
@@ -71,18 +73,18 @@ export const metadata: Metadata = {
     },
   },
 
-  // Metadatos adicionales importantes
   metadataBase: new URL('https://www.clubdeingeniero.com'),
   authors: [
-    { 
-      name: 'Club de Ingenieros', 
-      url: 'https://www.clubdeingeniero.com' 
-    }
+    {
+      name: 'Club de Ingenieros',
+      url: 'https://www.clubdeingeniero.com',
+    },
   ],
-  category: 'Ingeniería Civil | Hidrología',
+  category: 'Hidrología, Ingeniería Civil, SIG, Recursos Hídricos',
   creator: 'Club de Ingenieros',
   publisher: 'Club de Ingenieros',
 };
+
 
 export default function AnalisisCuencasLayout({
   children,
