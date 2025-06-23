@@ -27,42 +27,24 @@ const courses = [
     buttonTextColor: "#FFFFFF",
     purchaseUrl: "/cursos/analisis-cuencas-hidrograficas-qgis",
   },
-  // {
-  //   id: 2,
-  //   title: "Modern Painting: Abstract Expressionism",
-  //   description:
-  //     "Dive into the world of abstract art. Learn the techniques of masters like Pollock and de Kooning to express your emotions.",
-  //   categoryIcon: <Tag className="h-4 w-4" />,
-  //   category: "In-person workshops",
-  //   originalPrice: "349.99",
-  //   discountedPrice: "25.00",
-  //   imageSrc:
-  //     "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?q=80&w=2872&auto=format&fit=crop",
-  //   bgColor: "#A8BCC3",
-  //   gradientColor: "#8FA5AF",
-  //   textColor: "#2A363B",
-  //   buttonBgColor: "#2A363B",
-  //   buttonTextColor: "#FFFFFF",
-  //   purchaseUrl: "https://www.camaralima.org.pe/",
-  // },
-  // {
-  //   id: 3,
-  //   title: "Digital Photography: Mastering Light",
-  //   description:
-  //     "Understand the science and art of light in photography. Master studio lighting, natural light, and post-processing.",
-  //   categoryIcon: <Tag className="h-4 w-4" />,
-  //   category: "Advanced Level",
-  //   originalPrice: "299.99",
-  //   discountedPrice: "20.00",
-  //   imageSrc:
-  //     "https://images.unsplash.com/photo-1505238680356-667803448bb6?q=80&w=2850&auto=format&fit=crop",
-  //   bgColor: "#D1C4A7",
-  //   gradientColor: "#B5A98F",
-  //   textColor: "#4C4433",
-  //   buttonBgColor: "#4C4433",
-  //   buttonTextColor: "#FFFFFF",
-  //   purchaseUrl: "/cursos/fotografia-digital",
-  // },
+  {
+  id: 2,
+  title: "HIDROLOGÍA APLICADA CON PISCO, SENAMHI Y R",
+  description:
+    "Aprende a corregir datos PISCO y SENAMHI, aplicar Quantile Mapping en R y realizar simulaciones hidrológicas con HEC-HMS usando datos reales.",
+  categoryIcon: <Tag className="h-4 w-4" />,
+  category: "100% online",
+  originalPrice: "199.00",
+  discountedPrice: "99.00",
+  imageSrc: "/hidrologia-aplicada-con-pisco/banner.webp",
+  bgColor: "#04597D",
+  gradientColor: "#8ED1FC",
+  textColor: "white",
+  buttonBgColor: "#023047",
+  buttonTextColor: "#FFFFFF",
+  purchaseUrl: "/cursos/hidrologia-aplicada-pisco-senamhi-qm",
+}
+
 ];
 
 // --- Variantes de Animación (sin cambios) ---

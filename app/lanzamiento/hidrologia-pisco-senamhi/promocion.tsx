@@ -91,6 +91,7 @@ const Promocion = () => {
 
   const time = formatTime(timeLeft);
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handlePurchaseClick = (paymentMethod: PaymentMethod) => {
     if (!isClientHydrated || availableCoupons <= 0 || timeLeft <= 0) return;
 

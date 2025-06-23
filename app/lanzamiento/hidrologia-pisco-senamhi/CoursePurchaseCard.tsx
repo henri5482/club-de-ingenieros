@@ -21,7 +21,7 @@ const CourseDetailsCard: React.FC = () => {
   const PROMOTION_END_DATE = {
     year: 2025,
     month: 6, // June
-    day: 26,
+    day: 25,
     hour: 19,
     minute: 0,
   };
@@ -202,7 +202,7 @@ const CourseDetailsCard: React.FC = () => {
       {/* Reference Image Section */}
       <div className="relative w-full rounded-lg overflow-hidden mb-6">
         <Image
-          src="/banner.webp"
+          src="/hidrologia-aplicada-con-pisco/banner.webp"
           alt="Referencia del Curso"
           layout="responsive"
           width={600}
@@ -276,11 +276,11 @@ const CourseDetailsCard: React.FC = () => {
         </div>
         <div className="flex items-center">
           <Users className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0" />
-          <span>224 estudiantes</span>
+          <span>720 estudiantes</span>
         </div>
         <div className="flex items-center">
           <BookOpen className="h-5 w-5 text-purple-500 mr-3 flex-shrink-0" />
-          <span>32 Secciones (15h 22m)</span>
+          <span>26 Secciones (120 horas)</span>
         </div>
         <div className="flex items-center">
           <BookOpen className="h-5 w-5 text-yellow-500 mr-3 flex-shrink-0" />

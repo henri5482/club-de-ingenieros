@@ -69,58 +69,58 @@ const iconComponentsDocente = {
 
 // Docente Data (No changes needed, keeping it as is)
 const datosDocenteKevin: DatosDocenteKevin = {
-  nombreCompleto: "Eliser Mejía Herrera",
-  tituloPrincipal: "Ingeniero Civil Colegiado",
-  subtitulo: "Especialista en Modelamiento Hidráulico e Hidrológico, Gestión de Proyectos y Seguridad de Presas",
+  nombreCompleto: "Rubén Omar Ortiz Vásquez",
+  tituloPrincipal: "Ingeniero Hidráulico Colegiado",
+  subtitulo: "Especialista en Hidrología, Modelamiento Hidráulico y Gestión Integral del Agua",
   descripcionGeneral:
-    "Ingeniero especializado en el desarrollo de proyectos de infraestructura hidráulica, con amplio conocimiento en modelamiento hidráulico, hidrológico y SIG. Sólida formación en el diseño de obras hidráulicas, así como en la implementación de sistemas de monitoreo y control hidrológico en operación de presas.",
-  imagenUrl: "/profesor01.jpg", // Make sure this path is correct for Eliser Mejía Herrera's photo!
-  email: "emejiah.1507@gmail.com", // Please update with the correct email for Eliser Mejía Herrera
+    "Rubén Omar Ortiz Vásquez es un apasionado Ingeniero Hidráulico con más de 8 años de experiencia en hidrología y gestión integral de recursos hídricos. Su trayectoria se distingue por un enfoque resiliente y creativo, permitiéndole superar desafíos y asegurar el éxito de proyectos estratégicos. Tiene una maestría en Recursos Hídricos por la UNALM (segundo puesto) y especializaciones en modelamiento hidrológico, hidráulico e hidrogeología minera.",
+  imagenUrl: "/hidrologia-aplicada-con-pisco/profesor.webp", // Asegúrate de subir esta imagen a tu proyecto
+  email: "ruben.ortiz.hidro@gmail.com",
   areasEstrategicas: [
-    { id: 1, area: "Dominio de HEC-RAS" },
-    { id: 2, area: "Dominio de HEC-HMS" },
-    { id: 3, area: "Dominio de RS MINERVE" },
-    { id: 4, area: "Dominio de QGIS" },
-    { id: 5, area: "Dominio de ACAD CIVIL 3D" },
-    { id: 6, area: "Dominio de Excel Avanzado" },
-    { id: 7, area: "Dominio de POWER BI" },
-    { id: 8, area: "Manejo de drones DJI" },
+    { id: 1, area: "Dominio de ArcGIS" },
+    { id: 2, area: "Dominio de WEAP" },
+    { id: 3, area: "Dominio de HEC-HMS" },
+    { id: 4, area: "Dominio de MODFLOW" },
+    { id: 5, area: "Dominio de Google Earth Engine" },
+    { id: 6, area: "Modelamiento Hidrológico e Hidráulico" },
+    { id: 7, area: "Gestión de Recursos Hídricos" },
   ],
   proyectosDestacados: [
-    { id: 1, entidad: "CONCESIONARIA TRASVASE OLMOS S.A. (01/2016 – 03/2025)", descripcion: "Coordinador de Hidrología: Responsable de la gestión hidrológica e hidrométrica en la presa Limón, incluyendo balances hídricos, diseño y modelamiento hidráulico de defensas ribereñas con HEC-RAS, análisis de riesgos de inundación con QGIS y control de sedimentos. Participó como Especialista en Hidráulica durante las inspecciones de seguridad de presa, además en implementación de planes de emergencia." },
-    { id: 2, entidad: "UTS – PROYECTOS Y SERVICIOS (10/2023 - 07/2024)", descripcion: "Especialista en Diseño Hidráulico: Revisó diseños hidráulicos de defensas ribereñas durante la construcción, realizando análisis hidrológicos e hidráulicos, interpretando datos topográficos y elaborando planos y especificaciones técnicas, asegurando cumplimiento normativo." },
-    { id: 3, entidad: "CONCESIONARIA H2OLMOS S.A. (09/2014 - 12/2015)", descripcion: "Asistente de Ingeniería: Implementó plan de operación y mantenimiento del sistema hídrico de Irrigación Olmos, controlando caudales, supervisando entregas y realizando balances hídricos." },
+    {
+      id: 1,
+      entidad: "Autoridad Nacional del Agua (ANA)",
+      descripcion: "Lideró la elaboración de modelos hidrológicos, evaluación de acreditaciones hídricas y gestión de recursos en la cuenca Jequetepeque-Zaña."
+    },
+    {
+      id: 2,
+      entidad: "SENAMHI",
+      descripcion: "Responsable de monitoreos y pronósticos hidrológicos en cuencas clave, liderando proyectos de hidrología operativa y campañas de aforo."
+    },
+    {
+      id: 3,
+      entidad: "Ministerio del Ambiente (MINAM)",
+      descripcion: "Ejecutó modelamiento hidráulico aplicado a la gestión territorial y evaluación de infraestructura verde."
+    }
   ],
   formacionAdicional: [
-    { id: 1, nombre: "Maestría en Ingeniería con Mención en Dirección y Gestión de Proyectos (03/2025) - Universidad Católica de Trujillo" },
-    { id: 2, nombre: "Ingeniero Civil (04/2024) - Universidad Cesar Vallejo" },
-    { id: 3, nombre: "Ingeniero Agrícola (04/2015) - Universidad Nacional Pedro Ruiz Gallo" },
-    { id: 4, nombre: "Experto en Hidrología Computacional y SIG para el Estudio y Gestión de Cuencas con QGIS (03/2025) - Centro de Altos Estudios en Geomática - CAEG" },
-    { id: 5, nombre: "CONTRATOS NEC: Planificación, Gestión y Trabajo Colaborativo en Proyecto Complejos (09/2024 - 11/2024) - CAPACITATION AND ENGINEERING ONLINE ACADEMY - CEO" },
-    { id: 6, nombre: "DIPLOMADO EN HIDRÁULICA FLUVIAL: DISEÑO Y CONTRUCCIÓN DE DEFENSAS RIBEREÑAS (09/2024 - 12/2024) - CERSA" },
-    { id: 7, nombre: "CURSO DE CAPACITACIÓN EN HIDROLOGÍA, HIDRÁULICA Y DRENAJE DE CARRETERAS (01/2024 - 02/2024) - Pontificia Universidad Católica del Perú - PUCP" },
-    { id: 8, nombre: "ESPECIALIZACIÓN: SUPERVISOR DE SEGURIDAD Y SALUD EN EL TRABAJO (11/2023 - 12/2023) - Colegio de Ingenieros del Perú" },
-    { id: 9, nombre: "ELABORACIÓN DEL ESTUDIO DE HIDROLOGÍA PARA PROYECTOS DE INFRAESTRUCTURA HIDRÁULICA Y RIEGO (08/2023) - Ministerio de Desarrollo Agrario y Riego" },
-    { id: 10, nombre: "AUSCULTACIÓN Y SEGURIDAD DE LAS PRESAS (02/2022) - RED INGENIERÍA - Argentina" },
-    { id: 11, nombre: "CURSO DE MODELAMIENTO HIDRÁULICO 2D CON HEC RAS V.6 (11/2021 - 01/2022) - CERSA" },
-    { id: 12, nombre: "IMPLEMENTADOR LIDER 5S CON ENFOQUE 9S (07/2021 - 08/2021) - ASESORES ESTRATÉGICOS" },
-    { id: 13, nombre: "CURSO DE ESPECIALIDAD HIDROLÓGICA APLICADA (03/2021 - 04/2021) - IEPI – Colegio de Ingenieros del Perú" },
-    { id: 14, nombre: "CURSO DE MODELACIÓN HIDROLÓGICA CON RS MINERVE (03/2021) - RHYDRO INGENIEROS" },
-    { id: 15, nombre: "INTERPRETACIÓN DE LAS NORMAS ISO 9001:2015 E ISO 14001:2015 EN LA NUEVA NORMALIDAD (10/2020) - ASESORES ESTRATÉGICOS" },
-    { id: 16, nombre: "DISEÑO, EXPLOTACIÓN Y SEGURIDAD DE PRESAS (CAF – BANCO DE DESARROLLO DE AMÉRICA LATINA)" },
+    { id: 1, nombre: "Maestría en Recursos Hídricos – Universidad Nacional Agraria La Molina (2° puesto)" },
+    { id: 2, nombre: "Especialización en Hidrogeología Aplicada a la Minería" },
+    { id: 3, nombre: "Diplomado en Modelamiento Hidráulico e Hidrológico" },
+    { id: 4, nombre: "Cursos internacionales de seguridad hídrica y modelamiento ambiental" },
   ],
   rasgosProfesionales: [
-    "Trabajo en equipo",
     "Liderazgo",
-    "Organización y planificación",
-    "Comunicación asertiva",
-    "Manejo de personal",
-    "Gestión de proyectos",
+    "Creatividad",
+    "Compromiso ambiental",
+    "Aprendizaje constante",
+    "Trabajo en equipo",
+    "Solución integral de problemas",
   ],
   redesSociales: [
-    { id: 1, nombre: "LinkedIn", url: "https://www.linkedin.com/in/eliser-mej%C3%ADa-herrera-3892189b/", iconName: "Linkedin" },
-  ],
+    { id: 1, nombre: "LinkedIn", url: "https://www.linkedin.com/in/vrortiz/", iconName: "Linkedin" },
+  ]
 };
+
 
 const DocenteSection = () => {
   // Framer Motion animation variants

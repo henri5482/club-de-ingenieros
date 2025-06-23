@@ -121,9 +121,126 @@
     "remainingSeats": "52 estudiantes",
     "precio": 198.00,
     "descuento": 0.50
-  }
-  
-  
+  }, 
+ {
+  "id": "hidrologia-aplicada-pisco-senamhi-qm",
+  "slug": "hidrologia-aplicada-pisco-senamhi-qm",
+  "category": "Hidrología Aplicada",
+  "src": "/hidrologia-aplicada-con-pisco/banner.webp",
+  "name": "Hidrología aplicada con PISCO, estaciones SENAMHI, Quantile Mapping en R",
+  "titulo": "Hidrología aplicada con PISCO, estaciones SENAMHI, Quantile Mapping en R",
+  "descripcion": "Curso intensivo donde aprenderás desde la carga de datos PISCO y SENAMHI hasta la simulación hidrológica en HEC-HMS, aplicando Quantile Mapping con R.",
+  "fechatext": "Inicia el 25 de junio del 2025",
+  "about": "Este curso te capacitará en la corrección de datos hidrometeorológicos mediante Quantile Mapping en R, el uso de PISCO y estaciones SENAMHI, y su aplicación en simulaciones hidrológicas distribuidas con HEC-HMS. Incluye desde la delimitación de cuencas en QGIS hasta la automatización de procesos en R, todo con datos reales.",
+  "profesores": [
+    {
+      "nombre": "Rubén Omar Ortiz Vásquez",
+      "imagen": "/hidrologia-aplicada-con-pisco/profesor.webp",
+      "usuarioSocial": "@RubenOrtiz",
+      "enlacePerfil": ""
+    }
+  ],
+  "paraQuienEs": [
+    "Profesionales y estudiantes interesados en modelación hidrológica aplicada.",
+    "Ingenieros hidráulicos, civiles y ambientales que trabajen con PISCO y R.",
+    "Técnicos en recursos hídricos que deseen simular cuencas con HEC-HMS.",
+    "Personas que busquen una formación práctica con datos reales y herramientas profesionales."
+  ],
+  "conocimientosPrevios": [
+    "Se recomienda conocimientos básicos de hidrología y manejo de software técnico como QGIS o R."
+  ],
+  "temarios": [
+    {
+      "title": "MÓDULO 01 – Demostración Práctica Inicial",
+      "items": [
+        "1.1 - Carga de datos PISCO y SENAMHI",
+        "1.2 - Aplicación rápida de Quantile Mapping en R",
+        "1.3 - Visualización de mejoras en los datos",
+        "1.4 - Simulación rápida en HEC-HMS con datos corregidos",
+        "1.5 - Carga de archivos reales",
+        "1.6 - Corrección y visualización inmediata",
+        "1.7 - Validación visual en HEC-HMS"
+      ]
+    },
+    {
+      "title": "MÓDULO 02 – Fundamentos y Exploración de Datos",
+      "items": [
+        "2.1 - ¿Qué es la hidrología aplicada?",
+        "2.2 - Introducción a PISCO y cómo descargarlo",
+        "2.3 - Estaciones SENAMHI: calidad y validación",
+        "2.4 - Comparación preliminar en Excel/R",
+        "2.5 - Revisión y graficado de datos",
+        "2.6 - Cálculo de medias y correlación",
+        "2.7 - Exploración de series históricas"
+      ]
+    },
+    {
+      "title": "MÓDULO 03 – Quantile Mapping con R",
+      "items": [
+        "3.1 - Fundamentos del Quantile Mapping",
+        "3.2 - Uso de librerías: qmap, climQMBC, ggplot2",
+        "3.3 - Aplicación paso a paso a una estación",
+        "3.4 - Corrección diaria o mensual de series",
+        "3.5 - Comparación antes y después de la corrección",
+        "3.6 - Cálculo de NSE y RMSE",
+        "3.7 - Visualización gráfica de resultados"
+      ]
+    },
+    {
+      "title": "MÓDULO 04 – Automatización y Exportación",
+      "items": [
+        "4.1 - Corrección de múltiples estaciones",
+        "4.2 - Funciones personalizadas en R para automatizar",
+        "4.3 - Exportación de resultados a CSV o TXT",
+        "4.4 - Aplicación de Quantile Mapping a varias series",
+        "4.5 - Automatización del proceso completo",
+        "4.6 - Exportación estructurada de datos"
+      ]
+    },
+    {
+      "title": "MÓDULO 05 – Preparación de Insumos para HEC-HMS",
+      "items": [
+        "5.1 - Delimitación de cuenca con QGIS",
+        "5.2 - Generación de hietogramas corregidos",
+        "5.3 - Conversión de datos a formato .met para HEC-HMS",
+        "5.4 - Recorte de datos PISCO corregidos por subcuenca",
+        "5.5 - Generación de subcuencas para modelado",
+        "5.6 - Creación de insumos meteorológicos"
+      ]
+    },
+    {
+      "title": "MÓDULO 06 – Simulación Hidrológica en HEC-HMS",
+      "items": [
+        "6.1 - Configuración del modelo distribuido en HEC-HMS",
+        "6.2 - Carga de datos meteorológicos corregidos",
+        "6.3 - Ejecución de la simulación hidrológica",
+        "6.4 - Análisis y validación de resultados obtenidos",
+        "6.5 - Construcción del modelo desde cero",
+        "6.6 - Simulación comparativa con y sin corrección",
+        "6.7 - Interpretación de resultados hidrológicos"
+      ]
+    }
+  ],
+  "fecha": "2025-06-25T00:00:00",
+  "learnings": [
+    "Aplicación de Quantile Mapping en R a datos PISCO y SENAMHI",
+    "Automatización de procesos de corrección de datos",
+    "Preparación de insumos hidrológicos para HEC-HMS",
+    "Simulación hidrológica distribuida en HEC-HMS",
+    "Delimitación de cuencas e insumos con QGIS"
+  ],
+  "details": {
+    "date": "25 junio 2025",
+    "duration": "12 horas (6 sesiones)",
+    "level": "Intermedio",
+    "offer": "Incluye bono, grabaciones, materiales y certificado de 120 horas"
+  },
+  "remainingSeats": "56 estudiantes",
+  "precio": 199.00,
+  "descuento": 0.50
+}
+
+
  
 
 ]

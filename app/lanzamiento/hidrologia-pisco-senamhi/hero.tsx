@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
   const PROMOTION_END_DATE = {
     year: 2025,
     month: 6,
-    day: 26,
+    day: 25,
     hour: 19,
     minute: 0,
   };

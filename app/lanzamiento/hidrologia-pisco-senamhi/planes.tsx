@@ -70,7 +70,7 @@ const planesData: Plan[] = [
     oldPrice: 199.0,
     discountInfo: "PROMOCIÓN",
     transmissionDates:
-      "16, 18, 20, 23 , 25 , 27 y 30 de Junio del 2025 en el horario de 7:00 PM a 9:00 PM.",
+      "25, 27, 30 de Junio y 02, 04 y 07 de Julio del 2025 en el horario de 7:00 PM a 9:00 PM.",
     features: [
       { text: "Instalador de Softwares", included: true },
       { text: "01 Curso Bono de regalo", included: true },
@@ -79,7 +79,7 @@ const planesData: Plan[] = [
       { text: "Descarga de Material de exposición en pdf", included: true },
       { text: "Descarga del audio en Formato Audio MP3", included: true },
       {
-        text: "Certificado Digital por 140 horas académicas con código QR",
+        text: "Certificado Digital por 120 horas académicas con código QR",
         included: true,
       },
     ],
