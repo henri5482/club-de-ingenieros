@@ -28,23 +28,38 @@ const courses = [
     purchaseUrl: "/cursos/analisis-cuencas-hidrograficas-qgis",
   },
   {
-  id: 2,
-  title: "HIDROLOGÍA APLICADA CON PISCO, SENAMHI Y R",
-  description:
-    "Aprende a corregir datos PISCO y SENAMHI, aplicar Quantile Mapping en R y realizar simulaciones hidrológicas con HEC-HMS usando datos reales.",
+    id: 2,
+    title: "HIDROLOGÍA APLICADA CON PISCO, SENAMHI Y R",
+    description:
+      "Aprende a corregir datos PISCO y SENAMHI, aplicar Quantile Mapping en R y realizar simulaciones hidrológicas con HEC-HMS usando datos reales.",
+    categoryIcon: <Tag className="h-4 w-4" />,
+    category: "100% online",
+    originalPrice: "199.00",
+    discountedPrice: "99.00",
+    imageSrc: "/hidrologia-aplicada-con-pisco/banner.webp",
+    bgColor: "#04597D",
+    gradientColor: "#8ED1FC",
+    textColor: "white",
+    buttonBgColor: "#023047",
+    buttonTextColor: "#FFFFFF",
+    purchaseUrl: "/cursos/hidrologia-aplicada-pisco-senamhi-qm",
+  },
+ {
+  id: 3,
+  title: "CERTIFICACIÓN DE PUNTOS GEODÉSICOS EN ORDEN C",
+  description: "Domina la normativa y los procesos para la certificación de puntos geodésicos de Orden C ante el IGN, desde el levantamiento hasta el expediente técnico.",
   categoryIcon: <Tag className="h-4 w-4" />,
   category: "100% online",
   originalPrice: "199.00",
   discountedPrice: "99.00",
-  imageSrc: "/hidrologia-aplicada-con-pisco/banner.webp",
-  bgColor: "#04597D",
-  gradientColor: "#8ED1FC",
+  imageSrc: "/certificacion-puntos-geodesicos-orden-c/banner.webp",
+  bgColor: "#7D3C98",
+  gradientColor: "#D2B4DE",
   textColor: "white",
-  buttonBgColor: "#023047",
+  buttonBgColor: "#512E5F",
   buttonTextColor: "#FFFFFF",
-  purchaseUrl: "/cursos/hidrologia-aplicada-pisco-senamhi-qm",
+  purchaseUrl: "/cursos/certificacion-puntos-geodesicos-orden-c"
 }
-
 ];
 
 // --- Variantes de Animación (sin cambios) ---
@@ -86,15 +101,15 @@ const textItemVariants = {
 };
 
 const imageVariants = {
-    enter: { scale: 0.8, opacity: 0 },
-    center: {
-        scale: 1,
-        opacity: 1,
-        transition: {
-            scale: { duration: 0.6, ease: [0.34, 1.56, 0.64, 1] },
-            opacity: { duration: 0.5 }
-        }
-    },
+  enter: { scale: 0.8, opacity: 0 },
+  center: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      scale: { duration: 0.6, ease: [0.34, 1.56, 0.64, 1] },
+      opacity: { duration: 0.5 }
+    }
+  },
 }
 
 
@@ -129,10 +144,10 @@ export default function CoursesCarouselFinal() {
   useEffect(() => {
     const interval = setInterval(() => {
       paginate(1);
-    }, 7000); 
+    }, 7000);
 
     return () => clearInterval(interval);
-  }, [page]); 
+  }, [page]);
 
   return (
 
@@ -151,7 +166,7 @@ export default function CoursesCarouselFinal() {
         animate={{ opacity: 0.5 }}
         transition={{ duration: 1.2, ease: "easeInOut" }}
       />
-      
+
 
       <div className="relative flex h-full w-full max-w-7xl items-center justify-center px-4 sm:px-6 lg:px-8">
         <AnimatePresence initial={false} custom={direction}>
@@ -186,17 +201,17 @@ export default function CoursesCarouselFinal() {
                   src={activeCourse.imageSrc}
                   alt={activeCourse.title}
                   className="h-full w-full rounded-2xl object-cover"
-                   style={{
-                     animation: 'kenburns 20s ease-in-out infinite alternate-reverse',
-                     transformOrigin: 'center center',
-                   }}
+                  style={{
+                    animation: 'kenburns 20s ease-in-out infinite alternate-reverse',
+                    transformOrigin: 'center center',
+                  }}
                 />
-                
+
               </motion.div>
             </motion.div>
 
             {/* --- Sección de Texto --- */}
-             {/* MEJORA: Se añade `text-center md:text-left` y `items-center md:items-start`
+            {/* MEJORA: Se añade `text-center md:text-left` y `items-center md:items-start`
                  para centrar el texto en móviles y alinearlo a la izquierda en desktop. */}
             <motion.div
               variants={textContainerVariants}
@@ -249,8 +264,8 @@ export default function CoursesCarouselFinal() {
                   }}
                 >
                   <motion.div
-                     whileHover={{ scale: 1.05, boxShadow: `0px 10px 30px ${activeCourse.buttonBgColor}50` }}
-                     whileTap={{ scale: 0.95 }}
+                    whileHover={{ scale: 1.05, boxShadow: `0px 10px 30px ${activeCourse.buttonBgColor}50` }}
+                    whileTap={{ scale: 0.95 }}
                   >
                     <Link
                       href={activeCourse.purchaseUrl}

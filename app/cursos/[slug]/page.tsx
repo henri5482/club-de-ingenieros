@@ -212,7 +212,7 @@ export default async function CourseDetail({
                       className="flex items-center justify-center w-full h-full"
                     >
                       <span className="text-sm sm:text-base md:text-lg">
-                        Comprar 
+                         
                       </span>
                       {course.precio && (
                         <span className="ml-2 flex items-baseline gap-2">
@@ -262,8 +262,8 @@ export default async function CourseDetail({
                   priority
                 />
               </div>
-              <div className="bg-white rounded-lg p-4 sm:p-6 border-t border-gray-200">
-                <div className="grid grid-cols-2 gap-3 sm:gap-4">
+              <div className="bg-white rounded-lg p-4 sm:p-2 border-t border-gray-200">
+                <div className="grid grid-cols-2 gap-3 sm:gap-2">
                   <div className="text-center sm:text-left">
                     <p className="text-gray-500 text-xs sm:text-sm uppercase tracking-wider mb-1">
                       Fecha
@@ -293,7 +293,7 @@ export default async function CourseDetail({
                       <p className="text-gray-500 text-xs sm:text-sm uppercase tracking-wider mb-1">
                         Oferta
                       </p>
-                      <p className="font-semibold text-sm sm:text-base md:text-lg text-red-600">
+                      <p className="font-semibold text-xs sm:text-sm md:text-sm text-red-600">
                         {course.details.offer}
                       </p>
                     </div>

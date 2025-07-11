@@ -238,7 +238,115 @@
   "remainingSeats": "102 estudiantes",
   "precio": 199.00,
   "descuento": 0.5025
+},
+ {
+  "id": "certificacion-puntos-geodesicos-orden-c",
+  "slug": "certificacion-puntos-geodesicos-orden-c",
+  "category": "Geodesia y Cartografía",
+  "src": "/certificacion-puntos-geodesicos-orden-c/banner.webp",
+  "name": "Certificación de Puntos Geodésicos en Orden C",
+  "titulo": "Certificación de Puntos Geodésicos en Orden C",
+  "descripcion": "Curso virtual enfocado en la certificación de puntos geodésicos de Orden C, abarcando desde los fundamentos geodésicos hasta la elaboración y validación de expedientes técnicos ante el IGN.",
+  "fechatext": "Inicia el 04 de julio del 2025",
+  "about": "Este curso te proporcionará los conocimientos y herramientas esenciales para la certificación de puntos geodésicos de Orden C, de acuerdo con la normativa del IGN. Aprenderás sobre sistemas de referencia, tipos de equipos GNSS, levantamiento estático, procesamiento de datos y la elaboración completa del expediente técnico, incluyendo casos reales y la guía para el envío y seguimiento ante el IGN.",
+  "profesores": [
+    {
+      "nombre": "Ing. Omar Mitchel Pedraza Ruiz",
+      "imagen": "/certificacion-puntos-geodesicos-orden-c/profesor.webp",
+      "usuarioSocial": "",
+      "enlacePerfil": ""
+    }
+  ],
+  "paraQuienEs": [
+    "Ingenieros y técnicos en topografía, geodesia, agrimensura y afines.",
+    "Profesionales que requieran certificar puntos geodésicos para proyectos de ingeniería o catastrales.",
+    "Estudiantes y egresados de carreras relacionadas con la geomática y la cartografía.",
+    "Interesados en adquirir conocimientos prácticos sobre la normativa y procesos del IGN."
+  ],
+  "conocimientosPrevios": [
+    "Se recomienda tener conocimientos básicos de topografía y sistemas de posicionamiento global (GNSS)."
+  ],
+  "temarios": [
+    {
+      "title": "MÓDULO 01: FUNDAMENTOS DE GEODESIA Y REFERENCIACIÓN GEOGRÁFICA",
+      "items": [
+        "Introducción a la Geodesia moderna.",
+        "Sistemas de referencia geodésica: WGS84 vs SIRGAS.",
+        "Tipos de puntos geodésicos: orden A, B, C, D.",
+        "Importancia de la Red Geodésica Nacional."
+      ]
+    },
+    {
+      "title": "MÓDULO 02: NORMATIVA Y REQUISITOS DEL IGN",
+      "items": [
+        "Requisitos del IGN para puntos de orden C (Guías técnicas vigentes).",
+        "Marco normativo nacional en cartografía y geodesia.",
+        "Formatos oficiales y criterios de evaluación de expedientes técnicos."
+      ]
+    },
+    {
+      "title": "MÓDULO 03: EQUIPOS GNSS Y PREPARACIÓN DE LA CAMPAÑA",
+      "items": [
+        "Tipos de receptores GNSS y sus especificaciones (doble frecuencia, RTK, estático).",
+        "Calibración, verificación y control de calidad de equipos.",
+        "Planificación de sesiones GNSS: tiempos de observación, geometría satelital, condiciones mínimas."
+      ]
+    },
+    {
+      "title": "MÓDULO 04: LEVANTAMIENTO GEODÉSICO ESTÁTICO",
+      "items": [
+        "Procedimiento completo para puntos de orden C.",
+        "Instalación de hitos y monografías.",
+        "Técnicas de observación GNSS en modo estático.",
+        "Registro de datos en campo: bitácoras, esquemas de ubicación y fotos reglamentarias."
+      ]
+    },
+    {
+      "title": "MÓDULO 05: PROCESAMIENTO DE DATOS GNSS",
+      "items": [
+        "Descarga y gestión de archivos RINEX.",
+        "Uso de software libre y propietario (ej. Trimble Business Center, Leica Infinity, RTKLIB).",
+        "Procesamiento con estaciones de referencia (Red GEOCATMIN, IGN, IGS).",
+        "Evaluación de precisión y calidad de soluciones."
+      ]
+    },
+    {
+      "title": "MÓDULO 06: ELABORACIÓN DEL EXPEDIENTE TÉCNICO PARA CERTIFICACIÓN",
+      "items": [
+        "Estructura del expediente según formato IGN.",
+        "Monografía geodésica: requisitos gráficos y descriptivos.",
+        "Reportes de procesamiento: contenido obligatorio.",
+        "Errores frecuentes y cómo evitarlos."
+      ]
+    },
+    {
+      "title": "MÓDULO 07: ENVÍO, SEGUIMIENTO Y VALIDACIÓN ANTE EL IGN",
+      "items": [
+        "Canal de envío y validación de expedientes.",
+        "Proceso de revisión y posibles observaciones del IGN.",
+        "Validación final y emisión del certificado de punto geodésico."
+      ]
+    }
+  ],
+  "fecha": "2025-07-04T19:00:00",
+  "learnings": [
+    "Fundamentos de geodesia y sistemas de referencia.",
+    "Normativa y requisitos del IGN para puntos de Orden C.",
+    "Manejo de equipos GNSS y planificación de campañas de levantamiento.",
+    "Procedimientos de levantamiento geodésico estático.",
+    "Procesamiento de datos GNSS con software especializado.",
+    "Elaboración de expedientes técnicos para certificación.",
+    "Proceso de envío, seguimiento y validación ante el IGN."
+  ],
+  "details": {
+    "date": "04 Julio del 2025",
+    "duration": "200 horas",
+    "level": "Intermedio",
+    "offer": "Incluye +1 Curso bono de regalo, instalador de softwares, acceso a todas las clases , material de exposición en PDF , certificado digital por 200 horas académicas con código QR."
+  },
+  "remainingSeats": "1200",
+  "precio": 199.00,
+  "descuento": 0.5025
 }
- 
 
 ]
