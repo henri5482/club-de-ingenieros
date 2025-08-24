@@ -239,6 +239,7 @@
   "precio": 199.00,
   "descuento": 0.5025
 },
+
  {
   "id": "certificacion-puntos-geodesicos-orden-c",
   "slug": "certificacion-puntos-geodesicos-orden-c",
@@ -347,6 +348,130 @@
   "remainingSeats": "1200",
   "precio": 199.00,
   "descuento": 0.5025
+},
+
+{
+  "id": "clasificacion-nube-puntos-lidar-fotogrametria-ia",
+  "slug": "clasificacion-nube-puntos-lidar-fotogrametria-ia",
+  "category": "Fotogrametría, LiDAR e Inteligencia Artificial",
+  "src": "/clasificacion-nube-puntos-lidar-fotogrametria-ia/banner.webp",
+  "name": "Clasificación de Nube de Puntos con LiDAR y Fotogrametría + Aplicaciones con Inteligencia Artificial",
+  "titulo": "Clasificación de Nube de Puntos con Sistema LiDAR y Fotogrametría + IA",
+  "descripcion": "Curso virtual especializado en clasificación de nubes de puntos utilizando LiDAR, fotogrametría y aplicaciones avanzadas con Inteligencia Artificial. Aprende desde los fundamentos hasta la generación de productos cartográficos y casos prácticos en ingeniería, minería y medio ambiente.",
+  "fechatext": "Inicia el 19 de agosto del 2025",
+  "about": "Este curso está diseñado para brindarte las herramientas técnicas y prácticas necesarias en el procesamiento y análisis de nubes de puntos mediante sistemas LiDAR y fotogrametría, incorporando Inteligencia Artificial. Aprenderás sobre planificación de proyectos, uso de software especializado, clasificación automática, modelado digital y validación de resultados con casos reales de aplicación.",
+  "profesores": [
+    {
+      "nombre": "Ing. Boris Roger Fernández Astro",
+      "imagen": "/clasificacion-nube-puntos-lidar-fotogrametria-ia/profesor.webp",
+      "usuarioSocial": "",
+      "enlacePerfil": ""
+    }
+  ],
+  "paraQuienEs": [
+    "Ingenieros, topógrafos y geógrafos especializados en geomática.",
+    "Profesionales en minería, medio ambiente, catastro y gestión territorial.",
+    "Estudiantes y egresados de carreras relacionadas con ingeniería civil, forestal o ambiental.",
+    "Interesados en aplicaciones de Inteligencia Artificial en geomática."
+  ],
+  "conocimientosPrevios": [
+    "Conocimientos básicos de fotogrametría o sistemas LiDAR son recomendados.",
+    "Manejo básico de software de SIG o CAD facilita el aprendizaje."
+  ],
+  "temarios": [
+    {
+      "title": "MÓDULO 01: FUNDAMENTOS DE LIDAR, FOTOGRAMETRÍA E INTELIGENCIA ARTIFICIAL",
+      "items": [
+        "Conceptos y principios básicos de tecnología LiDAR.",
+        "Fundamentos de fotogrametría y su integración con LiDAR.",
+        "Componentes de un sistema LiDAR: sensores, plataformas y formatos.",
+        "Introducción a la Inteligencia Artificial aplicada al análisis de nubes de puntos."
+      ]
+    },
+    {
+      "title": "MÓDULO 02: PLANIFICACIÓN Y EJECUCIÓN DE PROYECTOS LIDAR",
+      "items": [
+        "Etapas y flujo de trabajo en proyectos LiDAR y fotogramétricos.",
+        "Planificación de campañas de levantamiento y adquisición de datos.",
+        "Selección de sensores, plataformas y parámetros de captura.",
+        "Normas y buenas prácticas para recolección y almacenamiento de datos."
+      ]
+    },
+    {
+      "title": "MÓDULO 03: SOFTWARE ESPECIALIZADO Y ENTORNO DE TRABAJO",
+      "items": [
+        "Introducción a Quick Terrain Reader, Lidar360 y herramientas de Deep Learning.",
+        "Tipos de archivos admitidos (LAS, LAZ, ASCII, etc.).",
+        "Interfaz gráfica y explorador de archivos.",
+        "Configuración inicial y personalización del entorno de trabajo."
+      ]
+    },
+    {
+      "title": "MÓDULO 04: VISUALIZACIÓN Y ANÁLISIS BÁSICO DE NUBES DE PUNTOS",
+      "items": [
+        "Importación y visualización de datos LiDAR y fotogrametría.",
+        "Navegación en entornos 2D y 3D.",
+        "Herramientas de medición y visualización: intensidad, RGB, elevación, clasificación.",
+        "Guardado de proyectos y administración de datos."
+      ]
+    },
+    {
+      "title": "MÓDULO 05: PREPROCESAMIENTO Y FILTRADO DE DATOS",
+      "items": [
+        "Eliminación de ruido y reducción de densidad.",
+        "Segmentación por área (AOI).",
+        "Generación de rejillas o tiles.",
+        "Optimización de datos para análisis y clasificación posterior."
+      ]
+    },
+    {
+      "title": "MÓDULO 06: CLASIFICACIÓN AUTOMÁTICA Y AVANZADA CON IA",
+      "items": [
+        "Clasificación automática con software especializado.",
+        "Clasificación por altura, retorno y número de eco.",
+        "Identificación de edificaciones, vegetación, cables y postes.",
+        "Aplicación de modelos de Deep Learning para reconocimiento avanzado de elementos."
+      ]
+    },
+    {
+      "title": "MÓDULO 07: GENERACIÓN DE PRODUCTOS CARTOGRÁFICOS Y MODELADO",
+      "items": [
+        "Creación de Modelos Digitales del Terreno (DTM) y de Superficie (DSM).",
+        "Generación de Modelos Digitales de Alturas (DHM) y Canopy Height Model (CHM).",
+        "Obtención de curvas de nivel.",
+        "Integración de resultados con fotogrametría para productos más precisos."
+      ]
+    },
+    {
+      "title": "MÓDULO 08: VALIDACIÓN, CASOS DE ESTUDIO Y APLICACIONES REALES",
+      "items": [
+        "Validación visual y control de calidad de resultados.",
+        "Estudio de casos reales en ingeniería, minería y medio ambiente.",
+        "Aplicaciones prácticas en gestión territorial y monitoreo de infraestructuras.",
+        "Recomendaciones para optimizar flujos de trabajo y automatización con IA."
+      ]
+    }
+  ],
+  "fecha": "2025-08-19T19:00:00",
+  "learnings": [
+    "Conceptos fundamentales de LiDAR, fotogrametría e Inteligencia Artificial.",
+    "Planificación y ejecución de proyectos de adquisición de datos LiDAR.",
+    "Uso de software especializado como Quick Terrain Reader y Lidar360.",
+    "Visualización, análisis y preprocesamiento de nubes de puntos.",
+    "Clasificación automática y avanzada con algoritmos de IA.",
+    "Generación de productos cartográficos digitales (DTM, DSM, DHM).",
+    "Aplicación práctica de LiDAR e IA en minería, ingeniería y medio ambiente."
+  ],
+  "details": {
+    "date": "19 de Agosto del 2025",
+    "duration": "200 horas",
+    "level": "Intermedio",
+    "offer": "1 Curso bono de regalo a elegir ,material en PDF,certificado digital por 200 horas "
+  },
+  "remainingSeats": "1200",
+  "precio": 199.00,
+  "descuento": 0.5025,
+  "precioPromocion": 99.00
 }
 
 ]
