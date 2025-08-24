@@ -12,9 +12,26 @@ import { useEffect, useState } from "react";
 const courses = [
   {
     id: 1,
+    title: "CLASIFICACIÓN DE NUBE DE PUNTOS LIDAR Y FOTOGRAMETRÍA + IA",
+    description:
+      "Curso especializado en el procesamiento y clasificación de nubes de puntos con LiDAR y fotogrametría, integrando aplicaciones avanzadas de Inteligencia Artificial.",
+    categoryIcon: <Tag className="h-4 w-4" />,
+    category: "100% online",
+    originalPrice: "199.00",
+    discountedPrice: "99.00",
+    imageSrc: "/clasificacion-nube-puntos-lidar-fotogrametria-ia/banner.webp",
+    bgColor: "#0A9396",
+    gradientColor: "#005F73",
+    textColor: "white",
+    buttonBgColor: "#001219",
+    buttonTextColor: "#FFFFFF",
+    purchaseUrl: "/cursos/clasificacion-nube-puntos-lidar-fotogrametria-ia",
+  },
+  {
+    id: 4,
     title: "ANÁLISIS DE CUENCAS HIDROGRÁFICAS CON QGIS",
     description:
-      "Este curso tiene como objetivo principal formar profesionales y estudiantes en la aplicación de herramientas SIG avanzadas (QGIS) para el análisis hidrológico integral.",
+    "Este curso tiene como objetivo principal formar profesionales y estudiantes en la aplicación de herramientas SIG avanzadas (QGIS) para el análisis hidrológico integral.",
     categoryIcon: <Tag className="h-4 w-4" />,
     category: "100% online",
     originalPrice: "198.00",
@@ -28,7 +45,7 @@ const courses = [
     purchaseUrl: "/cursos/analisis-cuencas-hidrograficas-qgis",
   },
   {
-    id: 2,
+    id: 3,
     title: "HIDROLOGÍA APLICADA CON PISCO, SENAMHI Y R",
     description:
       "Aprende a corregir datos PISCO y SENAMHI, aplicar Quantile Mapping en R y realizar simulaciones hidrológicas con HEC-HMS usando datos reales.",
@@ -45,7 +62,7 @@ const courses = [
     purchaseUrl: "/cursos/hidrologia-aplicada-pisco-senamhi-qm",
   },
  {
-  id: 3,
+  id: 2,
   title: "CERTIFICACIÓN DE PUNTOS GEODÉSICOS EN ORDEN C",
   description: "Domina la normativa y los procesos para la certificación de puntos geodésicos de Orden C ante el IGN, desde el levantamiento hasta el expediente técnico.",
   categoryIcon: <Tag className="h-4 w-4" />,
@@ -59,7 +76,8 @@ const courses = [
   buttonBgColor: "#512E5F",
   buttonTextColor: "#FFFFFF",
   purchaseUrl: "/cursos/certificacion-puntos-geodesicos-orden-c"
-}
+},
+
 ];
 
 // --- Variantes de Animación (sin cambios) ---
