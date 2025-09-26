@@ -14,5 +14,13 @@
     "shortDescription": "Normativas esenciales de seguridad",
     "bannerColor": "bg-red-600",
     "template": "seguridad"
+  },
+  {
+    "id": "curso-03",
+    "fullTitle": "Hidrología Aplicada con PISCO y Simulación Hidrológica Distribuida en HEC-HMS",
+    "slug": "modelamiento-1d-con-hec-ras",
+    "shortDescription": "Normativas esenciales de seguridad",
+    "bannerColor": "bg-red-600",
+    "template": "seguridad"
   }
 ]
